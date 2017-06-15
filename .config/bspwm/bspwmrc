@@ -1,9 +1,9 @@
 #! /bin/sh
-############################
-#                          #
-#  SNAX'S CUSTOM BSPWMRC!  #
-#                          #
-############################
+#===================#
+#                   #
+#  Snax's bspwmrc!  #
+#                   #
+#===================#
 
 xsetroot -cursor_name left_ptr
 sxhkd &
