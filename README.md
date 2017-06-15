@@ -9,4 +9,4 @@ The color scheme has changed slightly since this pic:
 
 Now it looks more like this (with wal enabled):
 
-<img src="http://imgur.com/ZhGNUe2">
+<img src="https://i.imgur.com/ZhGNUe2.png">
