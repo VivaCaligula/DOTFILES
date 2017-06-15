@@ -1,8 +1,8 @@
-#==============================================#
-#                                              #
-#  Snax's .zshrc with Powerline version 1.0.2  #
-#                                              #
-#==============================================#
+#=================================#
+#                                 #
+#  Snax's .zshrc with Powerline!  #
+#                                 #
+#=================================#
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH

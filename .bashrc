@@ -1,8 +1,8 @@
-#===============================================#
-#                                               #
-#  Snax's .bashrc with Powerline version 1.0.3  #
-#                                               #
-#===============================================#
+#==================================#
+#                                  #
+#  Snax's .bashrc with Powerline!  #
+#                                  #
+#==================================#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
