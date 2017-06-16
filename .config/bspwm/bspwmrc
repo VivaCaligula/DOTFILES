@@ -12,7 +12,7 @@ compton &
 #xsetroot -solid "#E2A96A"
 #hsetroot -solid "#424242"
 hsetroot -solid "#67605e"
-#wal -i "$HOME/Pictures/wal" -o wal-set
+wal -i "$HOME/Pictures/wal" -o wal-set
 polybar rome &
 termite &
 

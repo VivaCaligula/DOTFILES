@@ -17,7 +17,7 @@
 !compton.conf
 !README.md
 
-# Keep folders open with their dotfiles.
+# Keep specific folders open with their specific dotfiles.
 !.config/
 .config/*
 !.config/bspwm/
@@ -35,5 +35,3 @@
 !powerlineconfigs/
 !powerlineconfigs/*
 
-# Even if they are in subdirectories.
-#!*/
