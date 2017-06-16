@@ -34,4 +34,7 @@
 !.config/termite/config
 !powerlineconfigs/
 !powerlineconfigs/*
-
+!Pictures/
+Pictures/*
+!Pictures/wal/
+!Pictures/wal/*
