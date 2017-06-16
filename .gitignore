@@ -1,0 +1,39 @@
+#===================================#
+#                                   #
+#  Snax's .gitignore for dotfiles.  #
+#                                   #
+#===================================#
+
+# Ignore everything.
+*
+
+# But not these files.
+!.gitignore
+!.bashrc
+!.bashrcsnerx
+!.zshrc
+!.aliases
+!.tmux.conf
+!compton.conf
+!README.md
+
+# Keep folders open with their dotfiles.
+!.config/
+.config/*
+!.config/bspwm/
+.config/bspwm/*
+!.config/bspwm/bspwmrc
+!.config/sxhkd/
+.config/sxhkd/*
+!.config/sxhkd/sxhkdrc
+!.config/polybar/
+.config/polybar/*
+!.config/polybar/config
+!.config/termite/
+.config/termite/*
+!.config/termite/config
+!powerlineconfigs/
+!powerlineconfigs/*
+
+# Even if they are in subdirectories.
+#!*/
