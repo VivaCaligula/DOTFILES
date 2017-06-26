@@ -3,10 +3,10 @@
 This is for the caligula@rome bspwm configs, as well as snerx's server users.
 
 
-The color scheme has changed slightly since this pic: 
+It used to look like this: 
 
 <img src="https://i.redd.it/9ioonxgbzi3z.png">
 
-Now it looks more like this (with wal enabled):
+Now it looks like this (with wal enabled):
 
-<img src="https://i.imgur.com/ZhGNUe2.png">
+<img src="https://i.imgur.com/HckN6m2.png">
