@@ -6,23 +6,23 @@
 
 
 ;----------------------------------------------------------
-;			C O L O R S 
+;			C O L O R S
 ;----------------------------------------------------------
 
 [colors]
+peach = #FFCD98
+lime = #CADC79
 background = #424242
 background-alt = #2E2E2E
-#background = #555555
-#background-alt = #424242
-foreground = #FFCD98
-foreground-alt = #FFCD98
+foreground = #777777
+foreground-alt = #555555
 primary = #FFCD98
-secondary = #CADC79
+secondary = #d97464
 alert = #bd2c40
 
 
 ;----------------------------------------------------------
-;			G L O B A L 
+;			G L O B A L
 ;----------------------------------------------------------
 
 [global/wm]
@@ -46,9 +46,9 @@ underline-size = 0
 underline-color = #424242
 
 border-bottom-size = 4
-border-bottom-color = #2E2E2E
+border-bottom-color = ${colors.background-alt}
 border-top-size = 0
-border-top-color = #2E2E2E
+border-top-color = ${colors.background}
 border-color-foreground = #FFCD98
 
 spacing = 0
@@ -59,7 +59,7 @@ module-margin-right = 0
 
 
 ;----------------------------------------------------------
-;			F O N T S  
+;			F O N T S
 ;----------------------------------------------------------
 
 ;font-0 = Terminus:size=10;2
@@ -76,9 +76,9 @@ font-6 = GohuFont:pixelsize=10:weight=bold;2
 ;  	    M A I N   M O D U L E    L A Y O U T
 ;----------------------------------------------------------
 
-modules-left = bspwm
+modules-left = bspwm powermenu
 modules-center = xwindow
-modules-right = arrow volume arrow temperature arrow network arrow battery arrow date arrow powermenu
+modules-right = arrow volume arrow temperature arrow network arrow battery arrow date
 
 
 ;----------------------------------------------------------
@@ -109,7 +109,8 @@ label-maxlen = 50
 format-padding = 1
 label-padding-left = 1
 label-padding-right = 1
-label-background = #424242
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
 
 
 ;----------------------------------------------------------
@@ -146,7 +147,7 @@ mount-0 = /
 format-mounted = <label-mounted>
 format-mounted-prefix = hdd
 ;format-mounted-foreground = ${colors.foreground}
-;format-mounted-overline = #73d216 
+;format-mounted-overline = #73d216
 
 label-mounted = %percentage_used%
 label-mounted-padding = 1
@@ -157,7 +158,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 
 ;----------------------------------------------------------
-;		B S P W M   M O D U L E 
+;		B S P W M   M O D U L E
 ;----------------------------------------------------------
 
 [module/bspwm]
@@ -173,7 +174,7 @@ enable-click = true
 ; Default: true
 enable-scroll = true
 
-; Set the scroll cycle direction 
+; Set the scroll cycle direction
 ; Default: true
 reverse-scroll = true
 
@@ -181,22 +182,22 @@ reverse-scroll = true
 format-suffix-foreground = #2E2E2E
 
 label-focused = %name%
-label-focused-foreground = #999999
-label-focused-background = #2E2E2E
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
 label-focused-overline= ${colors.primary}
 label-focused-padding = 3
 
 label-occupied = %name%
 label-occupied-padding = 3
-label-occupied-foreground = #F96D5F
+label-occupied-foreground = ${colors.peach}
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 3
 
 label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = ${colors.foreground}
 label-empty-padding = 3
 
 
@@ -213,7 +214,7 @@ label-song-maxlen = 25
 label-song-ellipsis = true
 
 icon-prev = <
-icon-seekb = « 
+icon-seekb = «
 icon-stop = <>
 icon-play = |>
 icon-pause = ll
@@ -252,7 +253,7 @@ bar-empty-foreground = ${colors.foreground-alt}
 
 
 ;----------------------------------------------------------
-;			   C P U 
+;			   C P U
 ;----------------------------------------------------------
 
 [module/cpu]
@@ -377,7 +378,7 @@ label-disconnected-foreground = ${colors.foreground-alt}
 
 
 ;----------------------------------------------------------
-;		     D A T E  &  T I M E 
+;		     D A T E  &  T I M E
 ;----------------------------------------------------------
 
 [module/date]
@@ -415,17 +416,17 @@ format-volume = <label-volume>
 ;format-volume = <bar-volume>
 format-volume-prefix = " vol"
 format-volume-prefix-foreground = ${colors.foreground}
-format-volume-prefix-background = #424242
+format-volume-prefix-background = ${colors.background}
 label-volume = %percentage%
 label-volume-foreground = ${colors.foreground}
-label-volume-background = #424242
+label-volume-background = ${colors.background}
 ;label-volume-underline= #58ffef
 ;label-volume-overline= #58ffef
 
 format-muted-prefix = " "
 format-muted-suffix = " "
-format-muted-foreground = #F96D5F
-format-muted-background = #2E2E2E
+format-muted-foreground = ${colors.secondary}
+format-muted-background = ${colors.foreground-alt}
 label-muted = muted
 label-volume-padding = 1
 
@@ -447,7 +448,7 @@ bar-volume-indicator-background = #222
 bar-volume-fill-background = #222
 bar-volume-fill = ─
 bar-volume-fill-font = 5
-bar-volume-empty-background = #222 
+bar-volume-empty-background = #222
 bar-volume-empty-padding = 1
 bar-volume-empty = ─
 bar-volume-empty-font = 5
@@ -521,12 +522,12 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 82
+warn-temperature = 70
 interval = 2
 
 format-prefix = " temp"
 format-prefix-foreground = ${colors.foreground}
-;format-prefix-background = #424242
+format-prefix-background = ${colors.background}
 format = <label>
 ;format-underline = #c17d11
 ;format-overline = #c17d11
@@ -534,11 +535,11 @@ format-warn = <label-warn>
 ;format-warn-underline = ${self.format-underline}
 
 label = %temperature%
-label-background = #424242
+label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 label-warn = %temperature%
-label-warn-background = #F96D5F
-label-warn-foreground = #424242
+label-warn-background = ${colors.background-alt}
+label-warn-foreground = ${colors.alert}
 label-padding = 1
 
 ramp-0 = 
@@ -554,20 +555,21 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/menu
 
-;label-open = "  " 
-label-open = " .`.  "
-label-open-foreground = #F96D5F
-label-open-background = #424242
+;label-open = "  "
+label-open = " »  "
+;❧
+label-open-foreground = ${colors.secondary}
+label-open-background = ${colors.background}
 ;label-open-overline = #ef2929
 ;label-close =  cancel
-label-close = "cancel "
-label-close-foreground = #999999
+label-close = " cancel "
+label-close-foreground = ${colors.foreground-alt}
 label-separator = |
-label-separator-foreground = #2E2E2E
+label-separator-foreground = ${colors.background-alt}
 
 menu-0-0 = " logout "
 menu-0-0-exec = pkill x
-menu-0-0-foreground = #F96D5F
+menu-0-0-foreground = ${colors.secondary}
 
 
 ;----------------------------------------------------------
@@ -584,7 +586,7 @@ label-open-foreground = #999999
 label-close = " cancel "
 label-close-foreground = #999999
 label-separator = |
-label-separator-foreground = #2E2E2E
+label-separator-foreground = ${colors.background-alt}
 
 menu-0-0 = " term "
 menu-0-0-exec = termite &
