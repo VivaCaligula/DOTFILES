@@ -13,6 +13,8 @@
 peach = #FFCD98
 lime = #CADC79
 salmon = #d97464
+darkgrey = #2e2e2e
+lightgrey = #424242
 background = #424242
 background-alt = #2E2E2E
 foreground = #888888
@@ -46,7 +48,7 @@ overline-color = #F96D5F
 underline-size = 0
 underline-color = #424242
 
-border-bottom-size = 4
+border-bottom-size = 0
 border-bottom-color = ${colors.background-alt}
 border-top-size = 0
 border-top-color = ${colors.background}
@@ -63,23 +65,26 @@ module-margin-right = 0
 ;			F O N T S
 ;----------------------------------------------------------
 
-;font-0 = Terminus:size=10;2
-font-0 = GohuFont:size=10;2
-font-1 = Roboto:size=10;2
-font-2 = -*-gohufont-medium-*-*-*-10-*-*-*-*-*-*-*;2
-font-3 = FontAwesome:size=10;2
-font-4 = PowerlineSymbols:size=10;2
-font-5 = siji:pixelsize=10;2
-font-6 = GohuFont:pixelsize=10:weight=bold;2
+font-0 = Terminus:size=10;2
+font-1 = PowerlineSymbols:size=14;3
+font-2 = Terminus:size=10;0
+font-3 = Terminus:size=10;1
+;font-2 = GohuFont:size=10;1
+;font-3 = Roboto:size=10;1
+;font-4 = -*-gohufont-medium-*-*-*-10-*-*-*-*-*-*-*;1
+;font-5 = FontAwesome:size=10;6
+;font-6 = PowerlineSymbols:size=14;1
+;font-7 = siji:pixelsize=10;1
+;font-8 = GohuFont:pixelsize=10:weight=bold;1
 
 
 ;----------------------------------------------------------
 ;  	    M A I N   M O D U L E    L A Y O U T
 ;----------------------------------------------------------
 
-modules-left = bspwm powermenu
+modules-left = bspwm rightarrow powermenu
 modules-center = xwindow
-modules-right = arrow volume arrow temperature arrow network arrow battery arrow date
+modules-right = darkarrow volume lightarrow temperature darkarrow network lightarrow battery darkarrow date
 
 
 ;----------------------------------------------------------
@@ -110,7 +115,7 @@ label-maxlen = 50
 format-padding = 1
 label-padding-left = 1
 label-padding-right = 1
-label-foreground = ${colors.foreground}
+label-foreground = ${colors.darkgrey}
 label-background = ${colors.background}
 
 
@@ -182,24 +187,32 @@ reverse-scroll = false
 ;format-suffix = |
 format-suffix-foreground = ${colors.background-alt}
 
-label-focused = %name%
-label-focused-foreground = ${colors.foreground-alt}
-label-focused-background = ${colors.background-alt}
+;label-focused = %name%
+label-focused = "●"
+label-focused-foreground = ${colors.salmon}
+label-focused-background = ${colors.darkgrey}
 label-focused-underline= ${colors.primary}
 label-focused-overline= ${colors.primary}
 label-focused-padding = 3
+label-focused-font = 3
 
-label-occupied = %name%
+label-occupied = "●"
 label-occupied-padding = 3
-label-occupied-foreground = ${colors.salmon}
+label-occupied-foreground = ${colors.foreground}
+label-occupied-background = ${colors.darkgrey}
+label-occupied-font = 3
 
-label-urgent = %name%
-label-urgent-background = ${colors.alert}
+label-urgent = "●"
+label-urgent-foreground = ${colors.alert}
+label-urgent-background = ${colors.darkgrey}
 label-urgent-padding = 3
+label-urgent-font = 3
 
-label-empty = %name%
+label-empty = "○"
 label-empty-foreground = ${colors.foreground}
+label-empty-background = ${colors.darkgrey}
 label-empty-padding = 3
+label-empty-font = 3
 
 
 ;----------------------------------------------------------
@@ -307,18 +320,32 @@ label-padding = 1
 ;	          T E X T    M O D U L E S
 ;----------------------------------------------------------
 
-[module/arrow]
+[module/pipe]
 type = custom/text
 content = "|"
-content-background = #424242
-content-foreground = #2E2E2E
+content-background = ${colors.background}
+content-foreground = ${colors.darkgrey}
 content-padding = 1
 
-[module/bluelike]
+[module/darkarrow]
 type = custom/text
-content = " "
-content-background = #58ffef
-content-foreground = #555753
+content = " "
+content-background = ${colors.lightgrey}
+content-foreground = ${colors.darkgrey}
+content-padding = 0
+
+[module/lightarrow]
+type = custom/text
+content = " "
+content-background = ${colors.darkgrey}
+content-foreground = ${colors.lightgrey}
+content-padding = 0
+
+[module/rightarrow]
+type = custom/text
+content = ""
+content-background = ${colors.lightgrey}
+content-foreground = ${colors.darkgrey}
 content-padding = 0
 
 
@@ -334,8 +361,8 @@ interval = 2
 
 ;format-connected-prefix = " "
 format-connected-prefix = " net"
-format-connected-background = #424242
-format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.darkgrey}
+format-connected-foreground = ${colors.lightgrey}
 format-prefix-foreground = ${colors.foreground}
 format-connected = <label-connected>
 format-disconnected-prefix = " net"
@@ -347,9 +374,7 @@ format-disconnected = <label-disconnected>
 
 label-connected-padding = 1
 label-connected = %downspeed%
-label-connected-foreground = ${colors.foreground}
 label-disconnected = not connected
-label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 
 ramp-signal-1 = 
@@ -393,11 +418,13 @@ time-alt = %H:%M:%S
 
 format = <label>
 ;format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
+format-suffix = " "
+format-prefix-foreground = ${colors.lightgrey}
+format-foreground = ${colors.lightgrey}
+format-background = ${colors.darkgrey}
 ;format-overline = #0a6cf5
 label = %date% %time%
 label-font = 1
-label-foreground = ${colors.foreground}
 label-padding = 1
 
 
@@ -416,18 +443,18 @@ mapping = true
 format-volume = <label-volume>
 ;format-volume = <bar-volume>
 format-volume-prefix = " vol"
-format-volume-prefix-foreground = ${colors.foreground}
-format-volume-prefix-background = ${colors.background}
+format-volume-prefix-foreground = ${colors.lightgrey}
+format-volume-prefix-background = ${colors.darkgrey}
 label-volume = %percentage%
-label-volume-foreground = ${colors.foreground}
-label-volume-background = ${colors.background}
+label-volume-foreground = ${colors.lightgrey}
+label-volume-background = ${colors.darkgrey}
 ;label-volume-underline= #58ffef
 ;label-volume-overline= #58ffef
 
 format-muted-prefix = " "
 format-muted-suffix = " "
 format-muted-foreground = ${colors.secondary}
-format-muted-background = ${colors.foreground-alt}
+format-muted-background = ${colors.darkgrey}
 label-muted = muted
 label-volume-padding = 1
 
@@ -484,26 +511,30 @@ format-discharging = <label-discharging>
 
 ;format-full-prefix = " "
 format-full-prefix = "bat "
-;format-full-prefix-foreground = #8ae234
+format-full-prefix-foreground = ${colors.darkgrey}
+;format-full-prefix-background = ${colors.lightgrey}
 ;format-full-suffix = " "
 format-full-padding = 1
 ;format-charging-suffix = " "
 ;format-charging-prefix = " "
 format-charging-prefix = "bat "
-;format-charging-prefix-foreground = #FFFFFF
+format-charging-prefix-foreground = ${colors.darkgrey}
 ;format-charging-suffix-background = #222
-;format-charging-background = #4e5942
+format-charging-foregroun =${colors.darkgrey}
 format-charging-padding = 1
 ;format-discharging-prefix = " "
 format-discharging-prefix = "bat "
-;format-discharging-prefix-foreground = #FFFFFF
+format-discharging-prefix-foreground = ${colors.darkgrey}
 ;format-discharging-suffix-background = #222
-;format-discharging-background = #222
+format-discharging-foreground = ${colors.darkgrey}
 format-discharging-padding = 1
 
 label-charging = %percentage%
+label-charging-foreground = ${colors.darkgrey}
 label-discharging = %percentage%
+label-discharging-foreground = ${colors.darkgrey}
 label-full = %percentage%
+label-full-foreground = ${colors.darkgrey}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -527,8 +558,8 @@ warn-temperature = 70
 interval = 2
 
 format-prefix = " temp"
-format-prefix-foreground = ${colors.foreground}
-format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.darkgrey}
+format-prefix-background = ${colors.lightgrey}
 format = <label>
 ;format-underline = #c17d11
 ;format-overline = #c17d11
@@ -537,7 +568,7 @@ format-warn = <label-warn>
 
 label = %temperature%
 label-background = ${colors.background}
-label-foreground = ${colors.foreground}
+label-foreground = ${colors.darkgrey}
 label-warn = %temperature%
 label-warn-background = ${colors.background-alt}
 label-warn-foreground = ${colors.alert}
@@ -558,12 +589,13 @@ type = custom/menu
 
 ;label-open = "  "
 label-open = "   »   "
+label-open-font = 4
 ;❧
-label-open-foreground = ${colors.foreground}
+label-open-foreground = ${colors.darkgrey}
 label-open-background = ${colors.background}
 ;label-open-overline = #ef2929
 ;label-close =  cancel
-label-close = " cancel "
+label-close = "   cancel "
 label-close-foreground = ${colors.lime}
 label-separator = |
 label-separator-foreground = ${colors.background-alt}
