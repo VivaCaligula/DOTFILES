@@ -9,4 +9,4 @@ It used to look like this:
 
 Now it looks like this (with wal enabled):
 
-<img src="https://i.imgur.com/d8mxVlj.png">
+<img src="https://i.imgur.com/8Zk642P.png">
