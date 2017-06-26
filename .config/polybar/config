@@ -12,9 +12,10 @@
 [colors]
 peach = #FFCD98
 lime = #CADC79
+salmon = #d97464
 background = #424242
 background-alt = #2E2E2E
-foreground = #777777
+foreground = #888888
 foreground-alt = #555555
 primary = #FFCD98
 secondary = #d97464
@@ -176,10 +177,10 @@ enable-scroll = true
 
 ; Set the scroll cycle direction
 ; Default: true
-reverse-scroll = true
+reverse-scroll = false
 
 ;format-suffix = |
-format-suffix-foreground = #2E2E2E
+format-suffix-foreground = ${colors.background-alt}
 
 label-focused = %name%
 label-focused-foreground = ${colors.foreground-alt}
@@ -190,7 +191,7 @@ label-focused-padding = 3
 
 label-occupied = %name%
 label-occupied-padding = 3
-label-occupied-foreground = ${colors.peach}
+label-occupied-foreground = ${colors.salmon}
 
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
@@ -556,14 +557,14 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 ;label-open = "  "
-label-open = " »  "
+label-open = "   »   "
 ;❧
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.background}
 ;label-open-overline = #ef2929
 ;label-close =  cancel
 label-close = " cancel "
-label-close-foreground = ${colors.foreground-alt}
+label-close-foreground = ${colors.lime}
 label-separator = |
 label-separator-foreground = ${colors.background-alt}
 
