@@ -14,13 +14,13 @@ peach = #FFCD98
 lime = #CADC79
 salmon = #d97464
 darkgrey = #2e2e2e
-lightgrey = #424242
-background = #424242
+lightgrey = #444444
+background = #444444
 background-alt = #2E2E2E
 foreground = #888888
 foreground-alt = #555555
 primary = #FFCD98
-secondary = #d97464
+secondary = #fa8370
 alert = #bd2c40
 
 
@@ -35,7 +35,7 @@ margin-bottom = 0
 [bar/rome]
 monitor = ${env:MONITOR:LVDS-1}
 width = 100%
-height = 21
+height = 20
 offset-x = 0
 offset-y = 0
 fixed-center = true
@@ -67,15 +67,8 @@ module-margin-right = 0
 
 font-0 = Terminus:size=10;2
 font-1 = PowerlineSymbols:size=14;3
-font-2 = Terminus:size=10;0
-font-3 = Terminus:size=10;1
-;font-2 = GohuFont:size=10;1
-;font-3 = Roboto:size=10;1
-;font-4 = -*-gohufont-medium-*-*-*-10-*-*-*-*-*-*-*;1
-;font-5 = FontAwesome:size=10;6
-;font-6 = PowerlineSymbols:size=14;1
-;font-7 = siji:pixelsize=10;1
-;font-8 = GohuFont:pixelsize=10:weight=bold;1
+font-2 = Terminus:size=10;1
+font-3 = Terminus:size=16;2
 
 
 ;----------------------------------------------------------
@@ -111,7 +104,7 @@ scroll-down = bspwm-deskprev
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 50
+label-maxlen = 20
 format-padding = 1
 label-padding-left = 1
 label-padding-right = 1
@@ -198,7 +191,7 @@ label-focused-font = 3
 
 label-occupied = "●"
 label-occupied-padding = 3
-label-occupied-foreground = ${colors.foreground}
+label-occupied-foreground = ${colors.lightgrey}
 label-occupied-background = ${colors.darkgrey}
 label-occupied-font = 3
 
@@ -209,7 +202,7 @@ label-urgent-padding = 3
 label-urgent-font = 3
 
 label-empty = "○"
-label-empty-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.lightgrey}
 label-empty-background = ${colors.darkgrey}
 label-empty-padding = 3
 label-empty-font = 3
@@ -588,7 +581,7 @@ ramp-foreground = ${colors.foreground-alt}
 type = custom/menu
 
 ;label-open = "  "
-label-open = "   »   "
+label-open = " »   "
 label-open-font = 4
 ;❧
 label-open-foreground = ${colors.darkgrey}

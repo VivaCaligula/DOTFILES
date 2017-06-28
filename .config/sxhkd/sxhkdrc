@@ -10,7 +10,7 @@ super + Return
 
 # program launcher
 super + space
-	dmenu_run -nb "#424242" -nf "#F7BE81" -sb "#2E2E2E" -sf "#cadc79" -fn Monospace-12:normal
+	dmenu_run -nb "#424242" -nf "#1e1e1e" -sb "#2E2E2E" -sf "#555555" -fn Monospace-11:normal
 
 # make sxhkd reload its configuration files:
 super + Escape
