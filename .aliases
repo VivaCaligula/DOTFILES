@@ -147,6 +147,11 @@ alias taskmanager='htop'
 alias process='ps'
 alias processes='ps'
 
+###  Script Shit  ###
+alias hax='sh ~/scripts/nmap.sh'
+alias ss='sh ~/scripts/ss.sh'
+alias screenshot='sh ~/scripts/ss.sh'
+
 ###  Other Shit  ###
 alias exi='exit'
 alias eixt='exit'

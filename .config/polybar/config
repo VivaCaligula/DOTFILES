@@ -585,7 +585,7 @@ label-open = " »   "
 label-open-font = 4
 ;❧
 label-open-foreground = ${colors.darkgrey}
-label-open-background = ${colors.background}
+;label-open-background = ${colors.background}
 ;label-open-overline = #ef2929
 ;label-close =  cancel
 label-close = "   cancel "
@@ -595,7 +595,16 @@ label-separator-foreground = ${colors.background-alt}
 
 menu-0-0 = " logout "
 menu-0-0-exec = pkill x
-menu-0-0-foreground = ${colors.secondary}
+menu-0-0-foreground = ${colors.peach}
+menu-0-1 = " reboot "
+menu-0-1-exec = systemctl reboot
+menu-0-1-foreground = ${colors.salmon}
+menu-0-2 = " shutdown "
+menu-0-2-exec = systemctl poweroff
+menu-0-2-foreground = ${colors.salmon}
+menu-0-3 = " »   "
+menu-0-3-foreground = ${colors.darkgrey}
+menu-0-3-font = 4
 
 
 ;----------------------------------------------------------
