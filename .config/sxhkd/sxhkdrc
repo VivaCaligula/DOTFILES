@@ -140,7 +140,7 @@ super + alt + Right
 super + alt + Up
         bspc config window_gap {32,46,64,128}
 super + alt + Down
-        bspc config window_gap {32,16,8,0}
+        bspc config window_gap {16,8,4,0}
 
 # Volume
 super + shift + Up

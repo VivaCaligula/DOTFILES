@@ -30,7 +30,7 @@ alert = #bd2c40
 
 [global/wm]
 margin-top = 0
-margin-bottom = 0
+margin-bottom = 20
 
 [bar/rome]
 monitor = ${env:MONITOR:LVDS-1}
