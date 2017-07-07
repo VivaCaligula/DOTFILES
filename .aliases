@@ -149,6 +149,8 @@ alias processes='ps'
 
 ###  Script Shit  ###
 alias hax='sh ~/scripts/nmap.sh'
+alias lock='sh ~/scripts/lock.sh'
+alias lockscreen='sh ~/scripts/lock.sh'
 alias ss='sh ~/scripts/ss.sh'
 alias screenshot='sh ~/scripts/ss.sh'
 alias colors='sh ~/scripts/colors.sh'
