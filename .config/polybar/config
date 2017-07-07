@@ -510,23 +510,24 @@ adapter = AC0
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.xcolor7}
+format-charging-background = ${colors.xcolor1}
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.xcolor7}
+format-discharging-background = ${colors.xcolor1}
 format-full = <label-full>
+format-full-foreground = ${colors.xcolor7}
+format-full-background = ${colors.xcolor1}
 
 label-charging = "%percentage%% "
-label-charging-foreground = ${colors.xcolor7}
-label-charging-background = ${colors.xcolor1}
 label-discharging = "%percentage%% "
 label-discharging-foreground = ${colors.xcolor7}
-label-discharging-background = ${colors.xcolor1}
 label-full = "  %percentage%% "
-label-full-foreground = ${colors.xcolor7}
-label-full-background = ${colors.xcolor1}
 
 ramp-capacity-0 = 
 ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1 = 
-ramp-capacity-0-foreground = ${colors.alert}
+ramp-capacity-1-foreground = ${colors.alert}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 

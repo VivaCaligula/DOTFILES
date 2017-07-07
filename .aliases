@@ -154,6 +154,8 @@ alias lockscreen='sh ~/scripts/lock.sh'
 alias ss='sh ~/scripts/ss.sh'
 alias screenshot='sh ~/scripts/ss.sh'
 alias colors='sh ~/scripts/colors.sh'
+alias pipes='sh ~/scripts/pipes.sh -f30 -p5 -r0'
+alias matrix='cmatrix -s'
 
 ###  Other Shit  ###
 alias exi='exit'
