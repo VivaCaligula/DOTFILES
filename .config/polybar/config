@@ -464,7 +464,7 @@ label-volume = %percentage%
 label-volume-foreground = ${colors.xcolor7}
 label-volume-background = ${colors.xcolor1}
 label-muted =  muted
-label-muted-foreground = ${colors.salmon}
+label-muted-foreground = ${colors.xcolor0}
 label-muted-background = ${colors.xcolor1}
 
 ramp-volume-0 = " "
@@ -544,17 +544,18 @@ animation-charging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 70
-interval = 2
+interval = 1
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 ;format-prefix = " temp"
 format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor7}
+format-warn-foreground = ${colors.alert}
+format-warn-background = ${colors.xcolor7}
 
 label = %temperature%
 label-warn = %temperature%
-label-warn-foreground = ${colors.alert}
 
 ramp-0 = 
 ramp-1 = 
