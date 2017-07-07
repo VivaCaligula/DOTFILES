@@ -435,7 +435,7 @@ date = "  %d/%m/%Y"
 date-alt = ""
 
 time = ""
-time-alt = "  %H:%M:%S"
+time-alt = "    %H:%M:%S  "
 
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
