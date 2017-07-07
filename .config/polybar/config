@@ -524,7 +524,9 @@ label-full-foreground = ${colors.xcolor7}
 label-full-background = ${colors.xcolor1}
 
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-1 = 
+ramp-capacity-0-foreground = ${colors.alert}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -543,8 +545,8 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 70
-interval = 1
+warn-temperature = 65
+interval = 2
 
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
