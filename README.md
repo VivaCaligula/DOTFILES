@@ -10,3 +10,7 @@ It used to look like this:
 Now it looks more like this (with wal enabled):
 
 <img src="https://i.imgur.com/tB3XTR8.gif">
+
+Latest screenshot:
+
+<img src="https://i.imgur.com/8i4FHnn.png">
