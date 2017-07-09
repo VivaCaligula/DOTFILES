@@ -1,7 +1,5 @@
 ;=========================================================;
-;                                                         ;
-;   Snax's modified polybar config. Original by uNd0xR.   ;
-;                                                         ;
+;                  Snax's polybar config.                 ;
 ;=========================================================;
 
 
@@ -431,7 +429,7 @@ label-disconnected = %ifname% disconnected
 type = internal/date
 interval = 1
 
-date = "  %d/%m/%Y"
+date = "  %Y/%m/%d"
 date-alt = ""
 
 time = ""

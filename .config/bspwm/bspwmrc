@@ -1,9 +1,7 @@
 #! /bin/sh
-#===================#
-#                   #
-#  Snax's bspwmrc!  #
-#                   #
-#===================#
+#=========================#
+#     Snax's bspwmrc.     #
+#=========================#
 
 ### GENERAL STUFF ###
 bspc monitor -d trm ffx atm vlc add
