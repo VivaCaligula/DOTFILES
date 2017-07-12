@@ -2,13 +2,15 @@
 #     Snax's sxhkdrc.     #
 #=========================#
 
+
 # terminal emulator
 super + Return
 	termite
 
 # program launcher
 super + space
-  dmenu_run -nb "#303030" -nf "#555555" -sb "#222222" -sf "#d97464" -fn Monospace-12:normal
+  sh ~/scripts/dmenu.sh
+#  dmenu_run -nb "#303030" -nf "#555555" -sb "#222222" -sf "#d97464" -fn Monospace-12:normal
 
 # make sxhkd reload its configuration files:
 super + Escape

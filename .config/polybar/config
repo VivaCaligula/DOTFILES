@@ -43,12 +43,12 @@ xcolor15 = ${xrdb:color15}
 
 [global/wm]
 margin-top = 0
-margin-bottom = 21
+margin-bottom = 22
 
 [bar/rome]
 monitor = ${env:MONITOR:LVDS-1}
 width = 100%
-height = 21
+height = 22
 offset-x = 0
 offset-y = 0
 fixed-center = true
@@ -81,10 +81,10 @@ module-margin-right = 0
 ;			F O N T S
 ;----------------------------------------------------------
 
-font-0 = Terminus:size=10;2
+font-0 = Terminus:size=10;1
 font-1 = PowerlineSymbols:size=15;3
 font-2 = FontAwesome:size=10;2
-font-3 = Terminus:size=16;3
+font-3 = Terminus:size=18;1
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
 
@@ -128,22 +128,22 @@ reverse-scroll = false
 label-focused = 
 label-focused-foreground = ${colors.xcolor7}
 label-focused-background = ${colors.xcolor1}
-label-focused-padding = 3
+label-focused-padding = 2
 label-focused-font = 3
 label-occupied = 
 label-occupied-foreground = ${colors.xcolor0}
 label-occupied-background = ${colors.xcolor1}
-label-occupied-padding = 3
+label-occupied-padding = 2
 label-occupied-font = 3
 label-urgent = 
 label-urgent-foreground = ${colors.alert}
 label-urgent-background = ${colors.xcolor1}
-label-urgent-padding = 3
+label-urgent-padding = 2
 label-urgent-font = 3
 label-empty = 
 label-empty-foreground = ${colors.xcolor0}
 label-empty-background = ${colors.xcolor1}
-label-empty-padding = 3
+label-empty-padding = 2
 label-empty-font = 3
 
 
@@ -433,7 +433,7 @@ date = "  %Y/%m/%d"
 date-alt = ""
 
 time = ""
-time-alt = "    %H:%M:%S  "
+time-alt = "   %H:%M:%S "
 
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
