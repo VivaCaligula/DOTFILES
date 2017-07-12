@@ -1,14 +1,14 @@
 {
 	"groups": {
-		"active_window_status": {"fg": "snerx:peach",   "bg": "gray0",    "attrs": []},
-		"window_status":        {"fg": "snerx:peach",     "bg": "gray1",    "attrs": []},
-		"activity_status":      {"fg": "yellow",     "bg": "gray0",    "attrs": []},
-		"bell_status":          {"fg": "red",        "bg": "gray0",    "attrs": []},
-		"window":               {"fg": "snerx:peach",      "bg": "gray1",    "attrs": []},
-		"window:divider":       {"fg": "snerx:peach",      "bg": "gray1",    "attrs": []},
-		"window:current":       {"fg": "gray1",      "bg": "snerx:peach", "attrs": []},
-		"window_name":          {"fg": "gray1",      "bg": "snerx:peach", "attrs": ["bold"]},
-		"session":              {"fg": "black",      "bg": "gray90",   "attrs": ["bold"]},
-		"session:prefix":       {"fg": "gray90",     "bg": "snerx:strawberry", "attrs": ["bold"]}
+		"active_window_status": {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor1", "attrs": []},
+		"window_status":        {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor0", "attrs": []},
+		"activity_status":      {"fg": "yellow",     "bg": "snerx:walcolor0",    "attrs": []},
+		"bell_status":          {"fg": "red",        "bg": "snerx:walcolor0",    "attrs": []},
+		"window":               {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor1", "attrs": []},
+		"window:divider":       {"fg": "snerx:walcolor0",      "bg": "snerx:walcolor1", "attrs": []},
+		"window:current":       {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor1", "attrs": []},
+		"window_name":          {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor1", "attrs": []},
+		"session":              {"fg": "snerx:walcolor7",      "bg": "snerx:walcolor0", "attrs": []},
+		"session:prefix":       {"fg": "snerx:walcolor0",      "bg": "snerx:walcolor7", "attrs": []}
 	}
 }
