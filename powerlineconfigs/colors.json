@@ -8,26 +8,21 @@
 		"darkgreen": 28,
 		"mediumgreen": 70,
 		"brightgreen": 148,
-
 		"darkestcyan": 23,
 		"darkcyan": 74,
 		"mediumcyan": 117,
 		"brightcyan": 159,
-
 		"darkestblue": 24,
 		"darkblue": 31,
-
 		"red": 1,
 		"darkestred": 52,
 		"darkred": 88,
 		"mediumred": 124,
 		"brightred": 160,
 		"brightestred": 196,
-
 		"darkestpurple": 55,
 		"mediumpurple": 98,
 		"brightpurple": 189,
-
 		"darkorange": 94,
 		"mediumorange": 166,
 		"brightorange": 208,
@@ -35,6 +30,13 @@
 
 		"yellow": 11,
 		"brightyellow": 220,
+		"lightyellowgreen": 106,
+		"gold3": 178,
+		"orangered": 202,
+		"steelblue": 67,
+		"darkorange3": 166,
+		"skyblue1": 117,
+		"khaki1": 228,
 
 		"gray0": 233,
 		"gray1": 235,
@@ -47,23 +49,15 @@
 		"gray8": 247,
 		"gray9": 250,
 		"gray10": 252,
-
 		"gray11": 234,
 		"gray90": 254,
-
 		"gray70": [249, "b3b3b3"],
-
-		"lightyellowgreen": 106,
-		"gold3": 178,
-		"orangered": 202,
-
-		"steelblue": 67,
-		"darkorange3": 166,
-		"skyblue1": 117,
-		"khaki1": 228,
 
 		"snerx:peach": [16, "F79F81"],
 		"snerx:strawberry": [9, "F96D5F"],
+		"snerx:walcolor0": 0,
+		"snerx:walcolor1": 1,
+		"snerx:walcolor7": 7,
 
 		"solarized:base03": [8, "002b36"],
 		"solarized:base02": [0, "073642"],

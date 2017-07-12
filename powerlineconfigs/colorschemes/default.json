@@ -1,8 +1,8 @@
 {
 	"name": "Default",
 	"groups": {
-		"information:additional":    { "fg": "gray6", "bg": "gray3", "attrs": [] },
-		"information:regular":       { "fg": "gray2", "bg": "gray4", "attrs": ["bold"] },
+		"information:additional":    { "fg": "snerx:walcolor7", "bg": "snerx:walcolor1", "attrs": [] },
+		"information:regular":       { "fg": "snerx:walcolor0", "bg": "snerx:walcolor1", "attrs": [] },
 		"information:highlighted":   { "fg": "white", "bg": "gray4", "attrs": [] },
 		"information:priority":      { "fg": "brightyellow", "bg": "darkorange", "attrs": [] },
 		"warning:regular":           { "fg": "white", "bg": "snerx:strawberry", "attrs": ["bold"] },
@@ -38,8 +38,8 @@
 		"battery_full":              { "fg": "red", "bg": "gray0", "attrs": [] },
 		"battery_empty":             { "fg": "white", "bg": "gray0", "attrs": [] },
 		"player":                    { "fg": "gray10", "bg": "black", "attrs": [] },
-		"user":                      { "fg": "gray2", "bg": "snerx:peach", "attrs": ["bold"] },
-		"branch":                    { "fg": "snerx:peach", "bg": "gray2", "attrs": [] },
+		"user":                      { "fg": "snerx:walcolor0", "bg": "snerx:walcolor7", "attrs": [] },
+		"branch":                    { "fg": "snerx:walcolor7", "bg": "snerx:walcolor1", "attrs": [] },
 		"branch_dirty":              { "fg": "brightyellow", "bg": "gray2", "attrs": [] },
 		"branch_clean":              { "fg": "gray9", "bg": "gray2", "attrs": [] },
 		"branch:divider":            { "fg": "gray7", "bg": "gray2", "attrs": [] },
@@ -47,7 +47,7 @@
 		"stash:divider":             "branch:divider",
 		"cwd":                       "information:additional",
 		"cwd:current_folder":        "information:regular",
-		"cwd:divider":               { "fg": "gray2", "bg": "gray3", "attrs": [] },
+		"cwd:divider":               { "fg": "snerx:walcolor0", "bg": "snerx:walcolor1", "attrs": [] },
 		"virtualenv":                { "fg": "white", "bg": "darkcyan", "attrs": [] },
 		"attached_clients":          { "fg": "gray8", "bg": "gray2", "attrs": [] }
 	}
