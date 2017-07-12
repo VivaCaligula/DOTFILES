@@ -3,6 +3,19 @@
 #     Snax's bspwmrc.     #
 #=========================#
 
+
+### AUTOSTART ###
+xsetroot -cursor_name left_ptr
+sxhkd &
+#feh --bg-scale /home/caligula/Pictures/wallpapers/file.name
+#xsetroot -solid "#E2A96A"
+#hsetroot -solid "#67605e"
+wal -i "$HOME/Pictures/wal"
+polybar rome &
+compton &
+redshift &
+termite &
+
 ### GENERAL STUFF ###
 bspc monitor -d trm ffx atm vlc add
 
@@ -35,21 +48,17 @@ bspc config pointer_follows_focus true
 #bspc config click_to_focus true
 
 ### COLORS ###
-bspc config normal_border_color '#2E2E2E'
-#bspc config focused_border_color '#FFCD98'
-bspc config focused_border_color '#444444'
-bspc config active_border_color '#2E2E2E'
-bspc config urgent_border_color '#CC0000'
-bspc config presel_feedback_color '#444444'
-
-### AUTOSTART ###
-xsetroot -cursor_name left_ptr
-sxhkd &
-#feh --bg-scale /home/caligula/Pictures/wallpapers/file.name
-#xsetroot -solid "#E2A96A"
-#hsetroot -solid "#67605e"
-wal -i "$HOME/Pictures/wal" -o wal-set
-polybar rome &
-compton &
-termite &
-redshift &
+# Set the custom colors from wal.
+color0=`sed -n '1p' ~/.cache/wal/colors`
+color1=`sed -n '2p' ~/.cache/wal/colors`
+color7=`sed -n '8p' ~/.cache/wal/colors`
+bspc config normal_border_color $color0
+bspc config focused_border_color $color7
+bspc config active_border_color $color1
+bspc config urgent_border_color $color1
+bspc config presel_feedback_color $color7
+#bspc config normal_border_color '#2E2E2E'
+#bspc config focused_border_color '#444444'
+#bspc config active_border_color '#2E2E2E'
+#bspc config urgent_border_color '#CC0000'
+#bspc config presel_feedback_color '#444444'
