@@ -14,5 +14,5 @@ Then it looked like this (with wal enabled):
 Now it looks like these:
 
 <img src="https://i.imgur.com/Gs9MLYS.png">
-
+.
 <img src="hhttps://i.imgur.com/RUST5qC.png">
