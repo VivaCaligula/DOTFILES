@@ -1,0 +1,19 @@
+#============================#
+#     Reminders and Info     #
+#============================#
+
+:: Update Commands ::
+sudo pacman -Syu
+sudo yaourt -Syu
+sudo pacman-key --refresh-keys
+
+:: Git Commands ::
+git init     # To make a new repo
+git config --global user.name "NAME"
+git config --global user.email "EMAIL"
+git remote add origin https://github.com/VivaCaligula/DOTFILES.git
+
+:: Atom Packages ::
+Themes: dark-flat-ui, outlander-syntax
+Packages: language-vb, Minimap, Pigments, minimap-pigments, color-picker, split-diff, minimap-split-diff, highlight-line, highlight-selected, atom-clock, activate-power-mode, tree-view-autoresize
+Disable stuff in general settings but also Settings > Packages > Whitespace
