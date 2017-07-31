@@ -161,48 +161,56 @@ content-padding = 1
 [module/LeftStripe]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/arrow1]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor0}
 
 [module/arrow2]
 type = custom/text
 content = " "
+content-font = 2
 content-foreground = ${colors.xcolor7}
 content-background = ${colors.xcolor1}
 
 [module/arrow3]
 type = custom/text
 content = " "
+content-font = 2
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor7}
 
 [module/RightStripe]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/RightArrow1]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor1}
 content-background = ${colors.xcolor0}
 
 [module/MiddleArrowLeft]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/MiddleArrowRight]
 type = custom/text
 content = ""
+content-font = 2
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
