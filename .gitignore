@@ -22,7 +22,6 @@
 # Keep specific folders open with their specific dotfiles.
 !.config/
 .config/*
-!.config/redshift.conf
 !.config/bspwm/
 .config/bspwm/*
 !.config/bspwm/bspwmrc
