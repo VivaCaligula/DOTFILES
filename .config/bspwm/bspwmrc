@@ -36,7 +36,8 @@ bspc rule -a Chromium desktop='^2' follow=on
 bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a Vlc desktop='^4' follow=on
-bspc rule -a feh state=floating
+#bspc rule -a feh state=floating
+bspc rule -a Thunar state=floating
 bspc rule -a Termite state=floating
 bspc rule -a Gnome-terminal state=floating
 #bspc rule -a Kupfer.py focus=on
