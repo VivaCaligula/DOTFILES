@@ -16,6 +16,9 @@ git add *
 git commit -m "Text"
 git push origin master
 
+:: Font Checker ::
+fc-list | grep FONT_NAME
+
 :: Atom Packages ::
 Themes: dark-flat-ui, outlander-syntax
 Packages: language-vb, Minimap, Pigments, minimap-pigments, color-picker, split-diff, minimap-split-diff, highlight-line, highlight-selected, atom-clock, activate-power-mode, tree-view-autoresize
