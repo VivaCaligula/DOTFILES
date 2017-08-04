@@ -6,8 +6,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
 #export ZSH=/home/caligula/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -83,6 +83,9 @@ fi
 
 ### MY SHIT STARTS HERE ###
 #=========================#
+
+# Path to ruby installation.
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
 # This used to be useful, but powerline is mostly broken now, the modified
 # agnoster theme "roman" loads way faster and does the same stuff for zsh.

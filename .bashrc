@@ -16,12 +16,16 @@ shopt -s histappend
 ### MY SHIT STARTS HERE ###
 #=========================#
 
-# For powerline
-# export PYTHONPATH=/usr/lib/python3.6/site-packages
-# powerline-daemon -q
-# POWERLINE_BASH_CONTINUATION=1
-# POWERLINE_BASH_SELECT=1
-# . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+# Path to ruby installation.
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
+# This used to be useful, but powerline is mostly broken now, the modified
+# agnoster theme "roman" loads way faster and does the same stuff for zsh.
+    # export PYTHONPATH=/usr/lib/python3.6/site-packages
+    # powerline-daemon -q
+    # POWERLINE_BASH_CONTINUATION=1
+    # POWERLINE_BASH_SELECT=1
+    # . /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 
 # import colorschemes from wal
 (wal -r -t &)

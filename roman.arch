@@ -6,6 +6,7 @@
 sudo pacman -Syu
 sudo yaourt -Syu
 sudo pacman-key --refresh-keys
+gem update colorls
 
 :: Git Commands ::
 git init     # To make a new repo
