@@ -6,16 +6,17 @@
 *
 
 # But not these files.
-!.gitignore
+!.aliases
 !.bashrc
 !.bashrcsnerx
-!.zshrc
-!.aliases
+!.gitignore
 !.tmux.conf
 !.xinitrc
+!.zshrc
 !compton.conf
 !README.md
 !roman.arch
+!roman.zsh-theme
 
 # Keep specific folders open with their specific dotfiles.
 !.config/
@@ -32,11 +33,6 @@
 !.config/termite/
 .config/termite/*
 !.config/termite/config
-!.oh-my-zsh/
-.oh-my-zsh/*
-!.oh-my-zsh/themes/
-.oh-my-zsh/themes/*
-!.oh-my-zsh/themes/roman.zsh-theme
 !Pictures/
 Pictures/*
 !Pictures/wal/
