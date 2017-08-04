@@ -1,5 +1,5 @@
 ;=========================================================;
-;                  Snax's polybar config.                 ;
+;                Caligula's polybar config.               ;
 ;=========================================================;
 
 
@@ -82,8 +82,8 @@ module-margin-right = 0
 ;----------------------------------------------------------
 
 ;font-0 = Monospace:size=8;1
-font-0 = Terminus:size=10;1
-font-1 = PowerlineSymbols:size=15;3
+font-0 = PowerlineSymbols:size=15;3
+font-1 = Terminus:size=10;1
 font-2 = FontAwesome:size=10;2
 font-3 = Terminus:size=18;1
 ; Extra symbols: http://fontawesome.io/cheatsheet/
@@ -329,12 +329,9 @@ label = %percentage%
 bar-width = 10
 bar-indicator = │
 bar-indicator-foreground = #ff
-bar-indicator-font = 2
 bar-fill = ─
-bar-fill-font = 2
 bar-fill-foreground = #9f78e1
 bar-empty = ─
-bar-empty-font = 2
 bar-empty-foreground = ${colors.xcolor1}
 
 
@@ -490,11 +487,8 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = true
 bar-volume-indicator = "|"
-bar-volume-indicator-font = 1
 bar-volume-fill = ─
-bar-volume-fill-font = 5
 bar-volume-empty = ─
-bar-volume-empty-font = 5
 
 
 ;----------------------------------------------------------

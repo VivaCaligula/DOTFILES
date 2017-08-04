@@ -1,17 +1,18 @@
-#=============================================#
-#     Snax's .zshrc with Powerline & Wal!     #
-#=============================================#
+#=================================================#
+#     Caligula's .zshrc with Powerline & Wal!     #
+#=================================================#
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/caligula/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
+#export ZSH=/home/caligula/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="roman"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -21,10 +22,10 @@ ZSH_THEME="agnoster"
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=10
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -36,12 +37,12 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -67,25 +68,27 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nano'
+fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+#export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+#export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 
 ### MY SHIT STARTS HERE ###
 #=========================#
 
-# export PYTHONPATH=/usr/lib/python3.6/site-packages
-# powerline-daemon -q
-# source $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
+# This used to be useful, but powerline is mostly broken now, the modified
+# agnoster theme "roman" loads way faster and does the same stuff for zsh.
+    # export PYTHONPATH=/usr/lib/python3.6/site-packages
+    # powerline-daemon -q
+    # source $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
 
 # import colorschemes from wal
 (wal -r -t &)

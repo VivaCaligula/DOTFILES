@@ -1,8 +1,6 @@
-#===================================#
-#                                   #
-#  Snax's .gitignore for dotfiles.  #
-#                                   #
-#===================================#
+#=============================================#
+#     Caligula's .gitignore for dotfiles.     #
+#=============================================#
 
 # Ignore everything.
 *
@@ -34,9 +32,14 @@
 !.config/termite/
 .config/termite/*
 !.config/termite/config
-!powerlineconfigs/
-!powerlineconfigs/*
+!.oh-my-zsh/
+.oh-my-zsh/*
+!.oh-my-zsh/themes/
+.oh-my-zsh/themes/*
+!.oh-my-zsh/themes/roman.zsh-theme
 !Pictures/
 Pictures/*
 !Pictures/wal/
 !Pictures/wal/*
+!powerlineconfigs/
+!powerlineconfigs/*
