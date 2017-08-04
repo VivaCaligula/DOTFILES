@@ -17,7 +17,7 @@ redshift &
 termite &
 
 ### GENERAL STUFF ###
-bspc monitor -d trm ffx atm vlc add
+bspc monitor -d trm ffx atm dis vlc
 
 bspc config border_width         4
 bspc config window_gap           16
@@ -35,8 +35,8 @@ bspc config history_aware_focus  true
 bspc rule -a Chromium desktop='^2' follow=on
 bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Atom desktop='^3' follow=on state=fullscreen
-bspc rule -a Vlc desktop='^4' follow=on
-bspc rule -a discord desktop='^5' follow=on state=fullscreen
+bspc rule -a discord desktop='^4' follow=on state=fullscreen
+bspc rule -a Vlc desktop='^5' follow=on
 #bspc rule -a feh state=floating
 #bspc rule -a cool-retro-term state=floating
 bspc rule -a Thunar state=floating
