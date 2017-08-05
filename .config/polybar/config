@@ -43,12 +43,12 @@ xcolor15 = ${xrdb:color15}
 
 [global/wm]
 margin-top = 0
-margin-bottom = 22
+margin-bottom = 21
 
 [bar/rome]
 monitor = ${env:MONITOR:LVDS-1}
 width = 100%
-height = 22
+height = 21
 offset-x = 0
 offset-y = 0
 fixed-center = true

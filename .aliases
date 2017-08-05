@@ -96,8 +96,6 @@ alias changeowner='chown'
 alias modowner='chown'
 
 ###  Program Shit  ###
-alias d='sh ~/scripts/dmenu.sh'
-alias dmenu='sh ~/scripts/dmenu.sh'
 alias n='nano'
 alias na='nano'
 alias nan='nano'
@@ -120,6 +118,7 @@ alias process='ps'
 alias processes='ps'
 
 ###  Script Shit  ###
+alias dmenu='sh ~/scripts/dmenu.sh'
 alias hax='sh ~/scripts/nmap.sh'
 alias lock='sh ~/scripts/lock.sh'
 alias lockscreen='sh ~/scripts/lock.sh'
