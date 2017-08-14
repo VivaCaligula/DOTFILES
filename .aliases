@@ -151,6 +151,7 @@ alias clipboard='history'
 alias commands='history'
 alias copypaste='history'
 alias terminal='tty'
-lol() { echo -e "Don't get funny with me, ${USER}."; }
-lmao() { echo -e "Ayy, ${USER}."; }
-asdf() { echo -e "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }
+lol() { echo "Don't get funny with me, ${USER}."; }
+ayy() { echo "lmao"; }
+lmao() { echo "Ayy, ${USER}."; }
+asdf() { echo "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }
