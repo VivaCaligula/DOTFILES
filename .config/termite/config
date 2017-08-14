@@ -3,58 +3,63 @@
 #====================================#
 
 [options]
-scroll_on_output = true
-scroll_on_keystroke = true
-audible_bell = true
-visible_bell = true
-mouse_autohide = true
-dynamic_title = true
-urgent_on_bell = true
-#font = Monospace 8
-font = Terminus 9
-cursor_blink = true
-cursor_shape = block
-scrollback_lines = 1024
-icon_name = terminal
-transparency = 1.7
-pseudo_transparency = false
-
+    scroll_on_output = true
+    scroll_on_keystroke = true
+    audible_bell = true
+    visible_bell = true
+    mouse_autohide = true
+    dynamic_title = true
+    urgent_on_bell = true
+    cursor_blink = true
+    cursor_shape = block
+    search_wrap = true
+    allow_bold = true
+    # font = Monospace 8
+    # font = xos4 Terminus 12px
+    font = Terminus 9
+    geometry = 475x265
+    scrollback_lines = 5000
+    icon_name = terminal
+    transparency = 1.7
+    pseudo_transparency = false
+    clickable_url = true
+    browser = w3m
 
 #### SNAX'S COLORS ####
-  [colors]
-  foreground = #FFCD98
-  foreground_bold = #FFCD98
-  # background = #424242
-  # For transparent BG
-  background = rgba(63, 63, 63, 0.90)
-  cursor = #FFCD98
-  cursor_foreground = #424242
-  # If unset, will reverse FG and BG
-  #highlight = #F79F81
+    [colors]
+    foreground = #FFCD98
+    foreground_bold = #FFCD98
+    # background = #424242
+    # For transparent BG
+    background = rgba(63, 63, 63, 0.90)
+    cursor = #FFCD98
+    cursor_foreground = #424242
+    # If unset, will reverse FG and BG
+    #highlight = #F79F81
 
-  ## BLACK ##
-  color0 = #333333
-  color8 = #6c6d6e
-  ## RED ##
-  color1 = #DF6A5E
-  color9 = #F96D5F
-  ## GREEN ##
-  color2 = #99CC99
-  color10 = #76C8B2
-  ## YELLOW ##
-  color3 = #F4E494
-  color11 = #F4E494
-  ## BLUE ##
-  color4 = #7EB0E2
-  color12 = #95b9de
-  ## MAGENTA ##
-  color5 = #CC99CC
-  color13 = #E3B0E3
-  ## CYAN ##
-  color6 = #68C4C4
-  color14 = #7CD9D9
-  ## WHITE ##
-  color7 = #D3D0C8
-  color15 = #F2F0EC
-  ## PEACH CUSTOM FOR OTHER PROGS ##
-  color16 = #FFCD98
+    ## BLACK ##
+    color0 = #333333
+    color8 = #6c6d6e
+    ## RED ##
+    color1 = #DF6A5E
+    color9 = #F96D5F
+    ## GREEN ##
+    color2 = #99CC99
+    color10 = #76C8B2
+    ## YELLOW ##
+    color3 = #F4E494
+    color11 = #F4E494
+    ## BLUE ##
+    color4 = #7EB0E2
+    color12 = #95b9de
+    ## MAGENTA ##
+    color5 = #CC99CC
+    color13 = #E3B0E3
+    ## CYAN ##
+    color6 = #68C4C4
+    color14 = #7CD9D9
+    ## WHITE ##
+    color7 = #D3D0C8
+    color15 = #F2F0EC
+    ## PEACH CUSTOM FOR OTHER PROGS ##
+    color16 = #FFCD98
