@@ -14,7 +14,7 @@ wal -i "$HOME/Pictures/wal"
 polybar rome &
 compton &
 redshift &
-# termite &
+termite &
 
 ### GENERAL STUFF ###
 bspc monitor -d trm ffx atm dis vlc
@@ -62,6 +62,3 @@ bspc config presel_feedback_color $color7
 #bspc config active_border_color '#2E2E2E'
 #bspc config urgent_border_color '#CC0000'
 #bspc config presel_feedback_color '#444444'
-
-### CALIGULA'S DEFAULT LAUNCH ###
-sh /home/caligula/scripts/busyscreen.sh
