@@ -34,3 +34,19 @@ sudo ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 # Show hardware clock and write current software UTC time to hardware clock.
 sudo hwclock --show
 sudo hwclock --systohc
+
+:: Usefull Shell Script Stuff ::
+# Yn input options.
+while true
+do
+  # (1) prompt user, and read command line argument
+  read -p "Run the cron script now? " answer
+  # (2) handle the input we were given
+  case $answer in
+   [yY]* ) /usr/bin/wget -O - -q -t 1 http://www.example.com/cron.php
+           echo "Okay, just ran the cron script."
+           break;;
+   [nN]* ) exit;;
+   * )     echo "Dude, just enter Y or N, please.";;
+  esac
+done

@@ -5,14 +5,19 @@
 
 
 ###  Just The LS Shit  ###
-alias ls='colorls -a -sd && printf "\n"'
-alias l='colorls -a -sd && printf "\n"'
-alias la='colorls -a -l -sd && printf "\n"'
-alias lsa='colorls -a -l -sd && printf "\n"'
-alias lal='colorls -a -l -sd && printf "\n"'
-alias files='colorls -a -f -sf && printf "\n"'
-alias folders='colorls -a -d -sd && printf "\n"'
-alias report='colorls -a -sd -r && printf "\n"'
+superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.
+alias ls='superls'
+alias l='superls'
+superlsl() { colorls "$@" -a -l -sd && printf "\n"; } # Wombo combo list.
+alias la='superlsl'
+alias lsa='superlsl'
+alias lal='superlsl'
+lsfiles() { colorls "$@" -a -f -sf && printf "\n"; }
+alias files='lsfiles'
+lsfolders() { colorls "$@" -a -d -sd && printf "\n"; }
+alias folders='lsfolders'
+lsreport() { colorls "$@" -a -sd -r && printf "\n"; }
+alias report='lsreport'
 # alias ls='ls -a --color'
 # alias l='ls -a --color'
 # alias la='ls -alh --color'
@@ -21,10 +26,9 @@ alias report='colorls -a -sd -r && printf "\n"'
 # alias list='ls -alh --color'
 
 ###  Navigation Shit  ###
-cdls() { cd "$@" && ls; } # Combo command
+cdls() { cd "$@" && ls; } # Change dir and view contents.
 alias cd='cdls'
 alias c='cdls'
-alias C='cdls'
 alias go='cdls'
 alias goto='cdls'
 alias ..='cd ..'
@@ -104,12 +108,13 @@ alias ato='atom'
 alias lmux='tmux attach-session'
 alias r='ranger'
 alias neo='neofetch --block_range 0 15'
+alias matrix='cmatrix -s'
 alias snyph='python /var/www/public_html/snyph/api.py'
 alias weather='curl http://wttr.in/hacienda_heights'
 alias powa='cd /usr/lib/python3.6/site-packages/powerline/'
 alias net='netstat'
 alias netinfo='netstat'
-alias system='df -h -T; vmstat' # df displays free disk space, vmstat shows sysinfo
+alias system='printf "\n"; df -h -T; printf "\n"; vmstat; printf "\n"' # Free disk space & sysinfo.
 alias sysinfo='system'
 alias task='htop'
 alias tasks='htop'
@@ -118,17 +123,19 @@ alias process='ps'
 alias processes='ps'
 
 ###  Script Shit  ###
+alias busy='sh ~/scripts/busyscreen.sh'
+alias colors='sh ~/scripts/colors.sh'
 alias dmenu='sh ~/scripts/dmenu.sh'
-alias hax='sh ~/scripts/nmap.sh'
 alias lock='sh ~/scripts/lock.sh'
 alias lockscreen='sh ~/scripts/lock.sh'
+alias hax='sh ~/scripts/nmap.sh'
+alias pipes='sh ~/scripts/pipes.sh -f30 -p5 -r0'
 alias ss='sh ~/scripts/ss.sh'
 alias screenshot='sh ~/scripts/ss.sh'
-alias colors='sh ~/scripts/colors.sh'
-alias pipes='sh ~/scripts/pipes.sh -f30 -p5 -r0'
-alias matrix='cmatrix -s'
-alias walcycle='sh ~/scripts/walcycle.sh'
+alias record='sh ~/scripts/termrecorder.sh'
+alias replay='sh ~/scripts/termreplayer.sh'
 alias cycle='sh ~/scripts/walcycle.sh'
+alias walcycle='sh ~/scripts/walcycle.sh'
 
 ###  Other Shit  ###
 alias exi='exit'

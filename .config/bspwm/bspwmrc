@@ -14,7 +14,7 @@ wal -i "$HOME/Pictures/wal"
 polybar rome &
 compton &
 redshift &
-termite &
+# termite &
 
 ### GENERAL STUFF ###
 bspc monitor -d trm ffx atm dis vlc
@@ -40,7 +40,7 @@ bspc rule -a Vlc desktop='^5' follow=on
 #bspc rule -a feh state=floating
 #bspc rule -a cool-retro-term state=floating
 bspc rule -a Thunar state=floating
-bspc rule -a Termite state=floating
+bspc rule -a Termite state=floating follow=on
 bspc rule -a Gnome-terminal state=floating
 #bspc rule -a Screenkey manage=off
 
@@ -62,3 +62,6 @@ bspc config presel_feedback_color $color7
 #bspc config active_border_color '#2E2E2E'
 #bspc config urgent_border_color '#CC0000'
 #bspc config presel_feedback_color '#444444'
+
+### CALIGULA'S DEFAULT LAUNCH ###
+sh /home/caligula/scripts/busyscreen.sh
