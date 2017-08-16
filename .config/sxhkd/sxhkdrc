@@ -143,7 +143,7 @@ super + alt + Right
         bspc node -z top 0 10; \
         bspc node -z right -20 0
 
-# Explan/contract bspwm's window gaps.
+# Expand/contract bspwm's window gaps.
 super + alt + Up
         bspc config window_gap {32,46,64,128}
 super + alt + Down
