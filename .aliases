@@ -5,19 +5,19 @@
 
 
 ###  Script Shit  ###
-alias busy='sh ~/scripts/busyscreen.sh'
-alias colors='sh ~/scripts/colors.sh'
-alias dmenu='sh ~/scripts/dmenu.sh'
-alias lock='sh ~/scripts/lock.sh'
-alias lockscreen='sh ~/scripts/lock.sh'
-alias hax='sh ~/scripts/nmap.sh'
-alias pipes='sh ~/scripts/pipes.sh -f30 -p5 -r0'
-alias ss='sh ~/scripts/ss.sh'
-alias screenshot='sh ~/scripts/ss.sh'
-alias record='sh ~/scripts/termrecorder.sh'
-alias replay='sh ~/scripts/termreplayer.sh'
-alias cycle='sh ~/scripts/walcycle.sh'
-alias walcycle='sh ~/scripts/walcycle.sh'
+alias busy='bash ~/scripts/busyscreen.sh'
+alias colors='bash ~/scripts/colors.sh'
+alias dmenu='bash ~/scripts/dmenu.sh'
+alias lock='bash ~/scripts/lock.sh'
+alias lockscreen='bash ~/scripts/lock.sh'
+alias hax='bash ~/scripts/nmap.sh'
+alias pipes='bash ~/scripts/pipes.sh -f30 -p5 -r0'
+alias ss='bash ~/scripts/ss.sh'
+alias screenshot='bash ~/scripts/ss.sh'
+alias record='bash ~/scripts/termrecorder.sh'
+alias replay='bash ~/scripts/termreplayer.sh'
+alias cycle='bash ~/scripts/walcycle.sh'
+alias walcycle='bash ~/scripts/walcycle.sh'
 
 ###  Just The LS Shit  ###
 superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.

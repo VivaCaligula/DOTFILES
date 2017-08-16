@@ -9,7 +9,7 @@ super + Return
 
 # Program launcher.
 super + space
-  sh ~/scripts/dmenu.sh
+  bash ~/scripts/dmenu.sh
 #  dmenu_run -nb "#303030" -nf "#555555" -sb "#222222" -sf "#d97464" -fn Monospace-12:normal
 
 # Make sxhkd reload its configuration files:
@@ -129,25 +129,7 @@ super + {Left,Down,Up,Right}
 
 # Lock the session.
 ctrl + shift + l
-  sh /home/caligula/scripts/lock.sh
-
-# Expand/contract a floating window on all sides.
-super + alt + Left
-        bspc node -z left -20 0; \
-        bspc node -z bottom 0 10; \
-        bspc node -z top 0 -10; \
-        bspc node -z right 20 0
-super + alt + Right
-        bspc node -z left 20 0; \
-        bspc node -z bottom 0 -10; \
-        bspc node -z top 0 10; \
-        bspc node -z right -20 0
-
-# Expand/contract bspwm's window gaps.
-super + alt + Up
-        bspc config window_gap {32,46,64,128}
-super + alt + Down
-        bspc config window_gap {16,8,4,0}
+  bash /home/caligula/scripts/lock.sh
 
 # Volume stuff.
 super + shift + Up
@@ -162,3 +144,21 @@ super + shift + Left
 	brightness down
 super + shift + Right
 	brightness up
+
+# Expand/contract a floating window on all sides.
+super + alt + Left
+	bspc node -z left -20 0; \
+	bspc node -z bottom 0 10; \
+	bspc node -z top 0 -10; \
+	bspc node -z right 20 0
+super + alt + Right
+	bspc node -z left 20 0; \
+	bspc node -z bottom 0 -10; \
+	bspc node -z top 0 10; \
+	bspc node -z right -20 0
+
+# Expand/contract bspwm's window gaps.
+super + alt + Up
+	bspc config window_gap {32,46,64,128}
+super + alt + Down
+	bspc config window_gap {16,8,4,0}

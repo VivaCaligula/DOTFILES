@@ -582,7 +582,7 @@ label-separator-foreground = ${colors.xcolor1}
 
 ; lock
 menu-0-0 = 
-menu-0-0-exec = sh ~/scripts/lock.sh
+menu-0-0-exec = bash ~/scripts/lock.sh
 menu-0-0-foreground = ${colors.lime}
 ; sleep
 menu-0-1 = 
@@ -622,7 +622,7 @@ label-separator-foreground = ${colors.darkgrey}
 menu-0-0 = " term "
 menu-0-0-exec = termite &
 menu-0-1 = " files "
-menu-0-1-exec = thundar &
+menu-0-1-exec = thunar &
 menu-0-2 = " text "
 menu-0-2-exec = atom &
 menu-1-0 = cancel
