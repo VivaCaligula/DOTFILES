@@ -133,7 +133,7 @@ super + {Left,Down,Up,Right}
 
 # Lock the session.
 ctrl + shift + l
-  bash /home/caligula/scripts/lock.sh
+  bash ~/scripts/lock.sh
 
 # Volume stuff.
 super + shift + Up

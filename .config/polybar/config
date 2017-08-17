@@ -81,11 +81,12 @@ module-margin-right = 0
 ;			F O N T S
 ;----------------------------------------------------------
 
-;font-0 = Monospace:size=8;1
 font-0 = PowerlineSymbols:size=15;3
 font-1 = Terminus:size=10;1
 font-2 = FontAwesome:size=10;2
-font-3 = Terminus:size=18;1
+font-3 = Terminus:size=18;0
+font-4 = Monospace:size=28;3
+font-5 = FontAwesome:size=26;7
 ; Extra symbols: http://fontawesome.io/cheatsheet/
 
 
@@ -93,13 +94,14 @@ font-3 = Terminus:size=18;1
 ;  	    M A I N   M O D U L E    L A Y O U T
 ;----------------------------------------------------------
 
-modules-left = bspwm RightArrow1 RightStripe powermenu xwindow
+modules-left = bspwm RightArrow1 appmenu xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = arrow1 LeftStripe arrow1 volume arrow2 network arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
+modules-right = powermenu arrow1 volume arrow2 network arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
 
 ; All modules in this config:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu memory network
-; eth date volume battery temperature powermenu quickmenu
+; eth date volume battery temperature appmenu powermenu github 
+; For custom script like VPN: https://github.com/jaagr/polybar/wiki/Module:-script
 
 
 ;----------------------------------------------------------
@@ -146,6 +148,15 @@ label-empty-foreground = ${colors.xcolor0}
 label-empty-background = ${colors.xcolor1}
 label-empty-padding = 2
 label-empty-font = 3
+
+; ws-icon-[0-9]+ = label;icon
+; Note that the label needs to correspond with the bspwm workspace name
+;ws-icon-0 = code;♚
+;ws-icon-1 = office;♛
+;ws-icon-2 = graphics;♜
+;ws-icon-3 = mail;♝
+;ws-icon-4 = web;♞
+;ws-icon-default = ♟
 
 
 ;----------------------------------------------------------
@@ -197,15 +208,13 @@ content-background = ${colors.xcolor0}
 
 [module/MiddleArrowLeft]
 type = custom/text
-content = ◥
-;◢ 
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
-
+content = "◥"
+content-foreground = ${colors.xcolor1}
+content-background = ${colors.xcolor0}
+;◥ ◤◢ ◣
 [module/MiddleArrowRight]
 type = custom/text
-content = ◤
-;◣
+content = "◢"
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
@@ -217,7 +226,9 @@ content-background = ${colors.xcolor1}
 [module/xwindow]
 type = internal/xwindow
 
-format-prefix = " "
+format-prefix = "» "
+; »  
+format-prefix-font = 4
 format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor0}
 
@@ -322,19 +333,15 @@ type = internal/backlight
 ; To list available cards use: $ ls -1 /sys/class/backlight/
 card = intel_backlight
 
-format = <label>
-format-prefix = " "
+format = <ramp> <label>
 ;    
-label = %percentage%
-;label = bkl %percentage%
+label = %percentage%%
 
-bar-width = 10
-bar-indicator = │
-bar-indicator-foreground = #ff
-bar-fill = ─
-bar-fill-foreground = #9f78e1
-bar-empty = ─
-bar-empty-foreground = ${colors.xcolor1}
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 
 ;----------------------------------------------------------
@@ -563,24 +570,78 @@ ramp-4 = 
 
 
 ;----------------------------------------------------------
+;		       R U N    M E N U
+;----------------------------------------------------------
+
+[module/appmenu]
+type = custom/menu
+
+;       
+label-open = " "
+label-open-font = 6
+label-open-foreground = ${colors.xcolor1}
+label-open-background = ${colors.xcolor0}
+label-close = " "
+label-close-foreground = ${colors.xcolor7}
+label-close-background = ${colors.xcolor0}
+label-separator = " "
+label-separator-foreground = ${colors.xcolor1}
+label-separator-background = ${colors.xcolor0}
+
+;                   
+; terminal
+menu-0-0 = "  "
+menu-0-0-exec = termite &
+menu-0-0-foreground = ${colors.xcolor7}
+menu-0-0-background = ${colors.xcolor0}
+; filemanager
+menu-0-1 = "  "
+menu-0-1-exec = thunar &
+menu-0-1-foreground = ${colors.xcolor7}
+menu-0-1-background = ${colors.xcolor0}
+; browser
+menu-0-2 = "  "
+menu-0-2-exec = firefox &
+menu-0-2-foreground = ${colors.xcolor7}
+menu-0-2-background = ${colors.xcolor0}
+; editor
+menu-0-3 = "  "
+menu-0-3-exec = atom &
+menu-0-3-foreground = ${colors.xcolor7}
+menu-0-3-background = ${colors.xcolor0}
+; chat client
+menu-0-4 = "  "
+menu-0-4-exec = discord &
+menu-0-4-foreground = ${colors.xcolor7}
+menu-0-4-background = ${colors.xcolor0}
+; media player
+menu-0-5 = "  "
+menu-0-5-exec = vlc &
+menu-0-5-foreground = ${colors.xcolor7}
+menu-0-5-background = ${colors.xcolor0}
+; end stripe
+menu-0-6 = " "
+menu-0-6-font = 6
+menu-0-6-foreground = ${colors.xcolor1}
+menu-0-6-background = ${colors.xcolor0}
+
+
+;----------------------------------------------------------
 ;		      P O W E R   M E N U
 ;----------------------------------------------------------
 
 [module/powermenu]
 type = custom/menu
 
-;   » 
-;label-open = " »  "
-;label-open-font = 4
-label-open = #e0d4
-;"  "
-label-open-exec = "modules-left = bspwm RightStripe powermenu xwindow"
+;      » 
+label-open = ""
+label-open-font = 6
 label-open-foreground = ${colors.xcolor1}
 label-open-background = ${colors.xcolor0}
 label-close = "   "
 label-close-foreground = ${colors.xcolor7}
 label-close-background = ${colors.xcolor0}
-label-separator = 
+label-separator = 
 label-separator-foreground = ${colors.xcolor1}
 label-separator-background = ${colors.xcolor0}
 
@@ -612,30 +673,26 @@ menu-0-4-background = ${colors.xcolor0}
 
 
 ;----------------------------------------------------------
-;		       R U N    M E N U
+;		       G I T H U B
 ;----------------------------------------------------------
 
-[module/quickmenu]
-type = custom/menu
+[module/github]
+type = internal/github
 
-format-foreground = #999999
-format-background = ${colors.xcolor0}
+; Accessing an access token stored in file
+;token = ${file:/path/to/file/containing/github/access.token}
+; Accessing an access token stored in an environment variable
+token = ${env:GITHUB_ACCESS_TOKEN}
+; Whether empty notifications should be displayed or not
+empty-notifications = false
+format = <label>
 
-;label-open = "  "
-label-open = " run "
-;label-close =   cancel
-label-close = " cancel "
-label-separator = |
-label-separator-foreground = ${colors.darkgrey}
+;    
+; Available tokens:
+;   %notifications% (default)
+; Default: Notifications: %notifications%
+label = %notifications%
 
-menu-0-0 = " term "
-menu-0-0-exec = termite &
-menu-0-1 = " files "
-menu-0-1-exec = thunar &
-menu-0-2 = " text "
-menu-0-2-exec = atom &
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
 
 
 ;#########################################################;
