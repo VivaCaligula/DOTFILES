@@ -30,14 +30,14 @@ bspc config right_padding        20
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config paddingless_monocle  false
-bspc config single_monocle       false
+bspc config single_monocle       true
 bspc config focus_by_distance    true
 bspc config history_aware_focus  true
 
 bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Chromium desktop='^2' follow=on
-bspc rule -a Atom desktop='^3' follow=on state=monocle
-bspc rule -a discord desktop='^4' follow=on state=monocle #fullscreen
+bspc rule -a Atom desktop='^3' follow=on
+bspc rule -a discord desktop='^4' follow=on #state=fullscreen
 bspc rule -a Vlc desktop='^5' follow=on
 #bspc rule -a feh state=floating
 #bspc rule -a cool-retro-term state=floating

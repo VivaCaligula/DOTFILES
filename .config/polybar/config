@@ -656,42 +656,47 @@ menu-0-6-background = ${colors.xcolor0}
 type = custom/menu
 
 ;      » 
-label-open = ""
+label-open = " "
 label-open-font = 6
 label-open-foreground = ${colors.xcolor1}
 label-open-background = ${colors.xcolor0}
-label-close = "   "
+label-close = 
 label-close-foreground = ${colors.xcolor7}
 label-close-background = ${colors.xcolor0}
-label-separator = 
+label-separator = " "
 label-separator-foreground = ${colors.xcolor1}
 label-separator-background = ${colors.xcolor0}
 
-; lock
-menu-0-0 = "  "
-menu-0-0-exec = bash ~/scripts/lock.sh
-menu-0-0-foreground = ${colors.xcolor7}
+; end stripe
+menu-0-0 = " "
+menu-0-0-font = 6
+menu-0-0-foreground = ${colors.xcolor1}
 menu-0-0-background = ${colors.xcolor0}
-; sleep
-menu-0-1 = "  "
-menu-0-1-exec = systemctl suspend
+; lock
+menu-0-1 = "  "
+menu-0-1-exec = bash ~/scripts/lock.sh
 menu-0-1-foreground = ${colors.xcolor7}
 menu-0-1-background = ${colors.xcolor0}
-; logout
-menu-0-2 = "  "
-menu-0-2-exec = pkill x
+; sleep
+menu-0-2 = "  "
+menu-0-2-exec = systemctl suspend
 menu-0-2-foreground = ${colors.xcolor7}
 menu-0-2-background = ${colors.xcolor0}
-; reboot
-menu-0-3 = "  "
-menu-0-3-exec = systemctl reboot
+; logout
+menu-0-3 = "  "
+menu-0-3-exec = pkill x
 menu-0-3-foreground = ${colors.xcolor7}
 menu-0-3-background = ${colors.xcolor0}
-; shutdown
-menu-0-4 = "   "
-menu-0-4-exec = systemctl poweroff
+; reboot
+menu-0-4 = "  "
+menu-0-4-exec = systemctl reboot
 menu-0-4-foreground = ${colors.xcolor7}
 menu-0-4-background = ${colors.xcolor0}
+; shutdown
+menu-0-5 = "    "
+menu-0-5-exec = systemctl poweroff
+menu-0-5-foreground = ${colors.xcolor7}
+menu-0-5-background = ${colors.xcolor0}
 
 
 ;#########################################################;

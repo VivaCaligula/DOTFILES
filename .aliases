@@ -12,6 +12,7 @@ alias lock='bash ~/scripts/lock.sh'
 alias lockscreen='bash ~/scripts/lock.sh'
 alias hax='bash ~/scripts/nmap.sh'
 alias pipes='bash ~/scripts/pipes.sh -f30 -p5 -r0'
+alias snux='bash ~/scripts/snux.sh'
 alias ss='bash ~/scripts/ss.sh'
 alias screenshot='bash ~/scripts/ss.sh'
 alias record='bash ~/scripts/termrecorder.sh'
@@ -43,14 +44,13 @@ alias report='lsreport'
 ###  Navigation Shit  ###
 cdls() { cd "$@" && ls; } # Change dir and view contents.
 alias cd='cdls'
-alias c='cdls'
 alias go='cdls'
 alias goto='cdls'
 alias ..='cd ..'
 alias ,,='cd ..'
 alias up='cd ..'
 alias ...='cd .. && cd ..'
-alias ....='cd /'
+alias ....='cd .. && cd .. && cd ..'
 alias ~='cd ~'
 alias home='cd ~'
 alias 1='cd ~'
@@ -151,7 +151,7 @@ alias clipboard='history'
 alias commands='history'
 alias copypaste='history'
 alias terminal='tty'
-lol() { printf "Don't get funny with me, ${USER}."; }
-ayy() { printf "lmao"; }
-lmao() { printf "Ayy, ${USER}."; }
-asdf() { printf "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }
+lol() { echo "Don't get funny with me, ${USER}."; }
+ayy() { echo "lmao"; }
+lmao() { echo "Ayy, ${USER}."; }
+asdf() { echo "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }
