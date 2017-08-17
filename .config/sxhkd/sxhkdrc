@@ -16,9 +16,8 @@ super + space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-#
-#  Bspwm hotkeys.
-#
+
+###  Bspwm hotkeys.  ###
 
 # Quit bspwm normally.
 super + alt + Escape
@@ -37,12 +36,11 @@ super + y
 	bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
 # Swap the current node and the biggest node.
-super + g
-	bspc node -s biggest
+#super + g
+#	bspc node -s biggest
 
-#
-#  State/flags.
-#
+
+###  State/flags.  ###
 
 # Set the window state.
 super + {t,shift + t,s,f}
@@ -52,17 +50,16 @@ super + {t,shift + t,s,f}
 super + ctrl + {x,y,z}
 	bspc node -g {locked,sticky,private}
 
-#
-#  Focus/swap.
-#
+
+###  Focus/swap.  ###
 
 # Focus the node in the given direction.
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Focus the node for the given path jump.
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+#super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
 
 # Focus the next/previous node.
 super + {_,shift + }c
@@ -83,12 +80,20 @@ super + {o,i}
 	bspc wm -h on
 
 # Focus or send to the given desktop.
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+#super + {_,shift + }{1-9,0}
+#	bspc {desktop -f,node -d} '^{1-9,10}'
+## This was split into the two following commands to follow the sent node.
 
-#
-#  Preselection.
-#
+# Focus to the given desktop.
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+
+# Send and follow to given desktop.	
+super + shift + {1-9}
+    id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
+
+
+###  Preselection.  ###
 
 # Preselect the direction.
 super + ctrl + {h,j,k,l}
@@ -106,9 +111,8 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
-#  Move/resize.
-#
+
+###  Move/resize.  ###
 
 # Expand a window by moving one of its side outward.
 super + alt + {h,j,k,l}
@@ -145,6 +149,12 @@ super + shift + Left
 super + shift + Right
 	brightness up
 
+# Expand/contract bspwm's window gaps.
+super + alt + Up
+	bspc config window_gap {32,46,64,128}
+super + alt + Down
+	bspc config window_gap {16,8,4,0}
+
 # Expand/contract a floating window on all sides.
 super + alt + Left
 	bspc node -z left -20 0; \
@@ -157,8 +167,6 @@ super + alt + Right
 	bspc node -z top 0 10; \
 	bspc node -z right -20 0
 
-# Expand/contract bspwm's window gaps.
-super + alt + Up
-	bspc config window_gap {32,46,64,128}
-super + alt + Down
-	bspc config window_gap {16,8,4,0}
+# Winsplit-like floating window placements.
+#ctrl + alt + 7
+#	bspc rule -a rectangle=WxH+X+Y

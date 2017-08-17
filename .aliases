@@ -143,7 +143,7 @@ alias eixt='exit'
 alias end='exit'
 alias quit='exit'
 alias bye='exit'
-alias say='echo'
+alias say='printf'
 message() { echo -en "${BCyan}Press Ctrl+D to EOF${NC}" && write "$@"; }
 alias msg='message'
 alias h='history'
@@ -151,7 +151,7 @@ alias clipboard='history'
 alias commands='history'
 alias copypaste='history'
 alias terminal='tty'
-lol() { echo "Don't get funny with me, ${USER}."; }
-ayy() { echo "lmao"; }
-lmao() { echo "Ayy, ${USER}."; }
-asdf() { echo "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }
+lol() { printf "Don't get funny with me, ${USER}."; }
+ayy() { printf "lmao"; }
+lmao() { printf "Ayy, ${USER}."; }
+asdf() { printf "Are you bored, ${USER}? I'm sure you have a backlog you could be watching..."; }

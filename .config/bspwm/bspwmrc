@@ -27,15 +27,17 @@ bspc config top_padding          20
 bspc config bottom_padding       20
 bspc config left_padding         20
 bspc config right_padding        20
-bspc config borderless_monocle   false
+bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config paddingless_monocle  true
+bspc config single_monocle       false
 bspc config focus_by_distance    true
 bspc config history_aware_focus  true
 
 bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Chromium desktop='^2' follow=on
-bspc rule -a Atom desktop='^3' follow=on state=fullscreen
-bspc rule -a discord desktop='^4' follow=on state=fullscreen
+bspc rule -a Atom desktop='^3' follow=on state=monocle
+bspc rule -a discord desktop='^4' follow=on state=monocle #fullscreen
 bspc rule -a Vlc desktop='^5' follow=on
 #bspc rule -a feh state=floating
 #bspc rule -a cool-retro-term state=floating
@@ -47,7 +49,8 @@ bspc rule -a Gnome-terminal state=floating
 ### MOUSE ###
 bspc config focus_follows_pointer true
 bspc config pointer_follows_focus true
-#bspc config click_to_focus true
+#bspc config click_to_focus        true
+pointer_follows_monitor           false
 
 ### COLORS ###
 # Set the custom colors from wal.

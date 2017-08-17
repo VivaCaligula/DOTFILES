@@ -93,7 +93,7 @@ font-3 = Terminus:size=18;1
 ;  	    M A I N   M O D U L E    L A Y O U T
 ;----------------------------------------------------------
 
-modules-left = bspwm RightArrow1 RightStripe RightArrow1 powermenu xwindow
+modules-left = bspwm RightArrow1 RightStripe powermenu xwindow
 modules-center = MiddleArrowLeft date MiddleArrowRight
 modules-right = arrow1 LeftStripe arrow1 volume arrow2 network arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
 
@@ -197,13 +197,15 @@ content-background = ${colors.xcolor0}
 
 [module/MiddleArrowLeft]
 type = custom/text
-content = ""
+content = ◥
+;◢ 
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
 [module/MiddleArrowRight]
 type = custom/text
-content = ""
+content = ◤
+;◣
 content-foreground = ${colors.xcolor0}
 content-background = ${colors.xcolor1}
 
@@ -216,7 +218,7 @@ content-background = ${colors.xcolor1}
 type = internal/xwindow
 
 format-prefix = " "
-format-foreground = ${colors.xcolor7}
+format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor0}
 
 label = %title%
@@ -460,7 +462,7 @@ label-volume = %percentage%
 label-volume-foreground = ${colors.xcolor7}
 label-volume-background = ${colors.xcolor1}
 label-muted =  muted
-label-muted-foreground = ${colors.xcolor0}
+label-muted-foreground = ${colors.xcolor7}
 label-muted-background = ${colors.xcolor1}
 
 ramp-volume-0 = " "
@@ -567,39 +569,46 @@ ramp-4 = 
 [module/powermenu]
 type = custom/menu
 
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor0}
-
-;label-open = "   "
-;label-open = "   "
-label-open = " »  "
-label-open-font = 4
-label-close = "   "
-label-close-foreground = ${colors.lime}
-label-separator = " » "
-;label-separator = |
+;   » 
+;label-open = " »  "
+;label-open-font = 4
+label-open = #e0d4
+;"  "
+label-open-exec = "modules-left = bspwm RightStripe powermenu xwindow"
+label-open-foreground = ${colors.xcolor1}
+label-open-background = ${colors.xcolor0}
+label-close = "   "
+label-close-foreground = ${colors.xcolor7}
+label-close-background = ${colors.xcolor0}
+label-separator = 
 label-separator-foreground = ${colors.xcolor1}
+label-separator-background = ${colors.xcolor0}
 
 ; lock
-menu-0-0 = 
+menu-0-0 = "  "
 menu-0-0-exec = bash ~/scripts/lock.sh
-menu-0-0-foreground = ${colors.lime}
+menu-0-0-foreground = ${colors.xcolor7}
+menu-0-0-background = ${colors.xcolor0}
 ; sleep
-menu-0-1 = 
+menu-0-1 = "  "
 menu-0-1-exec = systemctl suspend
-menu-0-1-foreground = ${colors.peach}
+menu-0-1-foreground = ${colors.xcolor7}
+menu-0-1-background = ${colors.xcolor0}
 ; logout
-menu-0-2 = 
+menu-0-2 = "  "
 menu-0-2-exec = pkill x
-menu-0-2-foreground = ${colors.peach}
+menu-0-2-foreground = ${colors.xcolor7}
+menu-0-2-background = ${colors.xcolor0}
 ; reboot
-menu-0-3 = 
+menu-0-3 = "  "
 menu-0-3-exec = systemctl reboot
-menu-0-3-foreground = ${colors.salmon}
+menu-0-3-foreground = ${colors.xcolor7}
+menu-0-3-background = ${colors.xcolor0}
 ; shutdown
-menu-0-4 = "  "
+menu-0-4 = "   "
 menu-0-4-exec = systemctl poweroff
-menu-0-4-foreground = ${colors.salmon}
+menu-0-4-foreground = ${colors.xcolor7}
+menu-0-4-background = ${colors.xcolor0}
 
 
 ;----------------------------------------------------------
