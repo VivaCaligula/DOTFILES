@@ -100,8 +100,8 @@ modules-right = powermenu arrow1 volume arrow2 network arrow3 cpu arrow2 memory 
 
 ; All modules in this config:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu memory network
-; eth date volume battery temperature appmenu powermenu github 
-; For custom script like VPN: https://github.com/jaagr/polybar/wiki/Module:-script
+; eth date volume battery temperature github appmenu powermenu
+; For custom scripts like VPN: https://github.com/jaagr/polybar/wiki/Module:-script
 
 
 ;----------------------------------------------------------
@@ -570,6 +570,28 @@ ramp-4 = 
 
 
 ;----------------------------------------------------------
+;		       G I T H U B
+;----------------------------------------------------------
+
+[module/github]
+type = internal/github
+
+; Accessing an access token stored in file
+;token = ${file:/path/to/file/containing/github/access.token}
+; Accessing an access token stored in an environment variable
+token = ${env:GITHUB_ACCESS_TOKEN}
+; Whether empty notifications should be displayed or not
+empty-notifications = false
+format = <label>
+
+;    
+; Available tokens:
+;   %notifications% (default)
+; Default: Notifications: %notifications%
+label = %notifications%
+
+
+;----------------------------------------------------------
 ;		       R U N    M E N U
 ;----------------------------------------------------------
 
@@ -670,29 +692,6 @@ menu-0-4 = "   "
 menu-0-4-exec = systemctl poweroff
 menu-0-4-foreground = ${colors.xcolor7}
 menu-0-4-background = ${colors.xcolor0}
-
-
-;----------------------------------------------------------
-;		       G I T H U B
-;----------------------------------------------------------
-
-[module/github]
-type = internal/github
-
-; Accessing an access token stored in file
-;token = ${file:/path/to/file/containing/github/access.token}
-; Accessing an access token stored in an environment variable
-token = ${env:GITHUB_ACCESS_TOKEN}
-; Whether empty notifications should be displayed or not
-empty-notifications = false
-format = <label>
-
-;    
-; Available tokens:
-;   %notifications% (default)
-; Default: Notifications: %notifications%
-label = %notifications%
-
 
 
 ;#########################################################;
