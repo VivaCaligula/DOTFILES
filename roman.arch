@@ -47,6 +47,21 @@ do
            echo "Okay, just ran the cron script."
            break;;
    [nN]* ) exit;;
-   * )     echo "Dude, just enter Y or N, please.";;
+   * )     echo "Just enter Y or N.";;
   esac
 done
+
+# Check if a file exists.
+FILE=$1     
+if [ -f $FILE ]; then
+   echo "File $FILE exists."
+else
+   echo "File $FILE does not exist."
+fi
+
+# Change -f to -d to check for a directory.
+
+# Check if a file doesn't exist.
+if [ ! -f /tmp/foo.txt ]; then
+    echo "File not found!"
+fi

@@ -394,9 +394,9 @@ format-connected-prefix = " "
 ;format-connected-prefix = " net"
 format-connected-foreground = ${colors.xcolor1}
 format-connected-background = ${colors.xcolor7}
-format-disconnected-prefix = " "
-format-disconnected-foreground = ${colors.xcolor1}
-format-disconnected-background = ${colors.xcolor7}
+;format-disconnected-prefix = " "
+;format-disconnected-foreground = ${colors.xcolor1}
+;format-disconnected-background = ${colors.xcolor7}
 
 label-connected = %downspeed%
 label-connected-foreground = ${colors.xcolor1}
