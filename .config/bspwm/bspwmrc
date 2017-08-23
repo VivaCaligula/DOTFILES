@@ -28,7 +28,7 @@ bspc config bottom_padding       20
 bspc config left_padding         20
 bspc config right_padding        20
 bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc config gapless_monocle      false
 bspc config paddingless_monocle  false
 bspc config single_monocle       true
 bspc config focus_by_distance    true
