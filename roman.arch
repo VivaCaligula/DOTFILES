@@ -8,6 +8,7 @@ sudo yaourt -Syu
 sudo pacman-key --refresh-keys
 gem update colorls
 
+
 :: Git Commands ::
 git init     # To make a new repo
 git config --global user.name "NAME"
@@ -17,13 +18,16 @@ git add *
 git commit -m "Text"
 git push origin master
 
+
 :: Font Checker ::
 fc-list | grep FONT_NAME
+
 
 :: Atom Packages ::
 Themes: dark-flat-ui, outlander-syntax
 Packages: language-vb, Minimap, Pigments, minimap-pigments, color-picker, split-diff, minimap-split-diff, highlight-line, highlight-selected, atom-clock, activate-power-mode, tree-view-autoresize
 Disable stuff in general settings but also Settings > Packages > Whitespace
+
 
 :: Time Update :: https://wiki.archlinux.org/index.php/Time
 # To check current timezone defined for the system and list availables zones.
@@ -34,6 +38,7 @@ sudo ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 # Show hardware clock and write current software UTC time to hardware clock.
 sudo hwclock --show
 sudo hwclock --systohc
+
 
 :: Usefull Shell Script Stuff :: http://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php
 # Yn input options.
