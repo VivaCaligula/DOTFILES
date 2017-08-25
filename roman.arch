@@ -35,7 +35,7 @@ sudo ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 sudo hwclock --show
 sudo hwclock --systohc
 
-:: Usefull Shell Script Stuff ::
+:: Usefull Shell Script Stuff :: http://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php
 # Yn input options.
 while true
 do
