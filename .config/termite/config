@@ -26,12 +26,12 @@
     browser = w3m
 
 #### SNAX'S COLORS ####
-    #[colors]
+    [colors]
     #foreground = #FFCD98
     #foreground_bold = #FFCD98
     #background = #424242
     # For transparent BG
-    #background = rgba(63, 63, 63, 0.90)
+    background = rgba(63, 63, 63, 0.90)
     #cursor = #FFCD98
     #cursor_foreground = #424242
     # If unset, will reverse FG and BG
