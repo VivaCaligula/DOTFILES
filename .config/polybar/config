@@ -386,7 +386,7 @@ label = %percentage_used%%
 type = internal/network
 ; To test interface: $ ls -1 /sys/class/net/
 interface = wls1
-interval = 1
+interval = 0.5
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -421,13 +421,14 @@ ramp-signal-4 = 
 [module/eth]
 type = internal/network
 interface = eth
-interval = 1.0
+interval = 0.5
 
-format-connected-prefix = " "
-format-foreground = ${colors.xcolor1}
-
-label-connected = %local_ip%
-label-disconnected = %ifname% disconnected
+label-connected = " %local_ip%"
+label-connected-foreground = ${colors.xcolor1}
+label-connected-background = ${colors.xcolor7}
+label-disconnected = " %ifname%"
+label-disconnected-foreground = ${colors.xcolor4}
+label-disconnected-background = ${colors.xcolor7}
 
 
 ;----------------------------------------------------------
