@@ -32,7 +32,7 @@
 !.config/polybar/config
 !.config/polybar/mail.py
 !.config/polybar/mediaplayer.py
-!.config/polybar/weather.json
+!.config/polybar/weather.py
 !.config/termite/
 .config/termite/*
 !.config/termite/config
