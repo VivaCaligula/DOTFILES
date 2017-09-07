@@ -30,6 +30,9 @@
 !.config/polybar/
 .config/polybar/*
 !.config/polybar/config
+!.config/polybar/mail.py
+!.config/polybar/mediaplayer.py
+!.config/polybar/weather.json
 !.config/termite/
 .config/termite/*
 !.config/termite/config
