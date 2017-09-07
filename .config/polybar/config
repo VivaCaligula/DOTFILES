@@ -646,7 +646,7 @@ menu-0-0-foreground = ${colors.xcolor7}
 menu-0-0-background = ${colors.xcolor0}
 ; sleep
 menu-0-1 = "  "
-menu-0-1-exec = systemctl suspend
+menu-0-1-exec = bash ~/scripts/lock.sh && systemctl suspend
 menu-0-1-foreground = ${colors.xcolor7}
 menu-0-1-background = ${colors.xcolor0}
 ; logout
