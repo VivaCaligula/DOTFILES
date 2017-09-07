@@ -441,9 +441,12 @@ interval = 1
 
 date = "  %Y/%m/%d"
 date-alt = ""
-
 time = ""
 time-alt = "  %I:%M:%S %p"
+;date = "%Y/%m/%d | "
+;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
+;time = "%I:%M:%S %p"
+;time-alt = " %z %Z"
 
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
