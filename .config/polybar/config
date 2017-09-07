@@ -49,8 +49,8 @@ margin-bottom = 21
 monitor = ${env:MONITOR:LVDS-1}
 width = 100%
 height = 21
-offset-x = 0
-offset-y = 0
+offset-x = 0%
+offset-y = 0%
 fixed-center = true
 ;dock = true
 background = ${colors.xcolor0}
@@ -64,9 +64,9 @@ underline-color = ${colors.xcolor7}
 ;format-param-underline = ${colors.colorname}
 
 border-bottom-size = 0
-border-bottom-color = ${colors.darkgrey}
+border-bottom-color = ${colors.xcolor7}
 border-top-size = 0
-border-top-color = ${colors.xcolor0}
+border-top-color = ${colors.xcolor7}
 border-color-foreground = ${colors.peach}
 
 spacing = 0
@@ -233,7 +233,7 @@ format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor0}
 
 label = %title%
-label-maxlen = 25
+label-maxlen = 22
 
 
 ;----------------------------------------------------------
@@ -284,7 +284,8 @@ mount-0 = /
 ;mount-1 = /home
 
 format-mounted = <label-mounted>
-format-mounted-prefix = " "
+;  
+format-mounted-prefix = " "
 ;format-mounted-prefix = hdd
 format-mounted-foreground = ${colors.xcolor7}
 format-mounted-background = ${colors.xcolor1}
@@ -350,15 +351,14 @@ ramp-4 = 🌑
 
 [module/cpu]
 type = internal/cpu
-interval = 1
+interval = 1.0
 
-format-prefix = " "
-;  
+;   
 ;format-prefix = "cpu "
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 
-label = %percentage%%
+label = " %percentage%%"
 
 
 ;----------------------------------------------------------
@@ -443,7 +443,7 @@ date = "  %Y/%m/%d"
 date-alt = ""
 
 time = ""
-time-alt = "   %H:%M:%S "
+time-alt = "  %I:%M:%S %p"
 
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
@@ -551,7 +551,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 65
 interval = 2
 
 format = <ramp> <label>
