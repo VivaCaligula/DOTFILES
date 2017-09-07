@@ -390,18 +390,20 @@ interval = 1
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
-format-connected-prefix = " "
+;format-connected-prefix = " "
 ;format-connected-prefix = " net"
-format-connected-foreground = ${colors.xcolor1}
-format-connected-background = ${colors.xcolor7}
+;format-connected-foreground = ${colors.xcolor1}
+;format-connected-background = ${colors.xcolor7}
 ;format-disconnected-prefix = " "
 ;format-disconnected-foreground = ${colors.xcolor1}
 ;format-disconnected-background = ${colors.xcolor7}
 
-label-connected = %downspeed%
+label-connected = " "
+;label-connected = %downspeed%
 label-connected-foreground = ${colors.xcolor1}
 label-connected-background = ${colors.xcolor7}
-label-disconnected = not connected
+label-disconnected = 
+;label-disconnected = not connected
 label-disconnected-foreground = ${colors.xcolor1}
 label-disconnected-background = ${colors.xcolor7}
 
@@ -548,7 +550,7 @@ animation-charging-framerate = 750
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 65
+warn-temperature = 60
 interval = 2
 
 format = <ramp> <label>
