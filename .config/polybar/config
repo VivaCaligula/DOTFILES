@@ -236,14 +236,14 @@ content-background = ${colors.xcolor0}
 [module/RightArrow2]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor8}
+content-foreground = ${colors.xcolor7}
 content-background = ${colors.xcolor1}
 
 [module/RightArrow3]
 type = custom/text
 content = ""
 content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor8}
+content-background = ${colors.xcolor7}
 
 [module/MiddleArrowLeft]
 type = custom/text
@@ -738,29 +738,27 @@ menu-0-6-background = ${colors.xcolor0}
 type = custom/script
 exec = $HOME/.config/polybar/mail.py
 interval = 60
-label =  %output%
+label = "  %output:0:10:% "
 ;  
-format-padding = 1
-format-background = ${colors.dorange}
-format-underline = ${colors.orange}
+format-foreground = ${colors.xcolor7}
+format-background = ${colors.xcolor1}
 
 
 [module/weather]
 type = custom/script
 exec = $HOME/.config/polybar/weather.py
-interval = 60
-label =  %output%
-format-padding = 1
-format-background = ${colors.dgreen}
-format-underline = ${colors.green}
+interval = 120
+label = "  %output:0:10:% "
+format-foreground = ${colors.xcolor1}
+format-background = ${colors.xcolor7}
 
 
 [module/music]
 type = custom/script
 exec = $HOME/.config/polybar/mediaplayer.py
 exec-if = pgrep -x spotify
-interval = 3.0
-label =  %output:0:30:%
+interval = 3
+label = "  %output:0:30:% "
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
