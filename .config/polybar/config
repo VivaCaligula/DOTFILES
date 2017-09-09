@@ -735,8 +735,8 @@ menu-0-6-background = ${colors.xcolor0}
 [module/mail]
 type = custom/script
 exec = $HOME/.config/polybar/mail.py
-interval = 120
-label = "  %output:0:10:% "
+interval = 60
+label = "  %output:0:10:...% "
 ;  
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
@@ -745,8 +745,8 @@ format-background = ${colors.xcolor1}
 [module/weather]
 type = custom/script
 exec = $HOME/.config/polybar/weather.py
-interval = 120
-label = "  %output:0:10:% "
+interval = 60
+label = "  %output:0:20:...% "
 format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor7}
 

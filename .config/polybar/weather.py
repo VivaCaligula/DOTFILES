@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
+# Modified from https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
 
 import json
 import urllib
@@ -23,7 +23,7 @@ def main():
                 'weather.json')) as f:
             api_key = json.load(f)['api_key']
     except:
-        return ''
+        return '!'
 
     try:
         data = urllib.parse.urlencode({'q': city, 'appid': api_key})
@@ -31,10 +31,11 @@ def main():
             'http://api.openweathermap.org/data/2.5/weather?' + data)
             .read())
         desc = weather['weather'][0]['description'].capitalize()
-        temp = int(float(weather['main']['temp']) - 272.15)
-        return '{}, {}°C'.format(desc, temp)
+        temp = int(float(weather['main']['temp']) * 9/5 - 459.67)
+        # * 9/5 - 459.67 for Farenheight, - 272.15 for celsius
+        return '{}, {} F'.format(desc, temp)
     except:
-        return ''
+        return '!'
 
 
 if __name__ == "__main__":
