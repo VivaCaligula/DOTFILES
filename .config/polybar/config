@@ -303,8 +303,8 @@ format-mounted-foreground = ${colors.xcolor7}
 format-mounted-background = ${colors.xcolor1}
 
 ;  
-label-mounted = "  %used%"
-; %free%% %percentage_used%%
+label-mounted = "  %percentage_used%%"
+; %free%% %percentage_used%% %used%
 label-mounted-foreground = ${colors.xcolor7}
 label-mounted-background = ${colors.xcolor1}
 label-unmounted =   %mountpoint%
