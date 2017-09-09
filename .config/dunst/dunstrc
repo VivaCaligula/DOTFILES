@@ -1,5 +1,5 @@
 [global]
-font = Iosevka Term 11
+font = Terminus 9
 
 # Allow a small subset of html markup:
 #   <b>bold</b>
@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "300x50-15+49"
+geometry = "250x64-16+32"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -79,12 +79,12 @@ shrink = no
 # The transparency of the window.  Range: [0; 100].
 # This option will only work if a compositing windowmanager is
 # present (e.g. xcompmgr, compiz, etc.).
-transparency = 5
+transparency = 25
 
 # Don't remove messages, if the user is idle (no mouse or keyboard input)
 # for longer than idle_threshold seconds.
 # Set to 0 to disable.
-idle_threshold = 0
+idle_threshold = 30
 
 # Which monitor should the notifications be displayed on.
 monitor = 0
@@ -100,7 +100,7 @@ monitor = 0
 #
 # If this option is set to mouse or keyboard, the monitor option
 # will be ignored.
-follow = none
+follow = mouse
 
 # Should a notification popped up from history be sticky or timeout
 # as if it would normally do.
@@ -110,7 +110,7 @@ sticky_history = yes
 history_length = 15
 
 # Display indicators for URLs (U) and actions (A).
-show_indicators = no
+show_indicators = yes
 
 # The height of a single line.  If the height is smaller than the
 # font height, it will get raised to the font height.
@@ -120,13 +120,13 @@ line_height = 3
 # Draw a line of "separatpr_height" pixel height between two
 # notifications.
 # Set to 0 to disable.
-separator_height = 2
+separator_height = 6
 
 # Padding between text and separator.
-padding = 6
+padding = 4
 
 # Horizontal padding.
-horizontal_padding = 6
+horizontal_padding = 4
 
 # Define a color for the separator.
 # possible values are:
@@ -139,7 +139,7 @@ separator_color = frame
 # Print a notification on startup.
 # This is mainly for error detection, since dbus (re-)starts dunst
 # automatically after a crash.
-startup_notification = false
+startup_notification = true
 
 # dmenu path.
 dmenu = /usr/bin/dmenu -p dunst:
@@ -148,14 +148,14 @@ dmenu = /usr/bin/dmenu -p dunst:
 browser = /usr/bin/firefox -new-tab
 
 # Align icons left/right/off
-icon_position = off
+icon_position = left
 max_icon_size = 80
 
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 # Frame
-frame_width = 3
+frame_width = 2
 color = "#8EC07C"
 
 [shortcuts]
@@ -182,23 +182,23 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#3B7C87"
-foreground = "#3B7C87"
-background = "#191311"
+frame_color = "#62a19b"
+foreground = "#62a19b"
+background = "#392c28"
 #background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#5B8234"
-foreground = "#5B8234"
-background = "#191311"
+frame_color = "#8aad66"
+foreground = "#8aad66"
+background = "#392c28"
 #background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#B7472A"
-foreground = "#B7472A"
-background = "#191311"
+frame_color = "#a85f4d"
+foreground = "#a85f4d"
+background = "#392c28"
 #background = "#2B313C"
 timeout = 8
 
