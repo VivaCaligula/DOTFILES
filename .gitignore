@@ -36,6 +36,9 @@
 !.config/termite/
 .config/termite/*
 !.config/termite/config
+!.config/dunst/
+.config/dunst/*
+!.config/dunst/dunstrc
 !Pictures/
 Pictures/*
 !Pictures/wal/
