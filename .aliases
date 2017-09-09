@@ -24,7 +24,7 @@ alias walcycle='bash ~/scripts/walcycle.sh'
 superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.
 alias ls='superls'
 alias l='superls'
-superlsl() { colorls "$@" -a -l -sd && printf "\n"; } # Wombo combo list.
+superlsl() { colorls "$@" -a -l -sd && printf "\n"; } 
 alias la='superlsl'
 alias lsa='superlsl'
 alias lal='superlsl'

@@ -31,10 +31,8 @@ xcolor12 = ${xrdb:color12}
 xcolor13 = ${xrdb:color13}
 xcolor14 = ${xrdb:color14}
 xcolor15 = ${xrdb:color15}
-;background = ${xrdb:background}
-;foreground = ${xrdb:foreground}
-;foreground = #888888
-;foreground-alt = #555555
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
 
 
 ;----------------------------------------------------------
@@ -96,7 +94,7 @@ font-5 = FontAwesome:size=26;7
 ;			  T R A Y
 ;----------------------------------------------------------
 
-tray-position = right
+tray-position = left
 tray-padding = 0
 tray-transparent = false
 tray-maxsize=24
@@ -737,7 +735,7 @@ menu-0-6-background = ${colors.xcolor0}
 [module/mail]
 type = custom/script
 exec = $HOME/.config/polybar/mail.py
-interval = 60
+interval = 120
 label = "  %output:0:10:% "
 ;  
 format-foreground = ${colors.xcolor7}
