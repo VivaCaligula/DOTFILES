@@ -114,12 +114,12 @@ scroll-down = bspwm-deskprev
 
 modules-left = bspwm RightArrow3 weather RightArrow2 mail RightArrow1 powermenu music
 modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = arrow1 LeftStripe arrow1 volume arrow2 network vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
+modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
 ; memory network eth date volume battery temperature github 
-; appmenu powermenu mail weather music vpn
+; appmenu powermenu mail weather music ssh vpn
 
 [bar/secondary]
 inherit = bar/rome
@@ -760,6 +760,21 @@ label = "  %output:0:30:% "
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+
+[module/ssh]
+type = custom/script
+exec = echo + SSH
+exec-if = pgrep -i ssh
+interval = 3.0
+format-foreground = ${colors.xcolor4}
+format-background = ${colors.xcolor7}
+label = " %output:0:5%"
+click-left = echo left %counter%
+click-middle = echo middle %counter%
+click-right = echo right %counter%
+scroll-up = echo scroll up %counter%
+scroll-down = echo scroll down %counter%
 
 
 [module/vpn]
