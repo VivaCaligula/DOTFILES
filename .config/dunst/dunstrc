@@ -11,7 +11,7 @@ font = Iosevka Term 11
 # <http://developer.gnome.org/pango/stable/PangoMarkupFormat.html>.
 # If markup is not allowed, those tags will be stripped out of the
 # message.
-allow_markup = yes
+markup = yes
 plain_text = no
 
 # The format of the message.  Possible variables are:
@@ -154,9 +154,8 @@ max_icon_size = 80
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
-
-[frame]
-width = 3
+# Frame
+frame_width = 3
 color = "#8EC07C"
 
 [shortcuts]
