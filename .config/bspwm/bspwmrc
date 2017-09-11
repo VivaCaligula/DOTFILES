@@ -1,3 +1,4 @@
+
 #! /bin/sh
 #=============================#
 #     Caligula's bspwmrc.     #
@@ -7,7 +8,7 @@
 ### AUTOSTART ###
 xsetroot -cursor_name left_ptr
 sxhkd &
-#feh --bg-scale /home/caligula/Pictures/wallpapers/file.name
+#feh --bg-scale /home/caligula/Pictures/wal/file.name
 #xsetroot -solid "#E2A96A"
 #hsetroot -solid "#67605e"
 wal -i "$HOME/Pictures/wal"
@@ -38,8 +39,9 @@ bspc rule -a Firefox desktop='^2' follow=on
 bspc rule -a Chromium desktop='^2' follow=on
 bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a discord desktop='^4' follow=on #state=fullscreen
+bspc rule -a Steam desktop='^4' follow=on
 bspc rule -a Vlc desktop='^5' follow=on
-#bspc rule -a feh state=floating
+bspc rule -a feh state=floating
 #bspc rule -a cool-retro-term state=floating
 bspc rule -a Thunar state=floating
 bspc rule -a Termite state=floating follow=on
