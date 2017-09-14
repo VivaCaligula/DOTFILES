@@ -550,8 +550,8 @@ format-full-background = ${colors.xcolor1}
 label-charging = "%percentage%% "
 label-discharging = "%percentage%% "
 label-discharging-foreground = ${colors.xcolor7}
-label-full = "  %percentage%% "
-
+label-full = "  %percentage%% "
+; 
 ramp-capacity-0 = " "
 ramp-capacity-0-foreground = ${colors.xcolor4}
 ramp-capacity-1 = " "
