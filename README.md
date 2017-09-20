@@ -1,7 +1,4 @@
-<center>![Snerx Logo](https://snerx.com/ImageShit/SnerxLogo2.png "snerx.com")</center>
-
-<center>[![GitHub issues](https://img.shields.io/github/issues/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/issues) [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.0.1-red.svg)</center>
-<center># CALIGULA'S DOTFILES</center>
+# CALIGULA'S DOTFILES [![GitHub issues](https://img.shields.io/github/issues/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/issues) [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.0.1-red.svg)
 
 ---
 
