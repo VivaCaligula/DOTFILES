@@ -15,13 +15,13 @@ termite &
 bspc monitor -d trm web atm dis vlc
 
 bspc config border_width         2
-bspc config window_gap           21
+bspc config window_gap           18
 
 bspc config split_ratio          0.50
-bspc config top_padding          10
-bspc config bottom_padding       10
-bspc config left_padding         10
-bspc config right_padding        10
+bspc config top_padding          14
+bspc config bottom_padding       14
+bspc config left_padding         14
+bspc config right_padding        14
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config paddingless_monocle  false

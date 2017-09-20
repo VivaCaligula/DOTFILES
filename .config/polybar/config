@@ -34,7 +34,7 @@ color15 = #d6d3ac
 
 [global/wm]
 margin-top = 0
-margin-bottom = 8
+margin-bottom = 14
 
 [bar/antium]
 monitor = ${env:MONITOR:LVDS-1}
