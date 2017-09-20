@@ -8,9 +8,11 @@ sudo yaourt -Syu
 sudo pacman-key --refresh-keys
 gem update colorls
 
+
 :: Mounting a Drive ::
 $ lsusb # lists devices
 mount -t vfat /dev/sda $HOME/Desktop/flash
+
 
 :: Git Commands ::
 git init     # To make a new repo
@@ -21,13 +23,16 @@ git add *
 git commit -m "Text"
 git push origin master
 
+
 :: Font Checker ::
 fc-list | grep FONT_NAME
+
 
 :: Atom Packages ::
 Themes: dark-flat-ui, outlander-syntax
 Packages: language-vb, Minimap, Pigments, minimap-pigments, color-picker, split-diff, minimap-split-diff, highlight-line, highlight-selected, atom-clock, activate-power-mode, tree-view-autoresize
 Disable stuff in general settings but also Settings > Packages > Whitespace
+
 
 :: Time Update :: https://wiki.archlinux.org/index.php/Time
 # To check current timezone defined for the system and list availables zones.
@@ -39,7 +44,9 @@ sudo ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 sudo hwclock --show
 sudo hwclock --systohc
 
+
 :: Usefull Shell Script Stuff :: http://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php
+
 # Yn input options.
 while true
 do
@@ -56,14 +63,13 @@ do
 done
 
 # Check if a file exists.
+# Change -f to -d to check for a directory.
 FILE=$1     
 if [ -f $FILE ]; then
    echo "File $FILE exists."
 else
    echo "File $FILE does not exist."
 fi
-
-# Change -f to -d to check for a directory.
 
 # Check if a file doesn't exist.
 if [ ! -f /tmp/foo.txt ]; then

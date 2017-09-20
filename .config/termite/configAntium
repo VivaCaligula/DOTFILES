@@ -1,0 +1,73 @@
+#====================================#
+#     Caligula's Termite config.     #
+#====================================#
+
+[options]
+    allow_bold = true
+    audible_bell = true
+    browser = w3m
+    clickable_url = true
+    cursor_blink = true
+    cursor_shape = block
+    dynamic_title = true
+    filter_unmatched_urls = true
+    font = Terminus 9
+    #font = Monospace 8
+    #font = xos4 Terminus 9px
+    #fullscreen = true
+    geometry = 475x254
+    icon_name = terminal
+    mouse_autohide = true
+    padding = 8
+    pseudo_transparency = false
+    #scrollbar = off
+    scroll_on_keystroke = true
+    scroll_on_output = true
+    scrollback_lines = 10000
+    search_wrap = true
+    #size_hints = false
+    #transparency = 1.7
+    urgent_on_bell = true
+    visible_bell = true
+
+[colors]
+# For color changes - https://terminal.sexy/
+# Schemes: xcolors.net/ > dkeg - canvasedpastel
+#          collection/ > x-erosion
+    # special
+    foreground      = #746c48
+    foreground_bold = #746c48
+    cursor          = #746c48
+    background      = #170f0d
+    # black
+    color0  = #26251c
+    color8  = #999f91
+    # red
+    color1  = #323027
+    color9  = #9b9773
+    # green
+    color2  = #3d4339
+    color10 = #b2b08c
+    # yellow
+    color3  = #443b2c
+    color11 = #c4bb8c
+    # blue
+    color4  = #534d35
+    color12 = #c4b67a
+    # magenta
+    color5  = #646756
+    color13 = #cfc995
+    # cyan
+    color6  = #7b8574
+    color14 = #d3d4b6
+    # white
+    color7  = #837b61
+    color15 = #d6d3ac
+    # extra
+    color16 = #636363
+
+[hints]
+    #padding = 2
+    #border = #3f3f3f
+    #border_width = 0.5
+    #roundness = 2.0

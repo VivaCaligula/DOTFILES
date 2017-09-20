@@ -1,0 +1,781 @@
+;=========================================================;
+;                Caligula's polybar config.               ;
+;=========================================================;
+; To refresh while editing do: $ polybar -r antium
+
+;----------------------------------------------------------
+;			C O L O R S
+;----------------------------------------------------------
+
+[colors]
+foreground = #746c48
+background = #170f0d
+color0 = #26251c
+color1 = #323027
+color2 = #3d4339
+color3 = #443b2c
+color4 = #534d35
+color5 = #646756
+color6 = #7b8574
+color7 = #837b61
+color8 = #999f91
+color9 = #9b9773
+color10 = #b2b08c
+color11 = #c4bb8c
+color12 = #c4b67a
+color13 = #cfc995
+color14 = #d3d4b6
+color15 = #d6d3ac
+
+
+;----------------------------------------------------------
+;			G L O B A L
+;----------------------------------------------------------
+
+[global/wm]
+margin-top = 16
+margin-bottom = 16
+
+[bar/antium]
+monitor = ${env:MONITOR:LVDS-1}
+;monitor-fallback = ${env:MONITOR:eDP-1}
+;dpi = ${xrdb:Xft.dpi:136}
+bottom = false
+width = 100%
+height = 16
+offset-x = 0%
+offset-y = 0%
+fixed-center = true
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+overline-size = 0
+overline-color = ${colors.color7}
+underline-size = 0
+underline-color = ${colors.color7}
+
+border-bottom-size = 0
+border-bottom-color = ${colors.color7}
+border-top-size = 0
+border-top-color = ${colors.color7}
+border-color-foreground = ${colors.color7}
+
+spacing = 0
+padding-left = 0
+padding-right = 0
+;label-padding = 2
+module-margin-left = 0
+module-margin-right = 0
+
+
+;----------------------------------------------------------
+;			F O N T S
+;----------------------------------------------------------
+
+font-0 = PowerlineSymbols:size=15;3
+font-1 = Terminus:size=10;0
+font-2 = FontAwesome:size=10;2
+font-3 = Terminus:size=18;0
+font-4 = Monospace:size=28;3
+font-5 = FontAwesome:size=26;7
+; Extra symbols: http://fontawesome.io/cheatsheet/
+
+
+;----------------------------------------------------------
+;			  T R A Y
+;----------------------------------------------------------
+
+tray-position = left
+tray-padding = 0
+tray-transparent = false
+tray-maxsize=24
+;tray-offset-x = 21%
+tray-foreground = ${colors.foreground}
+tray-background = ${colors.background}
+
+wm-restack = bspwm
+;override-redirect = true
+scroll-up = bspwm-desknext
+scroll-down = bspwm-deskprev
+
+
+;----------------------------------------------------------
+;  	    M O D U L E    L A Y O U T S
+;----------------------------------------------------------
+
+modules-left = bspwm 
+modules-center = date
+modules-right = volume network ssh vpn cpu battery
+
+; All modules available in this config file:
+; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
+; memory network eth date volume battery temperature github 
+; appmenu powermenu mail weather music ssh vpn
+
+
+;----------------------------------------------------------
+;		B S P W M   M O D U L E
+;----------------------------------------------------------
+
+[module/bspwm]
+type = internal/bspwm
+; Only show workspaces defined on the same output as the bar
+pin-workspaces = true
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = true
+
+; Set the scroll cycle direction
+; Default: true
+reverse-scroll = false
+
+;   ● ○
+;label-focused = %name%
+;label-focused = %index%
+label-focused = 
+label-focused-foreground = ${colors.color7}
+label-focused-background = ${colors.color1}
+label-focused-padding = 2
+label-focused-font = 3
+label-occupied = 
+label-occupied-foreground = ${colors.color0}
+label-occupied-background = ${colors.color1}
+label-occupied-padding = 2
+label-occupied-font = 3
+label-urgent = 
+label-urgent-foreground = ${colors.color4}
+label-urgent-background = ${colors.color1}
+label-urgent-padding = 2
+label-urgent-font = 3
+label-empty = 
+label-empty-foreground = ${colors.color0}
+label-empty-background = ${colors.color1}
+label-empty-padding = 2
+label-empty-font = 3
+
+; ws-icon-[0-9]+ = label;icon
+; Note that the label needs to correspond with the bspwm workspace name
+;ws-icon-0 = code;♚
+;ws-icon-1 = office;♛
+;ws-icon-2 = graphics;♜
+;ws-icon-3 = mail;♝
+;ws-icon-4 = web;♞
+;ws-icon-default = ♟
+
+
+;----------------------------------------------------------
+;	          T E X T    M O D U L E S
+;----------------------------------------------------------
+
+[module/pipe]
+type = custom/text
+content = "|"
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
+content-padding = 1
+
+[module/LeftStripe]
+type = custom/text
+content = ""
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
+
+[module/arrow1]
+type = custom/text
+content = ""
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
+
+[module/arrow2]
+type = custom/text
+content = " "
+content-foreground = ${colors.color7}
+content-background = ${colors.color1}
+
+[module/arrow3]
+type = custom/text
+content = " "
+content-foreground = ${colors.color1}
+content-background = ${colors.color7}
+
+[module/RightStripe]
+type = custom/text
+content = ""
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
+
+[module/RightArrow1]
+type = custom/text
+content = ""
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
+
+[module/RightArrow2]
+type = custom/text
+content = ""
+content-foreground = ${colors.color7}
+content-background = ${colors.color1}
+
+[module/RightArrow3]
+type = custom/text
+content = ""
+content-foreground = ${colors.color1}
+content-background = ${colors.color7}
+
+[module/MiddleArrowLeft]
+type = custom/text
+content = "◥"
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
+;◥ ◤◢ ◣
+[module/MiddleArrowRight]
+type = custom/text
+content = "◢"
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
+
+
+;----------------------------------------------------------
+;		       X W I N D O W
+;----------------------------------------------------------
+
+[module/xwindow]
+type = internal/xwindow
+
+format-foreground = ${colors.color1}
+format-background = ${colors.color0}
+
+label = "» %title:0:22:...%"
+
+
+;----------------------------------------------------------
+;		    X K E Y B O A R D
+;----------------------------------------------------------
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+;   
+format-foreground = ${colors.color1}
+format-background = ${colors.color0}
+
+label-layout =  %layout%
+label-indicator-padding = 1
+label-indicator-background = ${colors.color0}
+
+
+;----------------------------------------------------------
+;		   F I L E S Y S T E M
+;----------------------------------------------------------
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+fixed-values = true
+
+mount-0 = /
+;mount-1 = /home
+
+format-mounted = <label-mounted>
+format-mounted-foreground = ${colors.color7}
+format-mounted-background = ${colors.color1}
+
+;  
+label-mounted = "  %percentage_used%%"
+; %free%% %percentage_used%% %used%
+label-mounted-foreground = ${colors.color7}
+label-mounted-background = ${colors.color1}
+label-unmounted =   %mountpoint%
+label-unmounted-foreground = ${colors.color7}
+label-unmounted-background = ${colors.color1}
+
+
+;----------------------------------------------------------
+;			    M P D
+;----------------------------------------------------------
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6602
+
+format-online = <label-song>  <icon-prev> <icon-seekb> <icon-stop> <toggle> <icon-seekf> <icon-next>  <icon-repeat> <icon-random>
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+icon-prev = 
+icon-seekb = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-seekf = 
+
+icon-random = 
+icon-repeat = 
+
+toggle-on-foreground = ${colors.primary}
+toggle-off-foreground = #66
+
+
+;----------------------------------------------------------
+;		     B A C K L I G H T
+;----------------------------------------------------------
+
+[module/backlight]
+type = internal/xbacklight
+; To list available cards use: $ ls -1 /sys/class/backlight/
+;card = intel_backlight
+
+format = <ramp> <label>
+;    
+label = %percentage%%
+
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+
+;----------------------------------------------------------
+;			   C P U
+;----------------------------------------------------------
+
+[module/cpu]
+type = internal/cpu
+interval = 1.0
+
+format = <label>
+;format = <ramp-coreload><label> 
+format-prefix = " "
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
+
+label = %percentage:3%%
+;   
+
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+;ramp-coreload-7 = █
+
+
+;----------------------------------------------------------
+;			M E M O R Y
+;----------------------------------------------------------
+
+[module/memory]
+type = internal/memory
+interval = 1
+
+format-prefix = "  "
+;format-prefix = ram
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
+format-margin-top = -5
+
+label = %percentage_used%%
+
+
+;----------------------------------------------------------
+;	      W I R E L E S S    N E T W O R K
+;----------------------------------------------------------
+
+[module/network]
+type = internal/network
+; To test interface: $ ls -1 /sys/class/net/
+interface = wls1
+interval = 0.3
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected = "  %downspeed%"
+;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
+label-connected-foreground = ${colors.color1}
+label-connected-background = ${colors.color7}
+label-disconnected = " "
+label-disconnected-foreground = ${colors.color1}
+label-disconnected-background = ${colors.color7}
+
+ramp-signal-0 = ▁
+ramp-signal-1 = ▂
+ramp-signal-2 = ▃
+ramp-signal-3 = ▄
+ramp-signal-4 = ▅
+ramp-signal-5 = ▆
+ramp-signal-6 = ▇
+ramp-signal-7 = █
+
+
+;----------------------------------------------------------
+;   		      E T H E R N E T
+;----------------------------------------------------------
+
+[module/eth]
+type = internal/network
+; To test interface: $ ls -1 /sys/class/net/
+interface = ens5f5
+interval = 0.5
+
+label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
+label-connected-foreground = ${colors.color1}
+label-connected-background = ${colors.color7}
+label-disconnected = "  %ifname% "
+label-disconnected-foreground = ${colors.color4}
+label-disconnected-background = ${colors.color7}
+
+
+;----------------------------------------------------------
+;		     D A T E  &  T I M E
+;----------------------------------------------------------
+
+[module/date]
+type = internal/date
+interval = 1
+
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
+
+date = "  %Y/%m/%d"
+date-alt = ""
+time = ""
+time-alt = "  %I:%M:%S %p"
+;date = "%Y/%m/%d | "
+;date-alt = "It is day %j, week %V, of year %y of the %Cth century."
+;time = "%I:%M:%S %p"
+;time-alt = " %z %Z"
+label = "  %date%%time%  "
+
+
+;----------------------------------------------------------
+;			V O L U M E
+;----------------------------------------------------------
+
+[module/volume]
+type = internal/volume
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+mapping = true
+
+format-volume = <ramp-volume><label-volume>
+;     
+
+label-volume = %percentage%
+label-volume-foreground = ${colors.color7}
+label-volume-background = ${colors.color1}
+label-muted = "  muted"
+label-muted-foreground = ${colors.color4}
+label-muted-background = ${colors.color1}
+
+ramp-volume-0 = "  "
+ramp-volume-0-foreground = ${colors.color7}
+ramp-volume-0-background = ${colors.color1}
+ramp-volume-1 = "  "
+ramp-volume-1-foreground = ${colors.color7}
+ramp-volume-1-background = ${colors.color1}
+ramp-volume-2 = "  "
+ramp-volume-2-foreground = ${colors.color7}
+ramp-volume-2-background = ${colors.color1}
+ramp-volume-3 = "  "
+ramp-volume-3-foreground = ${colors.color7}
+ramp-volume-3-background = ${colors.color1}
+
+bar-volume-width = 10
+bar-volume-background = #495858
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = true
+bar-volume-indicator = "|"
+bar-volume-fill = ─
+bar-volume-empty = ─
+
+
+;----------------------------------------------------------
+;			 B A T T E R Y
+;----------------------------------------------------------
+
+[module/battery]
+type = internal/battery
+; To list battery & adapter: $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC0
+full-at = 99
+
+format-charging = <animation-charging> <label-charging>
+format-charging-foreground = ${colors.color7}
+format-charging-background = ${colors.color1}
+format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-foreground = ${colors.color7}
+format-discharging-background = ${colors.color1}
+format-full = <label-full>
+format-full-foreground = ${colors.color7}
+format-full-background = ${colors.color1}
+
+label-charging = "%percentage%% "
+label-discharging = "%percentage%% "
+label-discharging-foreground = ${colors.color7}
+label-full = "  %percentage%% "
+; 
+ramp-capacity-0 = " "
+ramp-capacity-0-foreground = ${colors.color4}
+ramp-capacity-1 = " "
+ramp-capacity-1-foreground = ${colors.color4}
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
+animation-charging-framerate = 750
+
+
+;----------------------------------------------------------
+;		    T E M P E R A T U R E
+;----------------------------------------------------------
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 65
+interval = 2
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-prefix = " "
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
+format-warn-foreground = ${colors.color4}
+format-warn-background = ${colors.color7}
+
+label = %temperature%
+label-warn = %temperature%
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+
+;----------------------------------------------------------
+;		       G I T H U B
+;----------------------------------------------------------
+
+[module/github]
+type = internal/github
+
+format = <label>
+
+; Accessing an access token stored in file
+;token = ${file:/path/to/file/containing/github/access.token}
+; Accessing an access token stored in an environment variable
+token = ${env:GITHUB_ACCESS_TOKEN}
+; Whether empty notifications should be displayed or not
+empty-notifications = false
+
+;    
+; Available tokens:
+;   %notifications% (default)
+; Default: Notifications: %notifications%
+label =  %notifications%
+
+
+;----------------------------------------------------------
+;		      P O W E R   M E N U
+;----------------------------------------------------------
+
+[module/powermenu]
+type = custom/menu
+
+;      » 
+label-open = " "
+label-open-font = 6
+label-open-foreground = ${colors.color1}
+label-open-background = ${colors.color0}
+label-close = 
+label-close-foreground = ${colors.color7}
+label-close-background = ${colors.color0}
+label-separator = " "
+label-separator-foreground = ${colors.color1}
+label-separator-background = ${colors.color0}
+
+; lock
+menu-0-0 = "  "
+menu-0-0-exec = bash ~/scripts/lock.sh
+menu-0-0-foreground = ${colors.color7}
+menu-0-0-background = ${colors.color0}
+; sleep
+menu-0-1 = "  "
+menu-0-1-exec = bash ~/scripts/lock.sh && systemctl suspend
+menu-0-1-foreground = ${colors.color7}
+menu-0-1-background = ${colors.color0}
+; logout
+menu-0-2 = "  "
+menu-0-2-exec = pkill x
+menu-0-2-foreground = ${colors.color7}
+menu-0-2-background = ${colors.color0}
+; reboot
+menu-0-3 = "  "
+menu-0-3-exec = systemctl reboot
+menu-0-3-foreground = ${colors.color7}
+menu-0-3-background = ${colors.color0}
+; shutdown
+menu-0-4 = " "
+menu-0-4-exec = systemctl poweroff
+menu-0-4-foreground = ${colors.color7}
+menu-0-4-background = ${colors.color0}
+; end stripe
+menu-0-5 = " "
+menu-0-5-font = 6
+menu-0-5-foreground = ${colors.color1}
+menu-0-5-background = ${colors.color0}
+
+
+;----------------------------------------------------------
+;		       R U N    M E N U
+;----------------------------------------------------------
+
+[module/appmenu]
+type = custom/menu
+
+;       
+label-open = " "
+label-open-font = 6
+label-open-foreground = ${colors.color1}
+label-open-background = ${colors.color0}
+label-close = " "
+label-close-foreground = ${colors.color7}
+label-close-background = ${colors.color0}
+label-separator = " "
+label-separator-foreground = ${colors.color1}
+label-separator-background = ${colors.color0}
+
+;                   
+; terminal
+menu-0-0 = "  "
+menu-0-0-exec = termite &
+menu-0-0-foreground = ${colors.color7}
+menu-0-0-background = ${colors.color0}
+; filemanager
+menu-0-1 = "  "
+menu-0-1-exec = thunar &
+menu-0-1-foreground = ${colors.color7}
+menu-0-1-background = ${colors.color0}
+; browser
+menu-0-2 = "  "
+menu-0-2-exec = firefox &
+menu-0-2-foreground = ${colors.color7}
+menu-0-2-background = ${colors.color0}
+; editor
+menu-0-3 = "  "
+menu-0-3-exec = atom &
+menu-0-3-foreground = ${colors.color7}
+menu-0-3-background = ${colors.color0}
+; chat client
+menu-0-4 = "  "
+menu-0-4-exec = discord &
+menu-0-4-foreground = ${colors.color7}
+menu-0-4-background = ${colors.color0}
+; media player
+menu-0-5 = "  "
+menu-0-5-exec = vlc &
+menu-0-5-foreground = ${colors.color7}
+menu-0-5-background = ${colors.color0}
+; end stripe
+menu-0-6 = " "
+menu-0-6-font = 6
+menu-0-6-foreground = ${colors.color1}
+menu-0-6-background = ${colors.color0}
+
+
+;----------------------------------------------------------
+;		      S C R I P T    M O D U L E S
+;    https://github.com/jaagr/polybar/wiki/Module:-script
+;----------------------------------------------------------
+
+; Example json files for mail, weather, & music: https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
+[module/mail]
+type = custom/script
+exec = $HOME/.config/polybar/mail.py
+interval = 120
+label = "  %output:0:5:...% "
+;  
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
+
+
+[module/weather]
+type = custom/script
+exec = $HOME/.config/polybar/weather.py
+interval = 120
+label = "  %output:0:22:...% "
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
+
+
+[module/music]
+type = custom/script
+exec = $HOME/.config/polybar/mediaplayer.py
+exec-if = pgrep -x spotify
+interval = 3
+label = "  %output:0:30:% "
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
+click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+
+[module/ssh]
+type = custom/script
+exec = echo + SSH
+exec-if = pgrep -i ssh
+interval = 3.0
+format-foreground = ${colors.color4}
+format-background = ${colors.color7}
+label = " %output:0:5%"
+click-left = echo left %counter%
+click-middle = echo middle %counter%
+click-right = echo right %counter%
+scroll-up = echo scroll up %counter%
+scroll-down = echo scroll down %counter%
+
+
+[module/vpn]
+type = custom/script
+exec = echo + VPN
+exec-if = pgrep -i vpn
+interval = 3.0
+format-foreground = ${colors.color4}
+format-background = ${colors.color7}
+label = " %output:0:5%"
+click-left = echo left %counter%
+click-middle = echo middle %counter%
+click-right = echo right %counter%
+scroll-up = echo scroll up %counter%
+scroll-down = echo scroll down %counter%
+
+
+;#########################################################;
+;                 E N D    O F    F I L E                 :
+;#########################################################;

@@ -84,7 +84,7 @@ transparency = 25
 # Don't remove messages, if the user is idle (no mouse or keyboard input)
 # for longer than idle_threshold seconds.
 # Set to 0 to disable.
-idle_threshold = 30
+idle_threshold = 10
 
 # Which monitor should the notifications be displayed on.
 monitor = 0
@@ -139,7 +139,7 @@ separator_color = frame
 # Print a notification on startup.
 # This is mainly for error detection, since dbus (re-)starts dunst
 # automatically after a crash.
-startup_notification = true
+startup_notification = false
 
 # dmenu path.
 dmenu = /usr/bin/dmenu -p dunst:
@@ -149,7 +149,7 @@ browser = /usr/bin/firefox -new-tab
 
 # Align icons left/right/off
 icon_position = left
-max_icon_size = 80
+max_icon_size = 32
 
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/

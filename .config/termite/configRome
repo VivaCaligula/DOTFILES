@@ -1,0 +1,43 @@
+#====================================#
+#     Caligula's Termite config.     #
+#====================================#
+
+[options]
+    allow_bold = true
+    audible_bell = true
+    browser = w3m
+    clickable_url = true
+    cursor_blink = true
+    cursor_shape = block
+    dynamic_title = true
+    filter_unmatched_urls = true
+    font = Terminus 9
+    #font = Monospace 8
+    #font = xos4 Terminus 9px
+    #fullscreen = true
+    geometry = 475x254
+    icon_name = terminal
+    mouse_autohide = true
+    #padding = 2
+    pseudo_transparency = false
+    #scrollbar = off
+    scroll_on_keystroke = true
+    scroll_on_output = true
+    scrollback_lines = 10000
+    search_wrap = true
+    #size_hints = false
+    transparency = 1.7
+    urgent_on_bell = true
+    visible_bell = true
+
+[colors]
+    # For transparent BG
+    background = rgba(63, 63, 63, 0.90)
+    # colors 0-15 are inherited from Xresources (set by wal script)
+    color16 = #636363
+
+[hints]
+    #padding = 2
+    #border = #3f3f3f
+    #border_width = 0.5
+    #roundness = 2.0

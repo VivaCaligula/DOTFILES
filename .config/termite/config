@@ -29,4 +29,3 @@
     [colors]
     # For transparent BG
     background = rgba(63, 63, 63, 0.90)
-    color15 = rgba(63, 63, 63, 0.90)

@@ -2,6 +2,7 @@
 #     Caligula's custom shell aliases.     #
 #==========================================#
 # Ruby "colorls" scripts are now used - https://github.com/athityakumar/colorls
+# Lots of other personalized scripts are used - https://github.com/VivaCaligula/SCRIPTS
 
 
 ###  Script Shit  ###
@@ -12,6 +13,9 @@ alias lock='bash ~/scripts/lock.sh'
 alias lockscreen='bash ~/scripts/lock.sh'
 alias hax='bash ~/scripts/nmap.sh'
 alias pipes='bash ~/scripts/pipes.sh -f30 -p5 -r0'
+alias rice='bash ~/scripts/riceman.sh'
+alias riceman='bash ~/scripts/riceman.sh'
+alias aesthetics='bash ~/scripts/riceman.sh'
 alias snux='bash ~/scripts/snux.sh'
 alias ss='bash ~/scripts/ss.sh'
 alias screenshot='bash ~/scripts/ss.sh'
