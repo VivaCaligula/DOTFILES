@@ -92,8 +92,5 @@ export PATH=$PATH:~/.gem/ruby/2.4.0/bin
     # powerline-daemon -q
     # source $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
 
-# Import colorschemes from wal.
-(wal -r -t &)
-
 # Append shell aliases.
 test -r ~/.aliases && source ~/.aliases

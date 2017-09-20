@@ -37,8 +37,8 @@
 !.config/polybar/weather.py
 !.config/termite/
 .config/termite/*
-!.config/termite/configRome
-!.config/termite/configAntium
+!.config/termite/Rome
+!.config/termite/Antium
 !.config/dunst/
 .config/dunst/*
 !.config/dunst/dunstrc

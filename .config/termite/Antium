@@ -18,7 +18,7 @@
     geometry = 475x254
     icon_name = terminal
     mouse_autohide = true
-    padding = 8
+    #padding = 8
     pseudo_transparency = false
     #scrollbar = off
     scroll_on_keystroke = true
@@ -32,13 +32,11 @@
 
 [colors]
 # For color changes - https://terminal.sexy/
-# Schemes: xcolors.net/ > dkeg - canvasedpastel
-#          collection/ > x-erosion
-    # special
-    foreground      = #746c48
-    foreground_bold = #746c48
-    cursor          = #746c48
-    background      = #170f0d
+# Schemes: xcolors.net/ ... dkeg - canvasedpastel
+#          collection/ ... x-erosion
+    background=#170f0d
+    foreground=#746c48
+    cursor=#746c48
     # black
     color0  = #26251c
     color8  = #999f91
@@ -67,7 +65,7 @@
     color16 = #636363
 
 [hints]
-    #padding = 2
+    #padding = 8
     #border = #3f3f3f
     #border_width = 0.5
     #roundness = 2.0

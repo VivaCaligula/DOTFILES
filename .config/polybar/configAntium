@@ -33,8 +33,8 @@ color15 = #d6d3ac
 ;----------------------------------------------------------
 
 [global/wm]
-margin-top = 16
-margin-bottom = 16
+margin-top = 0
+margin-bottom = 24
 
 [bar/antium]
 monitor = ${env:MONITOR:LVDS-1}
@@ -42,11 +42,11 @@ monitor = ${env:MONITOR:LVDS-1}
 ;dpi = ${xrdb:Xft.dpi:136}
 bottom = false
 width = 100%
-height = 16
+height = 24
 offset-x = 0%
 offset-y = 0%
 fixed-center = true
-background = ${colors.background}
+background = ${colors.color0}
 foreground = ${colors.foreground}
 
 overline-size = 0
@@ -64,8 +64,8 @@ spacing = 0
 padding-left = 0
 padding-right = 0
 ;label-padding = 2
-module-margin-left = 0
-module-margin-right = 0
+module-margin-left = 1
+module-margin-right = 1
 
 
 ;----------------------------------------------------------
@@ -73,7 +73,7 @@ module-margin-right = 0
 ;----------------------------------------------------------
 
 font-0 = PowerlineSymbols:size=15;3
-font-1 = Terminus:size=10;0
+font-1 = Terminus:size=10;1
 font-2 = FontAwesome:size=10;2
 font-3 = Terminus:size=18;0
 font-4 = Monospace:size=28;3
