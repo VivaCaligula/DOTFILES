@@ -389,8 +389,8 @@ format-disconnected = <label-disconnected>
 label-connected = "net %downspeed%"
 ;label-connected = "  %downspeed%  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.color4}
-label-disconnected = " "
-label-disconnected-foreground = ${colors.color4}
+label-disconnected = "net ded"
+label-disconnected-foreground = ${colors.color7}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂

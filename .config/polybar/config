@@ -34,7 +34,7 @@ color15 = #d6d3ac
 
 [global/wm]
 margin-top = 0
-margin-bottom = 14
+margin-bottom = 16
 
 [bar/antium]
 monitor = ${env:MONITOR:LVDS-1}
@@ -389,8 +389,8 @@ format-disconnected = <label-disconnected>
 label-connected = "net %downspeed%"
 ;label-connected = "  %downspeed%  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
 label-connected-foreground = ${colors.color4}
-label-disconnected = " "
-label-disconnected-foreground = ${colors.color4}
+label-disconnected = "net ded"
+label-disconnected-foreground = ${colors.color7}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -448,12 +448,12 @@ headphone-soundcard = default
 mapping = true
 
 format-volume = <label-volume>
-;     
+;      
 
 label-volume = vol %percentage%%
 label-volume-foreground = ${colors.color4}
-label-muted = "  muted"
-label-muted-foreground = ${colors.color4}
+label-muted = " muted"
+label-muted-foreground = ${colors.color7}
 
 ramp-volume-0 = "  "
 ramp-volume-0-foreground = ${colors.color4}
