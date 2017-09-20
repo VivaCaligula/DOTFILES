@@ -344,7 +344,7 @@ format = <label>
 ;format-prefix = ""
 format-foreground = ${colors.color4}
 
-label = cpu %percentage:3%%
+label = cpu%percentage:3%%
 ;   
 
 ramp-coreload-0 = ▁
