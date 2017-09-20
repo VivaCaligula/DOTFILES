@@ -1,38 +1,31 @@
 ;=========================================================;
 ;                Caligula's polybar config.               ;
 ;=========================================================;
-; To refresh while editing do: $ polybar -r rome
+; To refresh while editing do: $ polybar -r antium
 
 ;----------------------------------------------------------
 ;			C O L O R S
 ;----------------------------------------------------------
 
 [colors]
-peach = #FFCD98
-lime = #CADC79
-salmon = #d97464
-darkgrey = #2e2e2e
-lightgrey = #444444
-alert = #bd2c40
-
-xcolor0 = ${xrdb:color0}
-xcolor1 = ${xrdb:color1}
-xcolor2 = ${xrdb:color2}
-xcolor3 = ${xrdb:color3}
-xcolor4 = ${xrdb:color4}
-xcolor5 = ${xrdb:color5}
-xcolor6 = ${xrdb:color6}
-xcolor7 = ${xrdb:color7}
-xcolor8 = ${xrdb:color8}
-xcolor9 = ${xrdb:color9}
-xcolor10 = ${xrdb:color10}
-xcolor11 = ${xrdb:color11}
-xcolor12 = ${xrdb:color12}
-xcolor13 = ${xrdb:color13}
-xcolor14 = ${xrdb:color14}
-xcolor15 = ${xrdb:color15}
-background = ${xrdb:background}
-foreground = ${xrdb:foreground}
+foreground = #746c48
+background = #170f0d
+color0 = #26251c
+color1 = #323027
+color2 = #3d4339
+color3 = #443b2c
+color4 = #534d35
+color5 = #646756
+color6 = #7b8574
+color7 = #837b61
+color8 = #999f91
+color9 = #9b9773
+color10 = #b2b08c
+color11 = #c4bb8c
+color12 = #c4b67a
+color13 = #cfc995
+color14 = #d3d4b6
+color15 = #d6d3ac
 
 
 ;----------------------------------------------------------
@@ -40,34 +33,32 @@ foreground = ${xrdb:foreground}
 ;----------------------------------------------------------
 
 [global/wm]
-margin-top = 21
-margin-bottom = 21
+margin-top = 16
+margin-bottom = 16
 
-[bar/rome]
+[bar/antium]
 monitor = ${env:MONITOR:LVDS-1}
 ;monitor-fallback = ${env:MONITOR:eDP-1}
 ;dpi = ${xrdb:Xft.dpi:136}
 bottom = false
 width = 100%
-height = 21
+height = 16
 offset-x = 0%
 offset-y = 0%
 fixed-center = true
-background = ${colors.xcolor0}
-foreground = ${colors.xcolor1}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 overline-size = 0
-overline-color = ${colors.xcolor7}
+overline-color = ${colors.color7}
 underline-size = 0
-underline-color = ${colors.xcolor7}
-;label-name-overline = ${colors.colorname}
-;format-param-underline = ${colors.colorname}
+underline-color = ${colors.color7}
 
 border-bottom-size = 0
-border-bottom-color = ${colors.xcolor7}
+border-bottom-color = ${colors.color7}
 border-top-size = 0
-border-top-color = ${colors.xcolor7}
-border-color-foreground = ${colors.peach}
+border-top-color = ${colors.color7}
+border-color-foreground = ${colors.color7}
 
 spacing = 0
 padding-left = 0
@@ -82,7 +73,7 @@ module-margin-right = 0
 ;----------------------------------------------------------
 
 font-0 = PowerlineSymbols:size=15;3
-font-1 = Terminus:size=10;1
+font-1 = Terminus:size=10;0
 font-2 = FontAwesome:size=10;2
 font-3 = Terminus:size=18;0
 font-4 = Monospace:size=28;3
@@ -99,8 +90,8 @@ tray-padding = 0
 tray-transparent = false
 tray-maxsize=24
 ;tray-offset-x = 21%
-tray-foreground = ${colors.xcolor7}
-tray-background = ${colors.xcolor1}
+tray-foreground = ${colors.foreground}
+tray-background = ${colors.background}
 
 wm-restack = bspwm
 ;override-redirect = true
@@ -112,21 +103,14 @@ scroll-down = bspwm-deskprev
 ;  	    M O D U L E    L A Y O U T S
 ;----------------------------------------------------------
 
-modules-left = bspwm RightArrow3 weather RightArrow2 mail RightArrow1 powermenu music
-modules-center = MiddleArrowLeft date MiddleArrowRight
-modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
+modules-left = bspwm 
+modules-center = date
+modules-right = volume network ssh vpn cpu battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
 ; memory network eth date volume battery temperature github 
 ; appmenu powermenu mail weather music ssh vpn
-
-[bar/secondary]
-inherit = bar/rome
-bottom = true
-modules-left = mpd music github
-modules-center = 
-modules-right = powermenu arrow1 arrow2 weather arrow3 mail arrow2 network vpn eth
 
 
 ;----------------------------------------------------------
@@ -154,23 +138,23 @@ reverse-scroll = false
 ;label-focused = %name%
 ;label-focused = %index%
 label-focused = 
-label-focused-foreground = ${colors.xcolor7}
-label-focused-background = ${colors.xcolor1}
+label-focused-foreground = ${colors.color7}
+label-focused-background = ${colors.color1}
 label-focused-padding = 2
 label-focused-font = 3
 label-occupied = 
-label-occupied-foreground = ${colors.xcolor0}
-label-occupied-background = ${colors.xcolor1}
+label-occupied-foreground = ${colors.color0}
+label-occupied-background = ${colors.color1}
 label-occupied-padding = 2
 label-occupied-font = 3
 label-urgent = 
-label-urgent-foreground = ${colors.xcolor4}
-label-urgent-background = ${colors.xcolor1}
+label-urgent-foreground = ${colors.color4}
+label-urgent-background = ${colors.color1}
 label-urgent-padding = 2
 label-urgent-font = 3
 label-empty = 
-label-empty-foreground = ${colors.xcolor0}
-label-empty-background = ${colors.xcolor1}
+label-empty-foreground = ${colors.color0}
+label-empty-background = ${colors.color1}
 label-empty-padding = 2
 label-empty-font = 3
 
@@ -191,69 +175,69 @@ label-empty-font = 3
 [module/pipe]
 type = custom/text
 content = "|"
-content-foreground = ${colors.darkgrey}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
 content-padding = 1
 
 [module/LeftStripe]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
 
 [module/arrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
 
 [module/arrow2]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.color7}
+content-background = ${colors.color1}
 
 [module/arrow3]
 type = custom/text
 content = " "
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.color1}
+content-background = ${colors.color7}
 
 [module/RightStripe]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
 
 [module/RightArrow1]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
 
 [module/RightArrow2]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor7}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.color7}
+content-background = ${colors.color1}
 
 [module/RightArrow3]
 type = custom/text
 content = ""
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor7}
+content-foreground = ${colors.color1}
+content-background = ${colors.color7}
 
 [module/MiddleArrowLeft]
 type = custom/text
 content = "◥"
-content-foreground = ${colors.xcolor1}
-content-background = ${colors.xcolor0}
+content-foreground = ${colors.color1}
+content-background = ${colors.color0}
 ;◥ ◤◢ ◣
 [module/MiddleArrowRight]
 type = custom/text
 content = "◢"
-content-foreground = ${colors.xcolor0}
-content-background = ${colors.xcolor1}
+content-foreground = ${colors.color0}
+content-background = ${colors.color1}
 
 
 ;----------------------------------------------------------
@@ -263,8 +247,8 @@ content-background = ${colors.xcolor1}
 [module/xwindow]
 type = internal/xwindow
 
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor0}
+format-foreground = ${colors.color1}
+format-background = ${colors.color0}
 
 label = "» %title:0:22:...%"
 
@@ -278,12 +262,12 @@ type = internal/xkeyboard
 blacklist-0 = num lock
 
 ;   
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor0}
+format-foreground = ${colors.color1}
+format-background = ${colors.color0}
 
 label-layout =  %layout%
 label-indicator-padding = 1
-label-indicator-background = ${colors.salmon}
+label-indicator-background = ${colors.color0}
 
 
 ;----------------------------------------------------------
@@ -299,17 +283,17 @@ mount-0 = /
 ;mount-1 = /home
 
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.xcolor7}
-format-mounted-background = ${colors.xcolor1}
+format-mounted-foreground = ${colors.color7}
+format-mounted-background = ${colors.color1}
 
 ;  
 label-mounted = "  %percentage_used%%"
 ; %free%% %percentage_used%% %used%
-label-mounted-foreground = ${colors.xcolor7}
-label-mounted-background = ${colors.xcolor1}
+label-mounted-foreground = ${colors.color7}
+label-mounted-background = ${colors.color1}
 label-unmounted =   %mountpoint%
-label-unmounted-foreground = ${colors.xcolor7}
-label-unmounted-background = ${colors.xcolor1}
+label-unmounted-foreground = ${colors.color7}
+label-unmounted-background = ${colors.color1}
 
 
 ;----------------------------------------------------------
@@ -372,8 +356,8 @@ interval = 1.0
 format = <label>
 ;format = <ramp-coreload><label> 
 format-prefix = " "
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
 
 label = %percentage:3%%
 ;   
@@ -398,8 +382,8 @@ interval = 1
 
 format-prefix = "  "
 ;format-prefix = ram
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
 format-margin-top = -5
 
 label = %percentage_used%%
@@ -420,11 +404,11 @@ format-disconnected = <label-disconnected>
 
 label-connected = "  %downspeed%"
 ;label-connected = "  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
-label-connected-foreground = ${colors.xcolor1}
-label-connected-background = ${colors.xcolor7}
+label-connected-foreground = ${colors.color1}
+label-connected-background = ${colors.color7}
 label-disconnected = " "
-label-disconnected-foreground = ${colors.xcolor1}
-label-disconnected-background = ${colors.xcolor7}
+label-disconnected-foreground = ${colors.color1}
+label-disconnected-background = ${colors.color7}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -447,11 +431,11 @@ interface = ens5f5
 interval = 0.5
 
 label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
-label-connected-foreground = ${colors.xcolor1}
-label-connected-background = ${colors.xcolor7}
+label-connected-foreground = ${colors.color1}
+label-connected-background = ${colors.color7}
 label-disconnected = "  %ifname% "
-label-disconnected-foreground = ${colors.xcolor4}
-label-disconnected-background = ${colors.xcolor7}
+label-disconnected-foreground = ${colors.color4}
+label-disconnected-background = ${colors.color7}
 
 
 ;----------------------------------------------------------
@@ -462,8 +446,8 @@ label-disconnected-background = ${colors.xcolor7}
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
 
 date = "  %Y/%m/%d"
 date-alt = ""
@@ -492,24 +476,24 @@ format-volume = <ramp-volume><label-volume>
 ;     
 
 label-volume = %percentage%
-label-volume-foreground = ${colors.xcolor7}
-label-volume-background = ${colors.xcolor1}
+label-volume-foreground = ${colors.color7}
+label-volume-background = ${colors.color1}
 label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor4}
-label-muted-background = ${colors.xcolor1}
+label-muted-foreground = ${colors.color4}
+label-muted-background = ${colors.color1}
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.xcolor7}
-ramp-volume-0-background = ${colors.xcolor1}
+ramp-volume-0-foreground = ${colors.color7}
+ramp-volume-0-background = ${colors.color1}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.xcolor7}
-ramp-volume-1-background = ${colors.xcolor1}
+ramp-volume-1-foreground = ${colors.color7}
+ramp-volume-1-background = ${colors.color1}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.xcolor7}
-ramp-volume-2-background = ${colors.xcolor1}
+ramp-volume-2-foreground = ${colors.color7}
+ramp-volume-2-background = ${colors.color1}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.xcolor7}
-ramp-volume-3-background = ${colors.xcolor1}
+ramp-volume-3-foreground = ${colors.color7}
+ramp-volume-3-background = ${colors.color1}
 
 bar-volume-width = 10
 bar-volume-background = #495858
@@ -538,24 +522,24 @@ adapter = AC0
 full-at = 99
 
 format-charging = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.xcolor7}
-format-charging-background = ${colors.xcolor1}
+format-charging-foreground = ${colors.color7}
+format-charging-background = ${colors.color1}
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.xcolor7}
-format-discharging-background = ${colors.xcolor1}
+format-discharging-foreground = ${colors.color7}
+format-discharging-background = ${colors.color1}
 format-full = <label-full>
-format-full-foreground = ${colors.xcolor7}
-format-full-background = ${colors.xcolor1}
+format-full-foreground = ${colors.color7}
+format-full-background = ${colors.color1}
 
 label-charging = "%percentage%% "
 label-discharging = "%percentage%% "
-label-discharging-foreground = ${colors.xcolor7}
+label-discharging-foreground = ${colors.color7}
 label-full = "  %percentage%% "
 ; 
 ramp-capacity-0 = " "
-ramp-capacity-0-foreground = ${colors.xcolor4}
+ramp-capacity-0-foreground = ${colors.color4}
 ramp-capacity-1 = " "
-ramp-capacity-1-foreground = ${colors.xcolor4}
+ramp-capacity-1-foreground = ${colors.color4}
 ramp-capacity-2 = " "
 ramp-capacity-3 = " "
 ramp-capacity-4 = " "
@@ -580,10 +564,10 @@ interval = 2
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-prefix = " "
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
-format-warn-foreground = ${colors.xcolor4}
-format-warn-background = ${colors.xcolor7}
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
+format-warn-foreground = ${colors.color4}
+format-warn-background = ${colors.color7}
 
 label = %temperature%
 label-warn = %temperature%
@@ -628,45 +612,45 @@ type = custom/menu
 ;      » 
 label-open = " "
 label-open-font = 6
-label-open-foreground = ${colors.xcolor1}
-label-open-background = ${colors.xcolor0}
+label-open-foreground = ${colors.color1}
+label-open-background = ${colors.color0}
 label-close = 
-label-close-foreground = ${colors.xcolor7}
-label-close-background = ${colors.xcolor0}
+label-close-foreground = ${colors.color7}
+label-close-background = ${colors.color0}
 label-separator = " "
-label-separator-foreground = ${colors.xcolor1}
-label-separator-background = ${colors.xcolor0}
+label-separator-foreground = ${colors.color1}
+label-separator-background = ${colors.color0}
 
 ; lock
 menu-0-0 = "  "
 menu-0-0-exec = bash ~/scripts/lock.sh
-menu-0-0-foreground = ${colors.xcolor7}
-menu-0-0-background = ${colors.xcolor0}
+menu-0-0-foreground = ${colors.color7}
+menu-0-0-background = ${colors.color0}
 ; sleep
 menu-0-1 = "  "
 menu-0-1-exec = bash ~/scripts/lock.sh && systemctl suspend
-menu-0-1-foreground = ${colors.xcolor7}
-menu-0-1-background = ${colors.xcolor0}
+menu-0-1-foreground = ${colors.color7}
+menu-0-1-background = ${colors.color0}
 ; logout
 menu-0-2 = "  "
 menu-0-2-exec = pkill x
-menu-0-2-foreground = ${colors.xcolor7}
-menu-0-2-background = ${colors.xcolor0}
+menu-0-2-foreground = ${colors.color7}
+menu-0-2-background = ${colors.color0}
 ; reboot
 menu-0-3 = "  "
 menu-0-3-exec = systemctl reboot
-menu-0-3-foreground = ${colors.xcolor7}
-menu-0-3-background = ${colors.xcolor0}
+menu-0-3-foreground = ${colors.color7}
+menu-0-3-background = ${colors.color0}
 ; shutdown
 menu-0-4 = " "
 menu-0-4-exec = systemctl poweroff
-menu-0-4-foreground = ${colors.xcolor7}
-menu-0-4-background = ${colors.xcolor0}
+menu-0-4-foreground = ${colors.color7}
+menu-0-4-background = ${colors.color0}
 ; end stripe
 menu-0-5 = " "
 menu-0-5-font = 6
-menu-0-5-foreground = ${colors.xcolor1}
-menu-0-5-background = ${colors.xcolor0}
+menu-0-5-foreground = ${colors.color1}
+menu-0-5-background = ${colors.color0}
 
 
 ;----------------------------------------------------------
@@ -679,51 +663,51 @@ type = custom/menu
 ;       
 label-open = " "
 label-open-font = 6
-label-open-foreground = ${colors.xcolor1}
-label-open-background = ${colors.xcolor0}
+label-open-foreground = ${colors.color1}
+label-open-background = ${colors.color0}
 label-close = " "
-label-close-foreground = ${colors.xcolor7}
-label-close-background = ${colors.xcolor0}
+label-close-foreground = ${colors.color7}
+label-close-background = ${colors.color0}
 label-separator = " "
-label-separator-foreground = ${colors.xcolor1}
-label-separator-background = ${colors.xcolor0}
+label-separator-foreground = ${colors.color1}
+label-separator-background = ${colors.color0}
 
 ;                   
 ; terminal
 menu-0-0 = "  "
 menu-0-0-exec = termite &
-menu-0-0-foreground = ${colors.xcolor7}
-menu-0-0-background = ${colors.xcolor0}
+menu-0-0-foreground = ${colors.color7}
+menu-0-0-background = ${colors.color0}
 ; filemanager
 menu-0-1 = "  "
 menu-0-1-exec = thunar &
-menu-0-1-foreground = ${colors.xcolor7}
-menu-0-1-background = ${colors.xcolor0}
+menu-0-1-foreground = ${colors.color7}
+menu-0-1-background = ${colors.color0}
 ; browser
 menu-0-2 = "  "
 menu-0-2-exec = firefox &
-menu-0-2-foreground = ${colors.xcolor7}
-menu-0-2-background = ${colors.xcolor0}
+menu-0-2-foreground = ${colors.color7}
+menu-0-2-background = ${colors.color0}
 ; editor
 menu-0-3 = "  "
 menu-0-3-exec = atom &
-menu-0-3-foreground = ${colors.xcolor7}
-menu-0-3-background = ${colors.xcolor0}
+menu-0-3-foreground = ${colors.color7}
+menu-0-3-background = ${colors.color0}
 ; chat client
 menu-0-4 = "  "
 menu-0-4-exec = discord &
-menu-0-4-foreground = ${colors.xcolor7}
-menu-0-4-background = ${colors.xcolor0}
+menu-0-4-foreground = ${colors.color7}
+menu-0-4-background = ${colors.color0}
 ; media player
 menu-0-5 = "  "
 menu-0-5-exec = vlc &
-menu-0-5-foreground = ${colors.xcolor7}
-menu-0-5-background = ${colors.xcolor0}
+menu-0-5-foreground = ${colors.color7}
+menu-0-5-background = ${colors.color0}
 ; end stripe
 menu-0-6 = " "
 menu-0-6-font = 6
-menu-0-6-foreground = ${colors.xcolor1}
-menu-0-6-background = ${colors.xcolor0}
+menu-0-6-foreground = ${colors.color1}
+menu-0-6-background = ${colors.color0}
 
 
 ;----------------------------------------------------------
@@ -738,8 +722,8 @@ exec = $HOME/.config/polybar/mail.py
 interval = 120
 label = "  %output:0:5:...% "
 ;  
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
 
 
 [module/weather]
@@ -747,8 +731,8 @@ type = custom/script
 exec = $HOME/.config/polybar/weather.py
 interval = 120
 label = "  %output:0:22:...% "
-format-foreground = ${colors.xcolor1}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.color1}
+format-background = ${colors.color7}
 
 
 [module/music]
@@ -757,8 +741,8 @@ exec = $HOME/.config/polybar/mediaplayer.py
 exec-if = pgrep -x spotify
 interval = 3
 label = "  %output:0:30:% "
-format-foreground = ${colors.xcolor7}
-format-background = ${colors.xcolor1}
+format-foreground = ${colors.color7}
+format-background = ${colors.color1}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 
@@ -767,8 +751,8 @@ type = custom/script
 exec = echo + SSH
 exec-if = pgrep -i ssh
 interval = 3.0
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.color4}
+format-background = ${colors.color7}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%
@@ -782,8 +766,8 @@ type = custom/script
 exec = echo + VPN
 exec-if = pgrep -i vpn
 interval = 3.0
-format-foreground = ${colors.xcolor4}
-format-background = ${colors.xcolor7}
+format-foreground = ${colors.color4}
+format-background = ${colors.color7}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%
