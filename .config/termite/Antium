@@ -5,6 +5,7 @@
 [options]
     allow_bold = true
     audible_bell = true
+    border_width = 20
     browser = w3m
     clickable_url = true
     cursor_blink = true
@@ -17,9 +18,11 @@
     #fullscreen = true
     geometry = 475x254
     icon_name = terminal
+    margin = 24
     mouse_autohide = true
-    #padding = 8
+    padding = 0
     pseudo_transparency = false
+    roundness = 2.0
     #scrollbar = off
     scroll_on_keystroke = true
     scroll_on_output = true
@@ -63,9 +66,3 @@
     color15 = #d6d3ac
     # extra
     color16 = #636363
-
-[hints]
-    #padding = 8
-    #border = #3f3f3f
-    #border_width = 0.5
-    #roundness = 2.0
