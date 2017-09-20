@@ -1,36 +1,21 @@
-#============================#
-#     Caligula's nanorc.     #
-#============================#
-##
-## Please note that you must have configured nano with --enable-nanorc
-## for this file to be read!  Also note that this file should not be in
-## DOS or Mac format, and that characters specially interpreted by the
-## shell should not be escaped here.
-##
-## To make sure an option is disabled, use "unset <option>".
-##
-## For the options that take parameters, the default value is given.
-## Other options are unset by default.
-##
-## Quotes inside string parameters don't have to be escaped with
-## backslashes.  The last double quote in the string will be treated as
-## its end.  For example, for the "brackets" option, ""')>]}" will match
-## ", ', ), >, ], and }.
+##============================#
+##     Caligula's nanorc.     #
+##============================#
 
 ## Silently ignore problems with unknown directives in the nanorc file.
 ## Useful when your nanorc file might be read on systems with multiple
 ## versions of nano installed (e.g. your home directory is on NFS).
-# set quiet
+ set quiet
 
 ## When soft line wrapping is enabled, make it wrap lines at blanks
 ## (tabs and spaces) instead of always at the edge of the screen.
-set atblanks
+ set atblanks
 
 ## Use auto-indentation.
-set autoindent
+ set autoindent
 
 ## Back up files to the current filename plus a tilde.
-# set backup
+ set backup
 
 ## The directory to put unique backup files in.
 # set backupdir ""
@@ -39,42 +24,42 @@ set autoindent
 # set backwards
 
 ## Use bold text instead of reverse video text.
-# set boldtext
+ set boldtext
 
 ## The characters treated as closing brackets when justifying
 ## paragraphs.  They cannot contain blank characters.  Only closing
 ## punctuation, optionally followed by closing brackets, can end
 ## sentences.
-# set brackets ""')>]}"
+ set brackets ""')>]}"
 
 ## Do case-sensitive searches by default.
 # set casesensitive
 
 ## Constantly display the cursor position in the status bar.  Note that
 ## this overrides "quickblank".
-set constantshow
+ set constantshow
 
 ## Use cut-from-cursor-to-end-of-line by default.
-# set cutfromcursor
+ set cutfromcursor
 
 ## Set the line length for wrapping text and justifying paragraphs.
 ## If the value is 0 or less, the wrapping point will be the screen
 ## width less this number.
-# set fill -8
+ set fill -1
 
 ## Remember the used search/replace strings for the next session.
-# set historylog
+ set historylog
 
 ## Make the justify command kill whitespace at the end of lines.
-# set justifytrim
+ set justifytrim
 
 ## Display line numbers to the left of the text.
-set linenumbers
+ set linenumbers
 
 ## Enable vim-style lock-files.  This is just to let a vim user know you
 ## are editing a file [s]he is trying to edit and vice versa.  There are
 ## no plans to implement vim-style undo state in these files.
-set locking
+ set locking
 
 ## The opening and closing brackets that can be found by bracket
 ## searches.  They cannot contain blank characters.  The former set must
@@ -82,13 +67,13 @@ set locking
 # set matchbrackets "(<[{)>]}"
 
 ## Use the blank line below the title bar as extra editing space.
-set morespace
+ set morespace
 
 ## Enable mouse support, if available for your system.  When enabled,
 ## mouse clicks can be used to place the cursor, set the mark (with a
 ## double click), and execute shortcuts.  The mouse will work in the X
 ## Window System, and on the console when gpm is running.
-set mouse
+ set mouse
 
 ## Switch on multiple file buffers (inserting a file will put it into
 ## a separate buffer).
@@ -117,7 +102,7 @@ set mouse
 # set operatingdir ""
 
 ## Remember the cursor position in each file for the next editing session.
-set positionlog
+ set positionlog
 
 ## Preserve the XON and XOFF keys (^Q and ^S).
 # set preserve
@@ -126,7 +111,7 @@ set positionlog
 ## paragraphs.  They cannot contain blank characters.  Only closing
 ## punctuation, optionally followed by closing brackets, can end
 ## sentences.
-set punct "!.?"
+ set punct "!.?"
 
 ## Do quick status-bar blanking.  Status-bar messages will disappear after
 ## 1 keystroke instead of 26.  Note that "constantshow" overrides this.
@@ -138,7 +123,7 @@ set punct "!.?"
 ## If you have extended regular expression support, the default is:
 # set quotestr "^([ 	]*[#:>\|}])+"
 ## Otherwise:
-set quotestr "> "
+ set quotestr "> "
 
 ## Fix Backspace/Delete confusion problem.
 # set rebinddelete
@@ -151,30 +136,30 @@ set quotestr "> "
 
 ## Put the cursor on the highlighted item in the file browser;
 ## useful for people who use a braille display.
-set showcursor
+ set showcursor
 
 ## Make the Home key smarter.  When Home is pressed anywhere but at the
 ## very beginning of non-whitespace characters on a line, the cursor
 ## will jump to that beginning (either forwards or backwards).  If the
 ## cursor is already at that position, it will jump to the true
 ## beginning of the line.
-set smarthome
+ set smarthome
 
 ## Use smooth scrolling as the default.
-set smooth
+ set smooth
 
 ## Enable soft line wrapping (AKA full-line display).
-set softwrap
+ set softwrap
 
 ## Use this spelling checker instead of the internal one.  This option
 ## does not have a default value.
-set speller "aspell -x -c"
+ set speller "aspell -x -c"
 
 ## Allow nano to be suspended.
 # set suspend
 
 ## Use this tab size instead of the default; it must be greater than 0.
-set tabsize 4
+ set tabsize 4
 
 ## Convert typed tabs to spaces.
 # set tabstospaces
@@ -195,7 +180,7 @@ set tabsize 4
 
 ## Detect word boundaries differently by treating punctuation
 ## characters as parts of words.
-set wordbounds
+ set wordbounds
 
 ## The characters (besides alphanumeric ones) that should be considered
 ## as parts of words.  This option does not have a default value.  When
@@ -205,12 +190,12 @@ set wordbounds
 
 ## Paint the interface elements of nano.
 ## These are examples; by default there are no colors.
-set titlecolor brightwhite,blue
-set statuscolor brightwhite,green
-set selectedcolor brightwhite,magenta
-set numbercolor cyan
-set keycolor cyan
-set functioncolor green
+ set titlecolor brightwhite,blue
+ set statuscolor brightwhite,green
+ set selectedcolor brightwhite,magenta
+ set numbercolor cyan
+ set keycolor cyan
+ set functioncolor green
 ## In root's .nanorc you might want to use:
 # set titlecolor brightwhite,red
 # set statuscolor brightwhite,red
@@ -262,7 +247,7 @@ set functioncolor green
 ## them easier to remember and faster to type using nano's -Y option.
 ##
 ## To include all existing syntax definitions, you can do:
-include "/usr/share/nano/*.nanorc"
+ include "/usr/share/nano/*.nanorc"
 
 
 ## Key bindings.
