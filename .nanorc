@@ -15,7 +15,7 @@
  set autoindent
 
 ## Back up files to the current filename plus a tilde.
- set backup
+# set backup
 
 ## The directory to put unique backup files in.
 # set backupdir ""
