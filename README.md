@@ -1,6 +1,7 @@
-![Snerx Logo](https://snerx.com/ImageShit/SnerxLogo2.png "snerx.com")
-[![GitHub issues](https://img.shields.io/github/issues/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/issues) [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.0.1-red.svg)
-# CALIGULA'S DOTFILES 
+<center>![Snerx Logo](https://snerx.com/ImageShit/SnerxLogo2.png "snerx.com")</center>
+
+<center>[![GitHub issues](https://img.shields.io/github/issues/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/issues) [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.0.1-red.svg)</center>
+<center># CALIGULA'S DOTFILES</center>
 
 ---
 
@@ -11,8 +12,8 @@ Lots of functionality has been added to `Rome`; the tray shows docked programs i
 ![Rome Update](https://i.imgur.com/vI3JGmb.png)
 
 `Rome` | `Antium`
-:--- | ---:
-![Rome](https://i.imgur.com/rlf4oXl.jpg) | ![Antium](https://images.imgbox.com/97/61/qqp4K2lH_o.png)
+--- | ---
+![Rome](https://images.imgbox.com/b6/e4/75WuXwh7_o.png) | ![Antium](https://images.imgbox.com/97/61/qqp4K2lH_o.png)
 
 `Rome` *used* to look like this and is what `Antium` is now based on: 
 

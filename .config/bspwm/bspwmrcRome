@@ -41,6 +41,7 @@ bspc rule -a Atom desktop='^3' follow=on
 bspc rule -a discord desktop='^4' follow=on #state=fullscreen
 bspc rule -a Steam desktop='^4' follow=on
 bspc rule -a Vlc desktop='^5' follow=on
+bspc rule -a Gimp desktop='^5' follow=on
 bspc rule -a feh state=fullscreen
 #bspc rule -a cool-retro-term state=floating
 bspc rule -a Thunar state=floating
