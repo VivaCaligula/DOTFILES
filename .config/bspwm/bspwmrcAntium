@@ -10,6 +10,7 @@ sxhkd &
 polybar antium &
 redshift &
 termite &
+sh ~/scripts/bat.sh &
 
 ### GENERAL STUFF ###
 bspc monitor -d trm web atm dis vlc
@@ -38,7 +39,6 @@ bspc rule -a Steam desktop='^4' follow=on
 bspc rule -a Vlc desktop='^5' follow=on
 bspc rule -a Gimp desktop='^5' follow=on
 bspc rule -a feh state=fullscreen
-#bspc rule -a cool-retro-term state=floating
 bspc rule -a Thunar state=floating
 bspc rule -a Termite state=floating follow=on
 bspc rule -a Gnome-terminal state=floating

@@ -10,7 +10,7 @@ The rice configurations appear as shown:
 
 ROME | ANTIUM
 --- | ---
-![Rome](https://images.imgbox.com/b6/e4/75WuXwh7_o.png) | ![Antium](https://images.imgbox.com/97/61/qqp4K2lH_o.png)
+![Rome](https://images.imgbox.com/b6/e4/75WuXwh7_o.png) | ![Antium](https://images.imgbox.com/d6/37/Kd5BanGk_o.png)
 
 `ROME` *used* to look like this and is what `ANTIUM` is now based on: 
 
