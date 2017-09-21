@@ -11,4 +11,5 @@ The rice configurations appear as shown:
 ROME | ANTIUM
 --- | ---
 ![Rome](https://i.imgur.com/QCoNqal.png) | ![Antium](https://i.imgur.com/IOtOZK6.png)
+wal cycle | what antium is based on
 ![Rome Alt](https://i.imgur.com/SttYDkZ.png) | ![Old Rome/Antium](https://i.imgur.com/H4tjr24.png)
