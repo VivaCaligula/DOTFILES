@@ -1,5 +1,6 @@
-# vim:ft=zsh ts=2 sw=2 sts=2
-#
+#===============================#
+#     Caligula's zsh theme.     #
+#===============================#
 # Built off agnoster's Theme - https://gist.github.com/3712874
 
 
@@ -183,8 +184,8 @@ prompt_virtualenv() {
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘"
-  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}"
+  [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
   [[ -n "$symbols" ]] && prompt_segment black default "$symbols"
