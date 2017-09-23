@@ -34,67 +34,33 @@
 
 [colors]
 # For color changes - https://terminal.sexy/
-
-# X::Erosion scheme.
-    # special
-    foreground      = #bea492
-    foreground_bold = #bea492
-    cursor          = #bea492
-    background      = #181512
-    # black
-    color0  = #332d29
-    color8  = #817267
-    # red
-    color1  = #8c644c
-    color9  = #9f7155
-    # green
-    color2  = #746c48
-    color10 = #857b52
-    # yellow
-    color3  = #908a66
-    color11 = #9c956e
-    # blue
-    color4  = #646a6d
-    color12 = #71777a
-    # magenta
-    color5  = #605655
-    color13 = #656565
-    # cyan
-    color6  = #4b5c5e
-    color14 = #556d70
-    # white
-    color7  = #504339
-    color15 = #9a875f
-
 # CanvasedPastel
-#    background=#170f0d
-#    foreground=#746c48
-#    cursor=#746c48
+    background=#170f0d
+    foreground=#746c48
+    cursor=#746c48
     # black
-#    color0  = #26251c
-#    color8  = #999f91
+    color0  = #26251c
+    color8  = #999f91
     # red
-#    color1  = #323027
-#    color9  = #9b9773
+    color1  = #323027
+    color9  = #9b9773
     # green
-#    color2  = #3d4339
-#    color10 = #b2b08c
+    color2  = #3d4339
+    color10 = #b2b08c
     # yellow
-#    color3  = #443b2c
-#    color11 = #c4bb8c
+    color3  = #443b2c
+    color11 = #c4bb8c
     # blue
-#    color4  = #534d35
-#    color12 = #c4b67a
+    color4  = #534d35
+    color12 = #c4b67a
     # magenta
-#    color5  = #646756
-#    color13 = #cfc995
+    color5  = #646756
+    color13 = #cfc995
     # cyan
-#    color6  = #7b8574
-#    color14 = #d3d4b6
+    color6  = #7b8574
+    color14 = #d3d4b6
     # white
-#    color7  = #837b61
-#    color15 = #d6d3ac
-
-
+    color7  = #837b61
+    color15 = #d6d3ac
     # extra
-    color16 = #636363
+    color16 = #35211b
