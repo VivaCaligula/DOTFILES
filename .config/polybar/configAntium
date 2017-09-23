@@ -27,9 +27,9 @@ color12 = #71777a
 color13 = #656565
 color14 = #556d70
 color15 = #9a875f
-foreground = #746c48
-background = #170f0d
 ; CanvasedPastel scheme.
+;foreground = #746c48
+;background = #170f0d
 ;color0 = #26251c
 ;color1 = #323027
 ;color2 = #3d4339
