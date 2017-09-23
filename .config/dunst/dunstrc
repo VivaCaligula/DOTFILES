@@ -22,10 +22,10 @@ plain_text = no
 #   %I  iconname (without its path)
 #   %p  progress value if set ([  0%] to [100%]) or nothing
 # Markup is allowed
-format = "<b>%s</b>\n%b"
+format = "%a\n<b>%s</b>\n%b\n%p"
 
 # Sort messages by urgency.
-sort = no
+sort = yes
 
 # Show how many messages are currently hidden (because of geometry).
 indicate_hidden = yes
@@ -34,7 +34,7 @@ indicate_hidden = yes
 # Possible values are "left", "center" and "right".
 alignment = center
 
-# The frequency with wich text that is longer than the notification
+# The frequency with which text that is longer than the notification
 # window allows bounces back and forth.
 # This option conflicts with "word_wrap".
 # Set to 0 to disable.
@@ -43,7 +43,7 @@ bounce_freq = 0
 # Show age of message if message is older than show_age_threshold
 # seconds.
 # Set to -1 to disable.
-show_age_threshold = -1
+show_age_threshold = 10
 
 # Split notifications into multiple lines if they don't fit into
 # geometry.
@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "250x64-16+32"
+geometry = "250x64-12+32"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
@@ -79,12 +79,12 @@ shrink = no
 # The transparency of the window.  Range: [0; 100].
 # This option will only work if a compositing windowmanager is
 # present (e.g. xcompmgr, compiz, etc.).
-transparency = 25
+transparency = 30
 
 # Don't remove messages, if the user is idle (no mouse or keyboard input)
 # for longer than idle_threshold seconds.
 # Set to 0 to disable.
-idle_threshold = 10
+idle_threshold = 0
 
 # Which monitor should the notifications be displayed on.
 monitor = 0
@@ -115,7 +115,7 @@ show_indicators = yes
 # The height of a single line.  If the height is smaller than the
 # font height, it will get raised to the font height.
 # This adds empty space above and under the text.
-line_height = 3
+line_height = 2
 
 # Draw a line of "separatpr_height" pixel height between two
 # notifications.
@@ -123,7 +123,7 @@ line_height = 3
 separator_height = 6
 
 # Padding between text and separator.
-padding = 4
+padding = 3
 
 # Horizontal padding.
 horizontal_padding = 4
@@ -133,8 +133,8 @@ horizontal_padding = 4
 #  * auto: dunst tries to find a color fitting to the background;
 #  * foreground: use the same color as the foreground;
 #  * frame: use the same color as the frame;
-#  * anything else will be interpreted as a X color.
-separator_color = frame
+#  * anything else will be interpreted as an X color.
+separator_color = foreground
 
 # Print a notification on startup.
 # This is mainly for error detection, since dbus (re-)starts dunst
@@ -149,14 +149,14 @@ browser = /usr/bin/firefox -new-tab
 
 # Align icons left/right/off
 icon_position = left
-max_icon_size = 32
+max_icon_size = 16
 
 # Paths to default icons.
 icon_folders = /usr/share/icons/Paper/16x16/mimetypes/:/usr/share/icons/Paper/48x48/status/:/usr/share/icons/Paper/16x16/devices/:/usr/share/icons/Paper/48x48/notifications/:/usr/share/icons/Paper/48x48/emblems/
 
 # Frame
 frame_width = 2
-color = "#8EC07C"
+color = "#292929"
 
 [shortcuts]
 
@@ -182,24 +182,21 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#62a19b"
-foreground = "#62a19b"
+frame_color = "#749894"
+foreground = "#749894"
 background = "#392c28"
-#background = "#2B313C"
 timeout = 4
 
 [urgency_normal]
-frame_color = "#8aad66"
-foreground = "#8aad66"
+frame_color = "#87a36b"
+foreground = "#87a36b"
 background = "#392c28"
-#background = "#2B313C"
 timeout = 6
 
 [urgency_critical]
-frame_color = "#a85f4d"
-foreground = "#a85f4d"
+frame_color = "#aa6c5c"
+foreground = "#aa6c5c"
 background = "#392c28"
-#background = "#2B313C"
 timeout = 8
 
 
