@@ -10,6 +10,6 @@ The rice configurations appear as shown:
 
 ROME | ANTIUM
 --- | ---
-![Rome](https://i.imgur.com/QCoNqal.png) | ![Antium](https://i.imgur.com/IOtOZK6.png)
-Wal generates a new colorscheme each login. | An old config `ANTIUM` is based on.
-![Rome Alt](https://i.imgur.com/SttYDkZ.png) | ![Old Rome/Antium](https://i.imgur.com/H4tjr24.png)
+![Rome](https://i.imgur.com/QCoNqal.png) | ![Antium](https://i.imgur.com/ivy6jYM.png)
+`Wal` generates a new colorscheme each login. | Old `ANTIUM` color scheme.
+![Rome Alt](https://i.imgur.com/SttYDkZ.png) | ![Old Rome/Antium](https://i.imgur.com/IOtOZK6.png)
