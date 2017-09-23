@@ -8,24 +8,44 @@
 ;----------------------------------------------------------
 
 [colors]
+; X::Erosion scheme.
+foreground = #bea492
+background = #181512
+color0 = #332d29
+color1 = #8c644c
+color2 = #746c48
+color3 = #908a66
+color4 = #646a6d
+color5 = #605655
+color6 = #4b5c5e
+color7 = #504339
+color8 = #817267
+color9 = #9f7155
+color10 = #857b52
+color11 = #9c956e
+color12 = #71777a
+color13 = #656565
+color14 = #556d70
+color15 = #9a875f
 foreground = #746c48
 background = #170f0d
-color0 = #26251c
-color1 = #323027
-color2 = #3d4339
-color3 = #443b2c
-color4 = #534d35
-color5 = #646756
-color6 = #7b8574
-color7 = #837b61
-color8 = #999f91
-color9 = #9b9773
-color10 = #b2b08c
-color11 = #c4bb8c
-color12 = #c4b67a
-color13 = #cfc995
-color14 = #d3d4b6
-color15 = #d6d3ac
+; CanvasedPastel scheme.
+;color0 = #26251c
+;color1 = #323027
+;color2 = #3d4339
+;color3 = #443b2c
+;color4 = #534d35
+;color5 = #646756
+;color6 = #7b8574
+;color7 = #837b61
+;color8 = #999f91
+;color9 = #9b9773
+;color10 = #b2b08c
+;color11 = #c4bb8c
+;color12 = #c4b67a
+;color13 = #cfc995
+;color14 = #d3d4b6
+;color15 = #d6d3ac
 
 
 ;----------------------------------------------------------

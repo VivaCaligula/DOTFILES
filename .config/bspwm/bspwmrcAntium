@@ -52,7 +52,7 @@ pointer_follows_monitor           false
 
 ### COLORS ###
 # Set the colors from script.
-source "$HOME/scripts/scheme-CanvasedPastel.sh"
+source "$HOME/scripts/scheme-xErosion.sh"
 #source "$HOME/scripts/scheme-xErosion.sh"
 xsetroot -solid $background
 #hsetroot -solid $background
