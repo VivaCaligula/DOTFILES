@@ -70,7 +70,7 @@ hide_duplicates_count = yes
 # The width can be negative.  In this case the actual width is the
 # screen width minus the width defined in within the geometry option.
 #geometry = "250x50-40+40"
-geometry = "250x64-12+32"
+geometry = "250x64-8+30"
 
 # Shrink window if it's smaller than the width.  Will be ignored if
 # width is 0.
