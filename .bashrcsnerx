@@ -228,4 +228,7 @@ export HOSTFILE=$HOME/.hosts    # Put a list of remote hosts in ~/.hosts
 #  Append other commands here.
 #-------------------------------------------------------------
 
+# Path to ruby installation.
+export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
 test -r ~/.aliases && source ~/.aliases
