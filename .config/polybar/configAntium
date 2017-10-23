@@ -86,12 +86,12 @@ font-5 = FontAwesome:size=26;7
 ;			  T R A Y
 ;----------------------------------------------------------
 
-tray-position = left
-tray-padding = 0
-tray-transparent = false
-tray-maxsize=24
+;tray-position = left
+;tray-padding = 0
+;tray-transparent = false
+;tray-maxsize=24
 ;tray-offset-x = 21%
-tray-foreground = ${colors.foreground}
+;tray-foreground = ${colors.foreground}
 
 wm-restack = bspwm
 ;override-redirect = true
