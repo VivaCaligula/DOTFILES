@@ -28,12 +28,6 @@ git push origin master
 fc-list | grep FONT_NAME
 
 
-:: Atom Packages ::
-Themes: dark-flat-ui, outlander-syntax
-Packages: language-vb, Minimap, Pigments, minimap-pigments, color-picker, split-diff, minimap-split-diff, highlight-line, highlight-selected, atom-clock, activate-power-mode, tree-view-autoresize
-Disable stuff in general settings but also Settings > Packages > Whitespace
-
-
 :: Time Update :: https://wiki.archlinux.org/index.php/Time
 # To check current timezone defined for the system and list availables zones.
 timedatectl
