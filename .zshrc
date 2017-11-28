@@ -1,6 +1,6 @@
-#============================#
-#     Caligula's .zshrc!     #
-#============================#
+#=================================================#
+#     Caligula's .zshrc with Powerline & Wal!     #
+#=================================================#
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -86,17 +86,14 @@ export ARCHFLAGS="-arch x86_64"
 # Path to ruby installation.
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
+# This used to be useful, but powerline is mostly broken now, the modified
+# agnoster theme "roman" loads way faster and does the same stuff for zsh.
+    # export PYTHONPATH=/usr/lib/python3.6/site-packages
+    # powerline-daemon -q
+    # source $PYTHONPATH/powerline/bindings/zsh/powerline.zsh
+
 # Import colorschemes from wal.
 (wal -r -t &)
 
 # Append shell aliases.
 test -r ~/.aliases && source ~/.aliases
-
-# If plugin list doesn't work:
-source ~/.oh-my-zsh/custom/plugins/alias-tips/alias-tips.plugin.zsh
-#source ~/.oh-my-zsh/custom/plugins/almostontop/almostontop.plugin.zsh
-source ~/.oh-my-zsh/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
-source ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
-source ~/.oh-my-zsh/custom/plugins/k/k.plugin.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
