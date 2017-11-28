@@ -31,3 +31,5 @@ export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 (wal -r -t &)
 
 test -r ~/.aliases && source ~/.aliases
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

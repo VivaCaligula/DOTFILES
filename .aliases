@@ -29,9 +29,12 @@ superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.
 alias ls='superls'
 alias l='superls'
 superlsl() { colorls "$@" -a -l -sd && printf "\n"; } 
-alias la='superlsl'
-alias lsa='superlsl'
-alias lal='superlsl'
+# alias la='superlsl'
+# alias lsa='superlsl'
+# alias lal='superlsl'
+alias la='k -ah'
+alias lsa='k -ah'
+alias lal='k -ah'
 lsfiles() { colorls "$@" -a -f -sf && printf "\n"; }
 alias files='lsfiles'
 lsfolders() { colorls "$@" -a -d -sd && printf "\n"; }
@@ -143,6 +146,7 @@ alias process='ps'
 alias processes='ps'
 
 ###  Other Shit  ###
+alias fuck='sudo $(history -p \!\!)'
 alias exi='exit'
 alias eixt='exit'
 alias end='exit'

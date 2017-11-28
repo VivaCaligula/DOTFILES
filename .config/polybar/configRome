@@ -495,7 +495,7 @@ label-volume = %percentage%
 label-volume-foreground = ${colors.xcolor7}
 label-volume-background = ${colors.xcolor1}
 label-muted = "  muted"
-label-muted-foreground = ${colors.xcolor4}
+label-muted-foreground = ${colors.xcolor7}
 label-muted-background = ${colors.xcolor1}
 
 ramp-volume-0 = "  "
