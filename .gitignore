@@ -9,6 +9,7 @@
 !.aliases
 !.bashrc
 !.bashrcsnerx
+!.zshrc
 !.gitignore
 !.nanorc
 !.tmux.conf
@@ -16,7 +17,6 @@
 !compton.conf
 !README.md
 !roman.arch
-!roman.zsh-theme
 
 # Keep specific folders open with their specific dotfiles.
 !.config/
