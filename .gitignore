@@ -51,6 +51,3 @@
 Pictures/*
 !Pictures/wal/
 !Pictures/wal/*
-# These are no longer used, but if powerline is fixed they will come back.
-!powerlineconfigs/
-!powerlineconfigs/*
