@@ -9,6 +9,8 @@
 !.aliases
 !.bashrc
 !.bashrcsnerx
+!.zshrcAntium
+!.zshrcRome
 !.gitignore
 !.nanorc
 !.tmux.conf
