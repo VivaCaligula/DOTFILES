@@ -9,6 +9,7 @@
 alias busy='bash ~/scripts/busyscreen.sh'
 alias colors='bash ~/scripts/colors.sh'
 alias dmenu='bash ~/scripts/dmenu.sh'
+alias gitit='bash ~/scripts/git.sh'
 alias lock='bash ~/scripts/lock.sh'
 alias lockscreen='bash ~/scripts/lock.sh'
 alias hax='bash ~/scripts/nmap.sh'
