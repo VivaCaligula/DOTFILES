@@ -17,6 +17,7 @@
 !.xinitrc
 !compton.conf
 !README.md
+!gtk.css
 !roman.arch
 
 # Keep specific folders open with their specific dotfiles.
