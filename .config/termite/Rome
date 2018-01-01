@@ -18,7 +18,6 @@
     geometry = 475x254
     icon_name = terminal
     mouse_autohide = true
-    #padding = 2
     pseudo_transparency = false
     #scrollbar = off
     scroll_on_keystroke = true
@@ -35,9 +34,3 @@
     background = rgba(63, 63, 63, 0.90)
     # colors 0-15 are inherited from Xresources (set by wal script)
     color16 = #636363
-
-[hints]
-    #padding = 2
-    #border = #3f3f3f
-    #border_width = 0.5
-    #roundness = 2.0

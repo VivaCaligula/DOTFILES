@@ -19,7 +19,6 @@
     geometry = 475x254
     icon_name = terminal
     mouse_autohide = true
-    padding = 0
     pseudo_transparency = false
     roundness = 2.0
     #scrollbar = off
