@@ -17,8 +17,6 @@
 !.xinitrc
 !compton.conf
 !README.md
-!gtk.rome.css
-!gtk.antium.css
 !roman.arch
 
 # Keep specific folders open with their specific dotfiles.
@@ -45,6 +43,9 @@
 !.config/dunst/
 .config/dunst/*
 !.config/dunst/dunstrc
+.config/gtk-3.0/*
+!.config/gtk-3.0/gtk.antium.css
+!.config/gtk-3.0/gtk.rome.css
 !.oh-my-zsh/
 .oh-my-zsh/*
 !.oh-my-zsh/themes/
