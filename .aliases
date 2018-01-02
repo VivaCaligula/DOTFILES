@@ -134,7 +134,7 @@ alias fe='feh -g 1920x1080 -F -x -S filename -r $HOME/Pictures/'
 alias lmux='tmux attach-session'
 alias r='ranger'
 alias tor='sh ~/Downloads/tor-browser_en-US/Browser/start-tor-browser'
-neo() { printf "\n" && neofetch --disable Model --disable CPU --disable GPU --disable Resolution --gap 6 --block_range 0 15; }
+neo() { clear && printf "\n" && neofetch --disable Model --disable CPU --disable GPU --disable Resolution --gap 6 --block_range 0 15; }
 alias matrix='cmatrix -s'
 alias snyph='python /var/www/public_html/snyph/api.py'
 alias weather='curl http://wttr.in/los_angeles'

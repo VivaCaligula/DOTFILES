@@ -95,9 +95,9 @@ font-5 = FontAwesome:size=26;7
 ;----------------------------------------------------------
 
 tray-position = left
-tray-padding = 0
+tray-padding = 2
 tray-transparent = false
-tray-maxsize=24
+tray-maxsize = 24
 ;tray-offset-x = 21%
 tray-foreground = ${colors.xcolor7}
 tray-background = ${colors.xcolor1}
@@ -119,7 +119,7 @@ modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cp
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
 ; memory network eth date volume battery temperature github 
-; appmenu powermenu mail weather music ssh vpn
+; appmenu powermenu mail weather music ssh vpn btc
 
 [bar/secondary]
 inherit = bar/rome
@@ -732,6 +732,7 @@ menu-0-6-background = ${colors.xcolor0}
 ;----------------------------------------------------------
 
 ; Example json files for mail, weather, & music: https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
+
 [module/mail]
 type = custom/script
 exec = $HOME/.config/polybar/mail.py
@@ -741,7 +742,6 @@ label = "  %output:0:5:...% "
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 
-
 [module/weather]
 type = custom/script
 exec = $HOME/.config/polybar/weather.py
@@ -749,7 +749,6 @@ interval = 120
 label = "  %output:0:22:...% "
 format-foreground = ${colors.xcolor1}
 format-background = ${colors.xcolor7}
-
 
 [module/music]
 type = custom/script
@@ -760,7 +759,6 @@ label = "  %output:0:30:% "
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
 
 [module/ssh]
 type = custom/script
@@ -776,7 +774,6 @@ click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
 
-
 [module/vpn]
 type = custom/script
 exec = echo + VPN
@@ -790,6 +787,14 @@ click-middle = echo middle %counter%
 click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
+
+[module/btc]
+type = custom/script
+exec = $HOME/scripts/BTCprice.sh
+interval = 300.0
+format-foreground = ${colors.xcolor4}
+format-background = ${colors.xcolor7}
+label = " %output:0:25%"
 
 
 ;#########################################################;
