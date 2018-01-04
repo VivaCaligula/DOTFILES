@@ -6,7 +6,7 @@
 sudo pacman -Syu
 sudo yaourt -Syu
 sudo pacman-key --refresh-keys
-gem update colorls
+gem update
 
 
 :: Mounting a Drive ::
