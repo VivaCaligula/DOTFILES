@@ -368,12 +368,11 @@ type = internal/date
 interval = 1
 
 format-foreground = ${colors.color7}
-
 date = ""
 date-alt = "%Y/%m/%d"
 time = "%I:%M:%S %p"
 time-alt = ""
-label = %date%%time%
+label = "%date%%time%"
 
 
 ;----------------------------------------------------------
@@ -602,6 +601,7 @@ menu-0-6-foreground = ${colors.color1}
 ;----------------------------------------------------------
 
 ; Example json files for mail, weather, & music: https://github.com/Chaosteil/dotfiles/tree/master/polybar/.config/polybar
+
 [module/mail]
 type = custom/script
 exec = $HOME/.config/polybar/mail.py
@@ -610,14 +610,12 @@ label = "  %output:0:5:...% "
 ;  
 format-foreground = ${colors.color7}
 
-
 [module/weather]
 type = custom/script
 exec = $HOME/.config/polybar/weather.py
 interval = 120
 label = "  %output:0:22:...% "
 format-foreground = ${colors.color1}
-
 
 [module/music]
 type = custom/script
@@ -627,7 +625,6 @@ interval = 3
 label = "  %output:0:30:% "
 format-foreground = ${colors.color7}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
 
 [module/ssh]
 type = custom/script
@@ -641,7 +638,6 @@ click-middle = echo middle %counter%
 click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
-
 
 [module/vpn]
 type = custom/script
