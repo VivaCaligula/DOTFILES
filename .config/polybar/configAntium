@@ -24,8 +24,8 @@ color10 = #b2b08c
 color11 = #c4bb8c
 color12 = #c4b67a
 color13 = #cfc995
-color14 = #d3d4b6
-color15 = #d6d3ac
+color14 = #221916
+color15 = #49332c
 color16 = #35211b
 
 
@@ -35,7 +35,7 @@ color16 = #35211b
 
 [global/wm]
 margin-top = 0
-margin-bottom = 16
+margin-bottom = 0
 
 [bar/antium]
 monitor = ${env:MONITOR:LVDS-1}
@@ -62,8 +62,8 @@ border-top-color = ${colors.color7}
 border-color-foreground = ${colors.color7}
 
 spacing = 0
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 ;label-padding = 2
 module-margin-left = 2
 module-margin-right = 2
@@ -86,12 +86,12 @@ font-5 = FontAwesome:size=26;7
 ;			  T R A Y
 ;----------------------------------------------------------
 
-;tray-position = left
-;tray-padding = 0
-;tray-transparent = false
-;tray-maxsize=24
+tray-position = left
+tray-padding = 4
+tray-transparent = false
+tray-maxsize=24
 ;tray-offset-x = 21%
-;tray-foreground = ${colors.foreground}
+tray-foreground = ${colors.foreground}
 
 wm-restack = bspwm
 ;override-redirect = true
@@ -140,7 +140,7 @@ label-focused-foreground = ${colors.color7}
 label-focused-padding = 2
 label-focused-font = 3
 label-occupied = %name%
-label-occupied-foreground = ${colors.color4}
+label-occupied-foreground = ${colors.color15}
 label-occupied-padding = 2
 label-occupied-font = 3
 label-urgent = %name%
@@ -372,7 +372,7 @@ date = ""
 date-alt = "%Y/%m/%d"
 time = "%I:%M:%S %p"
 time-alt = ""
-label = "%date%%time%"
+label = "%date%%time%  "
 
 
 ;----------------------------------------------------------
@@ -437,10 +437,10 @@ format-discharging-foreground = ${colors.color7}
 format-full = <label-full>
 format-full-foreground = ${colors.color7}
 
-label-charging = "bat %percentage%%  "
-label-discharging = "bat %percentage%%  "
+label-charging = "bat %percentage%%"
+label-discharging = "bat %percentage%%"
 label-discharging-foreground = ${colors.color7}
-label-full = "bat %percentage%%  "
+label-full = "bat %percentage%%"
 ; 
 ramp-capacity-0 = ""
 ramp-capacity-0-foreground = ${colors.color7}
