@@ -16,16 +16,16 @@ sh ~/scripts/bat.sh &
 bspc monitor -d trm web atm dis vlc
 
 bspc config border_width         2
-bspc config window_gap           16
+bspc config window_gap           24
 
 bspc config split_ratio          0.50
-bspc config top_padding          14
-bspc config bottom_padding       14
-bspc config left_padding         14
-bspc config right_padding        14
+bspc config top_padding          0
+bspc config bottom_padding       0
+bspc config left_padding         0
+bspc config right_padding        0
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
-bspc config paddingless_monocle  false
+bspc config paddingless_monocle  true
 bspc config single_monocle       true
 bspc config focus_by_distance    true
 bspc config history_aware_focus  true
