@@ -27,8 +27,8 @@ alias walcycle='bash ~/scripts/walcycle.sh'
 
 ###  Just The LS Shit  ###
 superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.
-alias ls='superls'
-alias l='superls'
+#alias ls='superls'
+#alias l='superls'
 superlsl() { colorls "$@" -a -l -sd && printf "\n"; } 
 # alias la='superlsl'
 # alias lsa='superlsl'
@@ -42,12 +42,12 @@ lsfolders() { colorls "$@" -a -d -sd && printf "\n"; }
 alias folders='lsfolders'
 lsreport() { colorls "$@" -a -sd -r && printf "\n"; }
 alias report='lsreport'
-# alias ls='ls -a --color'
-# alias l='ls -a --color'
-# alias la='ls -alh --color'
-# alias lsa='ls -alh --color'
-# alias lal='ls -alh --color'
-# alias list='ls -alh --color'
+alias ls='ls -a --color'
+alias l='ls -a --color'
+#alias la='ls -alh --color'
+#alias lsa='ls -alh --color'
+#alias lal='ls -alh --color'
+#alias list='ls -alh --color'
 
 ###  Navigation Shit  ###
 cdls() { cd "$@" && ls; } # Change dir and view contents.
