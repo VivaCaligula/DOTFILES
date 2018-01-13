@@ -43,9 +43,11 @@
 !.config/dunst/
 .config/dunst/*
 !.config/dunst/dunstrc
+!.config/gtk-3.0/
 .config/gtk-3.0/*
 !.config/gtk-3.0/gtk.antium.css
 !.config/gtk-3.0/gtk.rome.css
+!.config/colorls/
 .config/colorls/*
 !.config/colorls/dark_colors.yaml
 !.oh-my-zsh/
