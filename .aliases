@@ -26,24 +26,24 @@ alias cycle='bash ~/scripts/walcycle.sh'
 alias walcycle='bash ~/scripts/walcycle.sh'
 
 ###  Just The LS Shit  ###
-superls() { colorls "$@" -a -sd && printf "\n"; } # Wombo combo.
-#alias ls='superls'
-#alias l='superls'
-superlsl() { colorls "$@" -a -l -sd && printf "\n"; } 
+superls() { colorls "$@" -a --sd && printf "\n"; } # Wombo combo.
+alias ls='superls'
+alias l='superls'
+superlsl() { colorls "$@" -a -l --sd && printf "\n"; } 
 # alias la='superlsl'
 # alias lsa='superlsl'
 # alias lal='superlsl'
 alias la='k -ah'
 alias lsa='k -ah'
 alias lal='k -ah'
-lsfiles() { colorls "$@" -a -f -sf && printf "\n"; }
+lsfiles() { colorls "$@" -a -f && printf "\n"; }
 alias files='lsfiles'
-lsfolders() { colorls "$@" -a -d -sd && printf "\n"; }
+lsfolders() { colorls "$@" -a -d && printf "\n"; }
 alias folders='lsfolders'
-lsreport() { colorls "$@" -a -sd -r && printf "\n"; }
+lsreport() { colorls "$@" -a --sd --gs -r && printf "\n"; }
 alias report='lsreport'
-alias ls='ls -a --color'
-alias l='ls -a --color'
+#alias ls='ls -a --color'
+#alias l='ls -a --color'
 #alias la='ls -alh --color'
 #alias lsa='ls -alh --color'
 #alias lal='ls -alh --color'
