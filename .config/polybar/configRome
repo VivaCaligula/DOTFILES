@@ -803,7 +803,7 @@ exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/ETHUSD | p
 interval = 60.0
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
-label = " $%output:0:10% "
+label = " $%output:0:7% "
 ;label = " ETH:$%output:0:7% "
 
 
