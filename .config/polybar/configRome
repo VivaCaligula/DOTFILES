@@ -804,7 +804,7 @@ interval = 60.0
 format-foreground = ${colors.xcolor7}
 format-background = ${colors.xcolor1}
 label = " $%output:0:10% "
-;label = " ETH:$%output:0:10% "
+;label = " ETH:$%output:0:7% "
 
 
 ;#########################################################;
