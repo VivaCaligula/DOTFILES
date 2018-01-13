@@ -29,18 +29,18 @@ alias walcycle='bash ~/scripts/walcycle.sh'
 superls() { colorls "$@" -a --sd && printf "\n"; } # Wombo combo.
 alias ls='superls'
 alias l='superls'
-superlsl() { colorls "$@" -a -l --sd && printf "\n"; } 
+superlsl() { colorls "$@" -la --sd && printf "\n"; } 
 # alias la='superlsl'
 # alias lsa='superlsl'
 # alias lal='superlsl'
 alias la='k -ah'
 alias lsa='k -ah'
 alias lal='k -ah'
-lsfiles() { colorls "$@" -a -f && printf "\n"; }
+lsfiles() { colorls "$@" -fa && printf "\n"; }
 alias files='lsfiles'
-lsfolders() { colorls "$@" -a -d && printf "\n"; }
+lsfolders() { colorls "$@" -da && printf "\n"; }
 alias folders='lsfolders'
-lsreport() { colorls "$@" -a --sd --gs -r && printf "\n"; }
+lsreport() { colorls "$@" --sd --gs -ar && printf "\n"; }
 alias report='lsreport'
 #alias ls='ls -a --color'
 #alias l='ls -a --color'
