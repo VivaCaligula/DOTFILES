@@ -8,25 +8,26 @@
 ;----------------------------------------------------------
 
 [colors]
-foreground = #746c48
-background = #170f0d
-color0 = #26251c
-color1 = #323027
-color2 = #3d4339
-color3 = #443b2c
-color4 = #534d35
-color5 = #646756
-color6 = #7b8574
-color7 = #837b61
-color8 = #999f91
-color9 = #9b9773
-color10 = #b2b08c
-color11 = #c4bb8c
-color12 = #c4b67a
-color13 = #cfc995
-color14 = #221916
-color15 = #49332c
-color16 = #35211b
+foreground      = #e2d3c3
+background      = #67605e
+color0  = #625a58
+color8  = #625a58
+color1  = #a7bab0
+color9  = #a7bab0
+color2  = #8e8e8e
+color10 = #8e8e8e
+color3  = #a0a0a0
+color11 = #a0a0a0
+color4  = #ac8383
+color12 = #ac8383
+color5  = #9ab993
+color13 = #9ab993
+color6  = #868686
+color14 = #868686
+color7  = #b9b9b9
+color15 = #b9b9b9
+color16 = #e2d3c3
+color17 = #67605e
 
 
 ;----------------------------------------------------------
@@ -47,8 +48,8 @@ height = 24
 offset-x = 0%
 offset-y = 0%
 fixed-center = true
-background = ${colors.color16}
-foreground = ${colors.color7}
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 overline-size = 0
 overline-color = ${colors.color7}
@@ -136,19 +137,19 @@ reverse-scroll = false
 
 ;   ● ○ %name% %index%
 label-focused = %name%
-label-focused-foreground = ${colors.color7}
+label-focused-foreground = ${colors.color16}
 label-focused-padding = 2
 label-focused-font = 3
 label-occupied = %name%
-label-occupied-foreground = ${colors.color15}
+label-occupied-foreground = ${colors.color7}
 label-occupied-padding = 2
 label-occupied-font = 3
 label-urgent = %name%
-label-urgent-foreground = ${colors.foreground}
+label-urgent-foreground = ${colors.color4}
 label-urgent-padding = 2
 label-urgent-font = 3
 label-empty = %name%
-label-empty-foreground = ${colors.background}
+label-empty-foreground = ${colors.color6}
 label-empty-padding = 2
 label-empty-font = 3
 
@@ -213,14 +214,14 @@ mount-0 = /
 ;mount-1 = /home
 
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.color7}
+format-mounted-foreground = ${colors.color2}
 
 ;  
 label-mounted = "  %percentage_used%%"
 ; %free%% %percentage_used%% %used%
-label-mounted-foreground = ${colors.color7}
+label-mounted-foreground = ${colors.color2}
 label-unmounted =   %mountpoint%
-label-unmounted-foreground = ${colors.color7}
+label-unmounted-foreground = ${colors.color2}
 
 
 ;----------------------------------------------------------
@@ -283,7 +284,7 @@ interval = 1.0
 format = <label>
 ;format = <ramp-coreload><label> 
 ;format-prefix = ""
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 
 label = cpu%percentage:3%%
 ;   
@@ -329,9 +330,9 @@ format-disconnected = <label-disconnected>
 
 label-connected = "net %downspeed%"
 ;label-connected = "  %downspeed%  %essid%  %local_ip%  %downspeed:8%  %upspeed:8%"
-label-connected-foreground = ${colors.color7}
+label-connected-foreground = ${colors.color2}
 label-disconnected = "net ded"
-label-disconnected-foreground = ${colors.color7}
+label-disconnected-foreground = ${colors.color2}
 
 ramp-signal-0 = ▁
 ramp-signal-1 = ▂
@@ -356,7 +357,7 @@ interval = 0.5
 label-connected = "   %local_ip% %downspeed:8%  %upspeed:8%  "
 label-connected-foreground = ${colors.color1}
 label-disconnected = "  %ifname% "
-label-disconnected-foreground = ${colors.color7}
+label-disconnected-foreground = ${colors.color2}
 
 
 ;----------------------------------------------------------
@@ -367,7 +368,7 @@ label-disconnected-foreground = ${colors.color7}
 type = internal/date
 interval = 1
 
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 date = ""
 date-alt = "%Y/%m/%d"
 time = "%I:%M:%S %p"
@@ -391,21 +392,21 @@ format-volume = <label-volume>
 ;      
 
 label-volume = vol %percentage%%
-label-volume-foreground = ${colors.color7}
+label-volume-foreground = ${colors.color2}
 label-muted = " muted"
-label-muted-foreground = ${colors.color7}
+label-muted-foreground = ${colors.color2}
 
 ramp-volume-0 = "  "
-ramp-volume-0-foreground = ${colors.color7}
+ramp-volume-0-foreground = ${colors.color2}
 ramp-volume-1 = "  "
-ramp-volume-1-foreground = ${colors.color7}
+ramp-volume-1-foreground = ${colors.color2}
 ramp-volume-2 = "  "
-ramp-volume-2-foreground = ${colors.color7}
+ramp-volume-2-foreground = ${colors.color2}
 ramp-volume-3 = "  "
-ramp-volume-3-foreground = ${colors.color7}
+ramp-volume-3-foreground = ${colors.color2}
 
 bar-volume-width = 10
-bar-volume-color7 = #495858
+bar-volume-color2 = #495858
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
 bar-volume-foreground-2 = #55aa55
@@ -431,21 +432,21 @@ adapter = AC0
 full-at = 99
 
 format-charging = <label-charging>
-format-charging-foreground = ${colors.color7}
+format-charging-foreground = ${colors.color2}
 format-discharging = <label-discharging>
-format-discharging-foreground = ${colors.color7}
+format-discharging-foreground = ${colors.color2}
 format-full = <label-full>
-format-full-foreground = ${colors.color7}
+format-full-foreground = ${colors.color2}
 
 label-charging = "bat %percentage%%"
 label-discharging = "bat %percentage%%"
-label-discharging-foreground = ${colors.color7}
+label-discharging-foreground = ${colors.color2}
 label-full = "bat %percentage%%"
 ; 
 ramp-capacity-0 = ""
-ramp-capacity-0-foreground = ${colors.color7}
+ramp-capacity-0-foreground = ${colors.color2}
 ramp-capacity-1 = ""
-ramp-capacity-1-foreground = ${colors.color7}
+ramp-capacity-1-foreground = ${colors.color2}
 ramp-capacity-2 = ""
 ramp-capacity-3 = ""
 ramp-capacity-4 = ""
@@ -471,7 +472,7 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 format-prefix = " "
 format-foreground = ${colors.color1}
-format-warn-foreground = ${colors.color7}
+format-warn-foreground = ${colors.color2}
 
 label = %temperature%
 label-warn = %temperature%
@@ -518,30 +519,30 @@ label-open = " "
 label-open-font = 6
 label-open-foreground = ${colors.color1}
 label-close = 
-label-close-foreground = ${colors.color7}
+label-close-foreground = ${colors.color2}
 label-separator = " "
 label-separator-foreground = ${colors.color1}
 
 ; lock
 menu-0-0 = "  "
 menu-0-0-exec = bash ~/scripts/lock.sh
-menu-0-0-foreground = ${colors.color7}
+menu-0-0-foreground = ${colors.color2}
 ; sleep
 menu-0-1 = "  "
 menu-0-1-exec = bash ~/scripts/lock.sh && systemctl suspend
-menu-0-1-foreground = ${colors.color7}
+menu-0-1-foreground = ${colors.color2}
 ; logout
 menu-0-2 = "  "
 menu-0-2-exec = pkill x
-menu-0-2-foreground = ${colors.color7}
+menu-0-2-foreground = ${colors.color2}
 ; reboot
 menu-0-3 = "  "
 menu-0-3-exec = systemctl reboot
-menu-0-3-foreground = ${colors.color7}
+menu-0-3-foreground = ${colors.color2}
 ; shutdown
 menu-0-4 = " "
 menu-0-4-exec = systemctl poweroff
-menu-0-4-foreground = ${colors.color7}
+menu-0-4-foreground = ${colors.color2}
 ; end stripe
 menu-0-5 = " "
 menu-0-5-font = 6
@@ -560,7 +561,7 @@ label-open = " "
 label-open-font = 6
 label-open-foreground = ${colors.color1}
 label-close = " "
-label-close-foreground = ${colors.color7}
+label-close-foreground = ${colors.color2}
 label-separator = " "
 label-separator-foreground = ${colors.color1}
 
@@ -568,27 +569,27 @@ label-separator-foreground = ${colors.color1}
 ; terminal
 menu-0-0 = "  "
 menu-0-0-exec = termite &
-menu-0-0-foreground = ${colors.color7}
+menu-0-0-foreground = ${colors.color2}
 ; filemanager
 menu-0-1 = "  "
 menu-0-1-exec = thunar &
-menu-0-1-foreground = ${colors.color7}
+menu-0-1-foreground = ${colors.color2}
 ; browser
 menu-0-2 = "  "
 menu-0-2-exec = firefox &
-menu-0-2-foreground = ${colors.color7}
+menu-0-2-foreground = ${colors.color2}
 ; editor
 menu-0-3 = "  "
 menu-0-3-exec = atom &
-menu-0-3-foreground = ${colors.color7}
+menu-0-3-foreground = ${colors.color2}
 ; chat client
 menu-0-4 = "  "
 menu-0-4-exec = discord &
-menu-0-4-foreground = ${colors.color7}
+menu-0-4-foreground = ${colors.color2}
 ; media player
 menu-0-5 = "  "
 menu-0-5-exec = vlc &
-menu-0-5-foreground = ${colors.color7}
+menu-0-5-foreground = ${colors.color2}
 ; end stripe
 menu-0-6 = " "
 menu-0-6-font = 6
@@ -608,7 +609,7 @@ exec = $HOME/.config/polybar/mail.py
 interval = 120
 label = "  %output:0:5:...% "
 ;  
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 
 [module/weather]
 type = custom/script
@@ -623,7 +624,7 @@ exec = $HOME/.config/polybar/mediaplayer.py
 exec-if = pgrep -x spotify
 interval = 3
 label = "  %output:0:30:% "
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 click-left = dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 [module/ssh]
@@ -631,7 +632,7 @@ type = custom/script
 exec = echo + SSH
 exec-if = pgrep -i ssh
 interval = 3.0
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%
@@ -644,7 +645,7 @@ type = custom/script
 exec = echo + VPN
 exec-if = pgrep -i vpn
 interval = 3.0
-format-foreground = ${colors.color7}
+format-foreground = ${colors.color2}
 label = " %output:0:5%"
 click-left = echo left %counter%
 click-middle = echo middle %counter%

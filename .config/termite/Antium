@@ -33,26 +33,25 @@
 
 [colors]
 # For color changes - https://terminal.sexy/
-# Modified CanvasedPastel scheme.
-    foreground = #746c48
-    foreground_bold = #746c48
-    cursor = #746c48
-    background = #221916
-    color0 = #26251c
-    color1 = #323027
-    color2 = #3d4339
-    color3 = #443b2c
-    color4 = #534d35
-    color5 = #646756
-    color6 = #7b8574
-    color7 = #837b61
-    color8 = #999f91
-    color9 = #9b9773
-    color10 = #b2b08c
-    color11 = #c4bb8c
-    color12 = #c4b67a
-    color13 = #cfc995
-    color14 = #cfc995
-    color15 = #49332c
-    # extra
-    color16 = #35211b
+foreground      = #e2d3c3
+foreground_bold = #e2d3c3
+cursor          = #e2d3c3
+background      = #67605e
+color0  = #625a58
+color8  = #625a58
+color1  = #a7bab0
+color9  = #a7bab0
+color2  = #8e8e8e
+color10 = #8e8e8e
+color3  = #a0a0a0
+color11 = #a0a0a0
+color4  = #ac8383
+color12 = #ac8383
+color5  = #9ab993
+color13 = #9ab993
+color6  = #868686
+color14 = #868686
+color7  = #b9b9b9
+color15 = #b9b9b9
+color16 = #e2d3c3
+color17 = #67605e
