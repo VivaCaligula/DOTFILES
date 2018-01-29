@@ -84,7 +84,7 @@ export ARCHFLAGS="-arch x86_64"
 #=========================#
 
 # Path to ruby installation.
-export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+export PATH=$PATH:~/.gem/ruby/2.5.0/bin
 
 # Import colorschemes from wal.
 (wal -r -t &)
