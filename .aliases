@@ -26,10 +26,10 @@ alias cycle='bash ~/scripts/walcycle.sh'
 alias walcycle='bash ~/scripts/walcycle.sh'
 
 ###  Just The LS Shit  ###
-superls() { colorls "$@" -a --sd && printf "\n"; } # Wombo combo.
+superls() { printf "\n" && colorls "$@" -a --sd && printf "\n"; } # Wombo combo.
 alias ls='superls'
 alias l='superls'
-superlsl() { colorls "$@" -la --sd && printf "\n"; } 
+superlsl() { printf "\n" && colorls "$@" -la --sd && printf "\n"; } 
 # alias la='superlsl'
 # alias lsa='superlsl'
 # alias lal='superlsl'
