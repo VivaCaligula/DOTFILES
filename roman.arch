@@ -2,17 +2,33 @@
 #     Reminders and Info     #
 #============================#
 
-:: Update Commands ::
+:: Arch Update Commands ::
 sudo pacman -Syu
 sudo yaourt -Syu
 sudo pacman-key --refresh-keys
 gem update
 
+:: Zcash Commands :: https://github.com/zcash/zcash/wiki/1.0-User-Guide :: https://github.com/zcash/zcash/wiki/Mining-Guide
+zcashd                                      # Runs cli
+zcashd --daemon                             # Runs in background
+zcash-cli getinfo                           # Test RPC
+zcash-cli getpeerinfo                       # See connected peers
+zcash-cli getnewaddress                     # Generate t-addr
+zcash-cli getaddressesbyaccount ""          # List transparent addresses
+zcash-cli z_getnewaddress                   # Generate z-addr
+ZADDR='z-addr'                              # Set environment variable for address
+zcash-cli z_listaddresses                   # List all addresses in your wallet for which you have a spending key
+zcash-cli z_listreceivedbyaddress "$ZADDR"  # Check transaction history of z-addr
+FRIEND='z-addr'                             # Set environment variable for send address
+zcash-cli z_sendmany "$ZADDR" "[{\"amount\": 0.8, \"address\": \"$FRIEND\"}]"    # Sending coins with your z-addr
+zcash-cli z_getoperationresult              # Check to see if the operation has finished and produced a result
+zcash-cli stop                              # To stop the Zcash daemon/miner
 
-:: Mounting a Drive ::
-$ lsusb # lists devices
-mount -t vfat /dev/sda $HOME/Desktop/flash
-
+    Accounting: z_getbalance, z_gettotalbalance
+    Addresses : z_getnewaddress, z_listaddresses, z_validateaddress
+    Keys : z_exportkey, z_importkey, z_exportwallet, z_importwallet
+    Operation: z_getoperationresult, z_getoperationstatus, z_listoperationids
+    Payment : z_listreceivedbyaddress, z_sendmany, z_shieldcoinbase
 
 :: Git Commands ::
 git init     # To make a new repo
@@ -23,10 +39,12 @@ git add *
 git commit -m "Text"
 git push origin master
 
-
 :: Font Checker ::
 fc-list | grep FONT_NAME
 
+:: Mounting a Drive ::
+lsusb     # lists devices
+mount -t vfat /dev/sda $HOME/Desktop/flash
 
 :: Time Update :: https://wiki.archlinux.org/index.php/Time
 # To check current timezone defined for the system and list availables zones.
@@ -38,23 +56,7 @@ sudo ln -sf /usr/share/zoneinfo/Zone/SubZone /etc/localtime
 sudo hwclock --show
 sudo hwclock --systohc
 
-
 :: Usefull Shell Script Stuff :: http://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php
-
-# Yn input options.
-while true
-do
-  # (1) prompt user, and read command line argument
-  read -p "Run the cron script now? " answer
-  # (2) handle the input we were given
-  case $answer in
-   [yY]* ) /usr/bin/wget -O - -q -t 1 http://www.example.com/cron.php
-           echo "Okay, just ran the cron script."
-           break;;
-   [nN]* ) exit;;
-   * )     echo "Just enter Y or N.";;
-  esac
-done
 
 # Check if a file exists.
 # Change -f to -d to check for a directory.
