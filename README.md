@@ -1,4 +1,4 @@
-# DOTFILES [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.0.1-red.svg)
+# DOTFILES [![GitHub stars](https://img.shields.io/github/stars/VivaCaligula/DOTFILES.svg)](https://github.com/VivaCaligula/DOTFILES/stargazers) ![GitHub version](https://img.shields.io/badge/version-2.5.0-red.svg)
 ---
 These dotfiles are for the `ROME` and `ANTIUM` rice configurations. Some scripts are used by them (including full aesthetic switch-outs by invoking the rice script) so you may want to [check those out](https://github.com/VivaCaligula/SCRIPTS) as well. 
 
@@ -11,5 +11,5 @@ The rice configurations appear as shown:
 ROME | ANTIUM
 --- | ---
 ![Rome](https://i.imgur.com/QCoNqal.png) | ![Antium](https://i.imgur.com/ivy6jYM.png)
-`Wal` generates a new colorscheme each login. | Original `ANTIUM` color highlight.
-![Rome Alt](https://i.imgur.com/SttYDkZ.png) | ![Old Rome/Antium](https://i.imgur.com/IOtOZK6.png)
+`Wal` generates a new colorscheme each login. | Old version of `ANTIUM`.
+![Rome Alt](https://i.imgur.com/SttYDkZ.png) | ![Old Antium](https://i.imgur.com/IOtOZK6.png)
