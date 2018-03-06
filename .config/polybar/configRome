@@ -112,14 +112,14 @@ scroll-down = bspwm-deskprev
 ;  	    M O D U L E    L A Y O U T S
 ;----------------------------------------------------------
 
-modules-left = bspwm RightArrow3 weather RightArrow2 mail RightArrow3 btc RightArrow2 RightArrow1 powermenu music
+modules-left = bspwm RightArrow3 weather RightArrow2 mail RightArrow1 powermenu music
 modules-center = MiddleArrowLeft date MiddleArrowRight
 modules-right = arrow1 LeftStripe arrow1 volume arrow2 network ssh vpn arrow3 cpu arrow2 memory arrow3 filesystem arrow2 temperature arrow3 battery
 
 ; All modules available in this config file:
 ; bspwm text xwindow tray xkeyboard filesystem mpd backlight cpu 
 ; memory network eth date volume battery temperature github 
-; appmenu powermenu mail weather music ssh vpn btc etherium
+; appmenu powermenu mail weather music ssh vpn bitcoin etherium
 
 [bar/secondary]
 inherit = bar/rome
@@ -788,7 +788,7 @@ click-right = echo right %counter%
 scroll-up = echo scroll up %counter%
 scroll-down = echo scroll down %counter%
 
-[module/btc]
+[module/bitcoin]
 type = custom/script
 exec = curl -s https://apiv2.bitcoinaverage.com/indices/global/ticker/BTCUSD | python -c "import json, sys; print(json.load(sys.stdin)['last'])"
 interval = 60.0
