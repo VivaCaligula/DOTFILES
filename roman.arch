@@ -6,6 +6,7 @@
 sudo pacman -Syu
 sudo yaourt -Syu
 sudo pacman-key --refresh-keys
+sudo pacman -Sc         # Removes all packages in the Cache that are not currently installed on your system.
 gem update
 polybar -r bar_name     # Refreshes polybar's cache.
 
@@ -41,9 +42,9 @@ sudo hwclock --systohc
 # Change -f to -d to check for a directory.
 FILE=$1     
 if [ -f $FILE ]; then
-   echo "File $FILE exists."
+    echo "File $FILE exists."
 else
-   echo "File $FILE does not exist."
+    echo "File $FILE does not exist."
 fi
 
 # Check if a file doesn't exist.
