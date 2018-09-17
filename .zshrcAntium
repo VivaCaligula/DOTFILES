@@ -94,6 +94,6 @@ source ~/.oh-my-zsh/custom/plugins/alias-tips/alias-tips.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/calc.plugin.zsh/calc.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-interactive-cd/zsh-interactive-cd.plugin.zsh
-#source ~/.oh-my-zsh/custom/plugins/almostontop/almostontop.plugin.zsh
+source ~/.oh-my-zsh/custom/plugins/almostontop/almostontop.plugin.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.oh-my-zsh/custom/plugins/k/k.plugin.zsh
