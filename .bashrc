@@ -17,7 +17,7 @@ shopt -s histappend
 #=========================#
 
 # Path to ruby installation.
-export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+export PATH=$PATH:~/.gem/ruby/2.5.0/bin
 
 # This used to be useful, but powerline is mostly broken now, the modified
 # agnoster theme "roman" loads way faster and does the same stuff for zsh.
