@@ -4,9 +4,10 @@
 
 :: Arch Update Commands ::
 sudo pacman -Syu
-sudo yaourt -Syu
+sudo yay -Syu
 sudo pacman-key --refresh-keys
 sudo pacman -Sc         # Removes all packages in the Cache that are not currently installed on your system.
+yay -Yc                 # Removes all unneeded dependencies on your system.
 gem update
 polybar -r bar_name     # Refreshes polybar's cache.
 
